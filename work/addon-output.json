@@ -1,0 +1,3446 @@
+{
+  "folt-a/godot-live-debugger": {
+    "repo_type": "github",
+    "last_updated": "2024-08-06T03:28:24Z",
+    "owner": "folt-a",
+    "default_branch": "main",
+    "stars": 16,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 88811
+}
+    ,
+    "topics": 
+[
+  "debugger",
+  "game-development",
+  "godot",
+  "godot-addon",
+  "godot4",
+  "godotengine",
+  "tool"
+]
+  },
+  "folt-a/godot-idea-board": {
+    "repo_type": "github",
+    "last_updated": "2024-05-19T14:28:05Z",
+    "owner": "folt-a",
+    "default_branch": "main",
+    "stars": 120,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 224101
+}
+    ,
+    "topics": 
+[
+  "documentation-tool",
+  "game-dev",
+  "game-development",
+  "godot",
+  "godot-addon",
+  "godot4",
+  "godotengine",
+  "tool"
+]
+  },
+  "MenacingMecha/godot-psx-style-demo": {
+    "repo_type": "github",
+    "last_updated": "2023-09-21T01:11:51Z",
+    "owner": "MenacingMecha",
+    "default_branch": "master",
+    "stars": 613,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 2755
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "shaders",
+  "ps1",
+  "psx",
+  "low-poly",
+  "pixel-art",
+  "game-development",
+  "game-engine",
+  "gamedev",
+  "retro",
+  "90s"
+]
+  },
+  "ramokz/phantom-camera": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T11:14:06Z",
+    "owner": "ramokz",
+    "default_branch": "main",
+    "stars": 2158,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 211894
+}
+    ,
+    "topics": 
+[
+  "camera",
+  "godot",
+  "addon",
+  "plugin",
+  "game-development",
+  "godotengine"
+]
+  },
+  "dialogic-godot/dialogic": {
+    "repo_type": "github",
+    "last_updated": "2024-09-22T12:14:43Z",
+    "owner": "dialogic-godot",
+    "default_branch": "main",
+    "stars": 3860,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 1024142
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "plugin",
+  "godot",
+  "game",
+  "dialogue",
+  "visualnovel",
+  "dialogic",
+  "gdscript",
+  "visual-novel"
+]
+  },
+  "folt-a/godot-nesink": {
+    "repo_type": "github",
+    "last_updated": "2023-02-27T15:48:10Z",
+    "owner": "folt-a",
+    "default_branch": "main",
+    "stars": 11,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 76835
+}
+    ,
+    "topics": 
+[
+  "async",
+  "asynchronous",
+  "await",
+  "godot",
+  "godot4",
+  "gdscript"
+]
+  },
+  "derkork/godot-statecharts": {
+    "repo_type": "github",
+    "last_updated": "2024-09-13T04:32:12Z",
+    "owner": "derkork",
+    "default_branch": "main",
+    "stars": 790,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 520743,
+  "C#": 22991
+}
+    ,
+    "topics": 
+[]
+  },
+  "effekseer/EffekseerForGodot4": {
+    "repo_type": "github",
+    "last_updated": "2024-09-06T05:15:19Z",
+    "owner": "effekseer",
+    "default_branch": "main",
+    "stars": 66,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 226864,
+  "GDScript": 22854,
+  "Python": 7743,
+  "C": 1472
+}
+    ,
+    "topics": 
+[]
+  },
+  "nathanhoad/godot_dialogue_manager": {
+    "repo_type": "github",
+    "last_updated": "2024-09-26T09:33:37Z",
+    "owner": "nathanhoad",
+    "default_branch": "main",
+    "stars": 2083,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 335091,
+  "C#": 19474
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "dialogue",
+  "editor",
+  "runtime",
+  "addon",
+  "gdscript",
+  "godot4",
+  "godotengine",
+  "csharp"
+]
+  },
+  "dalexeev/gdscript-preprocessor": {
+    "repo_type": "github",
+    "last_updated": "2024-04-15T11:33:27Z",
+    "owner": "dalexeev",
+    "default_branch": "master",
+    "stars": 85,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 29387
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot4",
+  "conditional-compilation",
+  "gdscript",
+  "godot-plugin",
+  "preprocessor",
+  "export",
+  "plugin",
+  "feature-tags"
+]
+  },
+  "blackears/cyclopsLevelBuilder": {
+    "repo_type": "github",
+    "last_updated": "2024-08-19T19:51:13Z",
+    "owner": "blackears",
+    "default_branch": "master",
+    "stars": 1037,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 1253102,
+  "Python": 8142
+}
+    ,
+    "topics": 
+[]
+  },
+  "MrWalkmanDev/AdaptiSound": {
+    "repo_type": "github",
+    "last_updated": "2024-06-14T22:29:54Z",
+    "owner": "MrWalkmanDev",
+    "default_branch": "main",
+    "stars": 61,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 65160
+}
+    ,
+    "topics": 
+[]
+  },
+  "nathanhoad/godot_sound_manager": {
+    "repo_type": "github",
+    "last_updated": "2024-04-18T07:20:12Z",
+    "owner": "nathanhoad",
+    "default_branch": "main",
+    "stars": 539,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 14427,
+  "C#": 7298
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot4",
+  "addon",
+  "audio",
+  "music",
+  "csharp"
+]
+  },
+  "hugemenace/resonate": {
+    "repo_type": "github",
+    "last_updated": "2024-09-07T03:49:08Z",
+    "owner": "hugemenace",
+    "default_branch": "main",
+    "stars": 177,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 64290
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "audio",
+  "godot",
+  "music",
+  "sound"
+]
+  },
+  "derkork/godot-resource-groups": {
+    "repo_type": "github",
+    "last_updated": "2024-07-19T15:09:31Z",
+    "owner": "derkork",
+    "default_branch": "main",
+    "stars": 179,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 19097,
+  "C#": 11378
+}
+    ,
+    "topics": 
+[]
+  },
+  "bitbrain/beehave": {
+    "repo_type": "github",
+    "last_updated": "2024-09-18T13:18:22Z",
+    "owner": "bitbrain",
+    "default_branch": "godot-4.x",
+    "stars": 1889,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 872865,
+  "HTML": 8292,
+  "CSS": 5920,
+  "C#": 1495,
+  "Batchfile": 1319,
+  "Shell": 857
+}
+    ,
+    "topics": 
+[
+  "ai",
+  "behavior-tree",
+  "gamedev",
+  "gdscript",
+  "godot",
+  "godot3",
+  "godot4",
+  "game-development",
+  "godotengine"
+]
+  },
+  "luxmargos/godot_tabby_explorer_plugin": {
+    "repo_type": "github",
+    "last_updated": "2024-01-16T03:51:02Z",
+    "owner": "luxmargos",
+    "default_branch": "main",
+    "stars": 16,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 96515
+}
+    ,
+    "topics": 
+[
+  "explorer",
+  "filesystem",
+  "gdscript",
+  "godot-addon",
+  "godot-engine",
+  "godot-plugin",
+  "godot4"
+]
+  },
+  "HolonProduction/godot_kanban_tasks": {
+    "repo_type": "github",
+    "last_updated": "2024-02-08T11:21:24Z",
+    "owner": "HolonProduction",
+    "default_branch": "master",
+    "stars": 149,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 162254
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "kanban",
+  "kanban-board",
+  "kanban-board-application"
+]
+  },
+  "OrigamiDev-Pete/TODO_Manager": {
+    "repo_type": "github",
+    "last_updated": "2024-06-03T14:58:00Z",
+    "owner": "OrigamiDev-Pete",
+    "default_branch": "main",
+    "stars": 363,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 24906
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "plugin"
+]
+  },
+  "poohcom1/godot-collapse-folders": {
+    "repo_type": "github",
+    "last_updated": "2024-02-11T03:49:40Z",
+    "owner": "poohcom1",
+    "default_branch": "master",
+    "stars": 4,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 1612
+}
+    ,
+    "topics": 
+[]
+  },
+  "Fractural/GDTask": {
+    "repo_type": "github",
+    "last_updated": "2024-09-09T07:39:05Z",
+    "owner": "Fractural",
+    "default_branch": "main",
+    "stars": 180,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 786375
+}
+    ,
+    "topics": 
+[]
+  },
+  "godot-rust/gdext": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T12:44:39Z",
+    "owner": "godot-rust",
+    "default_branch": "master",
+    "stars": 3006,
+    "license": "MPL-2.0",
+    "languages": 
+{
+  "Rust": 2392482,
+  "GDScript": 29253,
+  "Shell": 8028
+}
+    ,
+    "topics": 
+[
+  "game-development",
+  "gamedev",
+  "godot",
+  "rust"
+]
+  },
+  "Arnklit/godot_trail_2d": {
+    "repo_type": "github",
+    "last_updated": "2024-07-31T10:48:40Z",
+    "owner": "Arnklit",
+    "default_branch": "main",
+    "stars": 0,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 10333
+}
+    ,
+    "topics": 
+[]
+  },
+  "yaelatletl/godot-jigglebones": {
+    "repo_type": "github",
+    "last_updated": "2023-04-08T23:50:04Z",
+    "owner": "yaelatletl",
+    "default_branch": "4.X",
+    "stars": 126,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 5560
+}
+    ,
+    "topics": 
+[
+  "animation",
+  "godot-addon",
+  "godot-engine",
+  "godot4",
+  "physics-simulation"
+]
+  },
+  "oniksan/godobuf": {
+    "repo_type": "github",
+    "last_updated": "2024-08-05T04:13:31Z",
+    "owner": "oniksan",
+    "default_branch": "master",
+    "stars": 250,
+    "license": "BSD-3-Clause",
+    "languages": 
+{
+  "GDScript": 159275
+}
+    ,
+    "topics": 
+[]
+  },
+  "maktoobgar/scene_manager": {
+    "repo_type": "github",
+    "last_updated": "2024-07-06T10:09:44Z",
+    "owner": "maktoobgar",
+    "default_branch": "main",
+    "stars": 301,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 68069,
+  "Python": 3730
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "gdscript",
+  "scene-manager",
+  "godot-plugin",
+  "godot-addon",
+  "godot-engine"
+]
+  },
+  "brettchalupa/godot_skeleton": {
+    "repo_type": "github",
+    "last_updated": "2023-11-20T00:38:15Z",
+    "owner": "brettchalupa",
+    "default_branch": "main",
+    "stars": 155,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 5692,
+  "Ruby": 2299
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-template"
+]
+  },
+  "lawnjelly/smoothing-addon": {
+    "repo_type": "github",
+    "last_updated": "2024-07-31T16:44:31Z",
+    "owner": "lawnjelly",
+    "default_branch": "3.x",
+    "stars": 508,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 12998
+}
+    ,
+    "topics": 
+[]
+  },
+  "zfoo-project/zfoo": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T02:37:36Z",
+    "owner": "zfoo-project",
+    "default_branch": "main",
+    "stars": 1810,
+    "license": "Apache-2.0",
+    "languages": 
+{
+  "Java": 3651986,
+  "JavaScript": 1383136,
+  "C#": 723491,
+  "TypeScript": 692771,
+  "Ruby": 598749,
+  "Scala": 584832,
+  "GDScript": 573704,
+  "Python": 558193,
+  "Dart": 552953,
+  "Lua": 117632,
+  "C++": 114345,
+  "Kotlin": 105570,
+  "Rust": 87054,
+  "PHP": 68941,
+  "Swift": 68496,
+  "Go": 64286,
+  "Shell": 14014,
+  "Hack": 881,
+  "CMake": 511
+}
+    ,
+    "topics": 
+[
+  "netty",
+  "serialization",
+  "game-server",
+  "spring",
+  "network",
+  "websocket",
+  "rpc",
+  "orm",
+  "hotswap",
+  "mongodb",
+  "game-framework",
+  "javassist",
+  "byte-buddy",
+  "godot",
+  "unity",
+  "cocos",
+  "godot-engine",
+  "unreal-engine",
+  "cpp"
+]
+  },
+  "Zylann/godot_voxel": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T23:16:54Z",
+    "owner": "Zylann",
+    "default_branch": "master",
+    "stars": 2628,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 3986644,
+  "C": 150775,
+  "Python": 33486,
+  "GLSL": 22397,
+  "GDScript": 12306,
+  "Shell": 237
+}
+    ,
+    "topics": 
+[]
+  },
+  "Zylann/godot_editor_debugger_plugin": {
+    "repo_type": "github",
+    "last_updated": "2024-07-26T21:06:51Z",
+    "owner": "Zylann",
+    "default_branch": "master",
+    "stars": 192,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 14188
+}
+    ,
+    "topics": 
+[]
+  },
+  "KoBeWi/Godot-Action-Icon": {
+    "repo_type": "github",
+    "last_updated": "2024-06-18T21:32:00Z",
+    "owner": "KoBeWi",
+    "default_branch": "master",
+    "stars": 74,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 15524
+}
+    ,
+    "topics": 
+[
+  "godot"
+]
+  },
+  "KoBeWi/Metroidvania-System": {
+    "repo_type": "github",
+    "last_updated": "2024-08-20T20:37:57Z",
+    "owner": "KoBeWi",
+    "default_branch": "master",
+    "stars": 1047,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 168877
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "metroidvania"
+]
+  },
+  "KoBeWi/Godot-Instance-Dock": {
+    "repo_type": "github",
+    "last_updated": "2024-03-25T13:43:19Z",
+    "owner": "KoBeWi",
+    "default_branch": "master",
+    "stars": 174,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 29353
+}
+    ,
+    "topics": 
+[
+  "godot"
+]
+  },
+  "KoBeWi/Godot-Input-Remap": {
+    "repo_type": "github",
+    "last_updated": "2024-04-15T11:31:10Z",
+    "owner": "KoBeWi",
+    "default_branch": "master",
+    "stars": 79,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 5632
+}
+    ,
+    "topics": 
+[
+  "godot"
+]
+  },
+  "Loregret/script-panel-plus": {
+    "repo_type": "github",
+    "last_updated": "2024-08-30T11:23:03Z",
+    "owner": "Loregret",
+    "default_branch": "godot-4.x",
+    "stars": 87,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 68357
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot-engine",
+  "godot4",
+  "plugin",
+  "game-development",
+  "gamedev",
+  "godot"
+]
+  },
+  "kyoz/godot-share": {
+    "repo_type": "github",
+    "last_updated": "2024-08-21T00:51:41Z",
+    "owner": "kyoz",
+    "default_branch": "main",
+    "stars": 3,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 17434,
+  "Shell": 9583,
+  "Objective-C++": 6553,
+  "Python": 6436,
+  "Java": 3673,
+  "C++": 688,
+  "Objective-C": 524
+}
+    ,
+    "topics": 
+[
+  "android",
+  "godot",
+  "ios",
+  "plugin"
+]
+  },
+  "ArshvirGoraya/Godot-Collapsible-Container": {
+    "repo_type": "github",
+    "last_updated": "2024-08-31T14:40:04Z",
+    "owner": "ArshvirGoraya",
+    "default_branch": "main",
+    "stars": 61,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 107748
+}
+    ,
+    "topics": 
+[
+  "accordion-plugin",
+  "addon",
+  "collapsible",
+  "collapsible-accordion",
+  "collapsible-plugin",
+  "game-development",
+  "gdscript",
+  "godot-engine",
+  "godot-engine-4",
+  "godot-game-engine",
+  "godot-plugin",
+  "tool",
+  "ui"
+]
+  },
+  "jarneson/godot-ply": {
+    "repo_type": "github",
+    "last_updated": "2024-06-09T02:41:19Z",
+    "owner": "jarneson",
+    "default_branch": "main",
+    "stars": 352,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 153704
+}
+    ,
+    "topics": 
+[]
+  },
+  "MewPurPur/GodSVG": {
+    "repo_type": "github",
+    "last_updated": "2024-09-25T23:16:24Z",
+    "owner": "MewPurPur",
+    "default_branch": "main",
+    "stars": 1223,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 619963
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godot-engine",
+  "godotengine",
+  "open-source",
+  "svg-editor",
+  "svg-parser",
+  "vector-graphics",
+  "thorvg",
+  "svg"
+]
+  },
+  "detomon/wigglebone": {
+    "repo_type": "github",
+    "last_updated": "2024-09-21T11:43:34Z",
+    "owner": "detomon",
+    "default_branch": "master",
+    "stars": 342,
+    "license": "NOASSERTION",
+    "languages": 
+{
+  "GDScript": 15032
+}
+    ,
+    "topics": 
+[
+  "godot-engine",
+  "godot",
+  "physics-simulation",
+  "skeleton",
+  "bone",
+  "jiggle",
+  "plugin",
+  "wiggle",
+  "addon",
+  "gravity",
+  "motion"
+]
+  },
+  "spimort/TerraBrush": {
+    "repo_type": "github",
+    "last_updated": "2024-09-29T00:27:22Z",
+    "owner": "spimort",
+    "default_branch": "main",
+    "stars": 668,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 240504
+}
+    ,
+    "topics": 
+[]
+  },
+  "ItsKorin/Godot-Post-Process-Plugin": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T14:52:33Z",
+    "owner": "ItsKorin",
+    "default_branch": "main",
+    "stars": 251,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 17845
+}
+    ,
+    "topics": 
+[]
+  },
+  "Hyrdaboo/TrailRenderer": {
+    "repo_type": "github",
+    "last_updated": "2024-06-26T08:53:45Z",
+    "owner": "Hyrdaboo",
+    "default_branch": "master",
+    "stars": 23,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 12445,
+  "GDScript": 9603
+}
+    ,
+    "topics": 
+[]
+  },
+  "Goutte/godot-addon-animated-shape-2d": {
+    "repo_type": "github",
+    "last_updated": "2024-03-12T20:38:50Z",
+    "owner": "Goutte",
+    "default_branch": "main",
+    "stars": 118,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 53316
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-addon",
+  "godot-engine",
+  "godot4",
+  "2d-game",
+  "2d-graphics",
+  "game-development",
+  "gdscript",
+  "sprite-animation",
+  "godot-plugin"
+]
+  },
+  "Herbherth/GDScript-Quality-of-Life": {
+    "repo_type": "github",
+    "last_updated": "2024-08-06T15:50:29Z",
+    "owner": "Herbherth",
+    "default_branch": "main",
+    "stars": 76,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 59717
+}
+    ,
+    "topics": 
+[]
+  },
+  "Eneskp3441/Shaker": {
+    "repo_type": "github",
+    "last_updated": "2024-09-15T18:36:51Z",
+    "owner": "Eneskp3441",
+    "default_branch": "main",
+    "stars": 240,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 117497
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "plugin"
+]
+  },
+  "TheWalruzz/godot-questify": {
+    "repo_type": "github",
+    "last_updated": "2024-08-17T20:18:05Z",
+    "owner": "TheWalruzz",
+    "default_branch": "main",
+    "stars": 147,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 37193
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godot4",
+  "quest-system"
+]
+  },
+  "ja.esotericsoftware.com/spine-godot": {
+    "repo_type": "unknown",
+    "last_updated": "",
+    "owner": "unknown",
+    "default_branch": "main",
+    "stars": 0,
+    "license": "Unknown",
+    "languages": 
+{}
+    ,
+    "topics": 
+[]
+  },
+  "arlez80/gdcastledb4": {
+    "repo_type": "bitbucket",
+    "last_updated": "2024-04-22T14:31:42.388411+00:00",
+    "owner": "きのもと結衣",
+    "default_branch": "master",
+    "stars": 0,
+    "license": "Unknown",
+    "languages": 
+{}
+    ,
+    "topics": 
+[]
+  },
+  "arlez80/godot-midi-player-g4": {
+    "repo_type": "bitbucket",
+    "last_updated": "2024-08-22T02:14:00.584762+00:00",
+    "owner": "きのもと結衣",
+    "default_branch": "master",
+    "stars": 0,
+    "license": "Unknown",
+    "languages": 
+{}
+    ,
+    "topics": 
+[]
+  },
+  "arlez80/godot-mod-player": {
+    "repo_type": "bitbucket",
+    "last_updated": "2024-08-22T02:13:19.601117+00:00",
+    "owner": "きのもと結衣",
+    "default_branch": "master",
+    "stars": 0,
+    "license": "Unknown",
+    "languages": 
+{}
+    ,
+    "topics": 
+[]
+  },
+  "snopek-games/godot-rollback-netcode": {
+    "repo_type": "gitlab",
+    "last_updated": "2024-07-07T15:47:28.521Z",
+    "owner": "snopek-games",
+    "default_branch": "main",
+    "stars": 80,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 100
+}
+    ,
+    "topics": 
+[
+  "Godot Engine",
+  "godot"
+]
+  },
+  "SpriteStudio/SSPlayerForGodot": {
+    "repo_type": "github",
+    "last_updated": "2024-09-02T04:52:20Z",
+    "owner": "SpriteStudio",
+    "default_branch": "main",
+    "stars": 12,
+    "license": "NOASSERTION",
+    "languages": 
+{
+  "C++": 225721,
+  "C": 44341,
+  "Shell": 4769,
+  "GDScript": 3581,
+  "PowerShell": 2653,
+  "Batchfile": 156,
+  "Python": 92
+}
+    ,
+    "topics": 
+[]
+  },
+  "Daylily-Zeleen/Godot-DragonBones": {
+    "repo_type": "github",
+    "last_updated": "2024-09-25T07:38:03Z",
+    "owner": "Daylily-Zeleen",
+    "default_branch": "master",
+    "stars": 76,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 1355106,
+  "C": 27107,
+  "CMake": 8055,
+  "Python": 4380,
+  "Shell": 624
+}
+    ,
+    "topics": 
+[
+  "2d",
+  "addon",
+  "animation",
+  "dragonbones",
+  "gdextension",
+  "godot",
+  "godotengine",
+  "plugin"
+]
+  },
+  "98teg/NativeDialogs": {
+    "repo_type": "github",
+    "last_updated": "2024-03-17T13:28:57Z",
+    "owner": "98teg",
+    "default_branch": "master",
+    "stars": 158,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 21887,
+  "Python": 1187
+}
+    ,
+    "topics": 
+[
+  "gdnative",
+  "gdnative-plugin",
+  "gdscript",
+  "godot",
+  "godot-engine",
+  "godotengine",
+  "linux",
+  "native-dialogs",
+  "windows"
+]
+  },
+  "CraterCrash/godot-orchestrator": {
+    "repo_type": "github",
+    "last_updated": "2024-09-21T19:45:19Z",
+    "owner": "CraterCrash",
+    "default_branch": "main",
+    "stars": 942,
+    "license": "Apache-2.0",
+    "languages": 
+{
+  "C++": 2606468,
+  "CMake": 38015,
+  "Python": 30522,
+  "C": 11321,
+  "GDScript": 4480
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "godot-plugin",
+  "godot4",
+  "godotengine"
+]
+  },
+  "Cysharp/MasterMemory": {
+    "repo_type": "github",
+    "last_updated": "2024-09-18T07:54:28Z",
+    "owner": "Cysharp",
+    "default_branch": "master",
+    "stars": 1507,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 2012708
+}
+    ,
+    "topics": 
+[
+  "unity",
+  "memory-database",
+  "c-sharp"
+]
+  },
+  "Cysharp/R3": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T07:38:16Z",
+    "owner": "Cysharp",
+    "default_branch": "main",
+    "stars": 2089,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 1621787,
+  "CSS": 15312,
+  "HTML": 11401
+}
+    ,
+    "topics": 
+[]
+  },
+  "Cysharp/MemoryPack": {
+    "repo_type": "github",
+    "last_updated": "2024-09-24T12:21:58Z",
+    "owner": "Cysharp",
+    "default_branch": "main",
+    "stars": 3233,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 1326984,
+  "TypeScript": 87914,
+  "HTML": 4193,
+  "CSS": 1217,
+  "JavaScript": 3
+}
+    ,
+    "topics": 
+[]
+  },
+  "Cysharp/UnitGenerator": {
+    "repo_type": "github",
+    "last_updated": "2024-09-18T08:27:27Z",
+    "owner": "Cysharp",
+    "default_branch": "master",
+    "stars": 324,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 112844
+}
+    ,
+    "topics": 
+[]
+  },
+  "D2klaas/Godot-4-HTTPManager": {
+    "repo_type": "github",
+    "last_updated": "2023-12-25T13:24:08Z",
+    "owner": "D2klaas",
+    "default_branch": "main",
+    "stars": 53,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 37995
+}
+    ,
+    "topics": 
+[]
+  },
+  "D2klaas/Godot-4-VectorFieldNavigation": {
+    "repo_type": "github",
+    "last_updated": "2024-05-06T08:13:01Z",
+    "owner": "D2klaas",
+    "default_branch": "main",
+    "stars": 16,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 40748
+}
+    ,
+    "topics": 
+[
+  "pathfinding",
+  "godot"
+]
+  },
+  "GreenCrowDev/hoodie": {
+    "repo_type": "github",
+    "last_updated": "2024-07-20T19:49:30Z",
+    "owner": "GreenCrowDev",
+    "default_branch": "master",
+    "stars": 306,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 354404,
+  "Python": 1017
+}
+    ,
+    "topics": 
+[]
+  },
+  "KoBeWi/Godot-Ref-Serializer": {
+    "repo_type": "github",
+    "last_updated": "2024-07-31T20:55:03Z",
+    "owner": "KoBeWi",
+    "default_branch": "master",
+    "stars": 19,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 6610
+}
+    ,
+    "topics": 
+[
+  "godot"
+]
+  },
+  "KoBeWi/Godot-Tween-Suite": {
+    "repo_type": "github",
+    "last_updated": "2024-08-15T05:38:56Z",
+    "owner": "KoBeWi",
+    "default_branch": "master",
+    "stars": 84,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 29806
+}
+    ,
+    "topics": 
+[
+  "godot"
+]
+  },
+  "LaoDie1/godot-float-script-editor": {
+    "repo_type": "github",
+    "last_updated": "2023-05-05T12:17:37Z",
+    "owner": "LaoDie1",
+    "default_branch": "master",
+    "stars": 25,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 16743
+}
+    ,
+    "topics": 
+[]
+  },
+  "MakovWait/godots": {
+    "repo_type": "github",
+    "last_updated": "2024-08-22T21:17:06Z",
+    "owner": "MakovWait",
+    "default_branch": "main",
+    "stars": 332,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 446624,
+  "GAP": 36376
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godot-engine",
+  "godot-engine-4",
+  "godot4"
+]
+  },
+  "MizunagiKB/gd_cubism": {
+    "repo_type": "github",
+    "last_updated": "2024-09-16T13:24:37Z",
+    "owner": "MizunagiKB",
+    "default_branch": "main",
+    "stars": 142,
+    "license": "NOASSERTION",
+    "languages": 
+{
+  "C++": 144615,
+  "CSS": 36021,
+  "Python": 8021,
+  "GDScript": 1273
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godotengine",
+  "csharp"
+]
+  },
+  "MizunagiKB/gd_mocopi": {
+    "repo_type": "github",
+    "last_updated": "2024-04-06T02:18:56Z",
+    "owner": "MizunagiKB",
+    "default_branch": "main",
+    "stars": 4,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 306401
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godotengine"
+]
+  },
+  "Portponky/gridmap-plus": {
+    "repo_type": "github",
+    "last_updated": "2024-08-10T15:17:35Z",
+    "owner": "Portponky",
+    "default_branch": "main",
+    "stars": 17,
+    "license": "Unlicense",
+    "languages": 
+{
+  "GDScript": 22094
+}
+    ,
+    "topics": 
+[]
+  },
+  "Sacristan/godot_scene_object_brush": {
+    "repo_type": "github",
+    "last_updated": "2024-08-15T18:17:36Z",
+    "owner": "Sacristan",
+    "default_branch": "main",
+    "stars": 25,
+    "license": "Unlicense",
+    "languages": 
+{
+  "GDScript": 10554
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-asset-library",
+  "godot-engine",
+  "scene"
+]
+  },
+  "Scony/godot-gdscript-toolkit": {
+    "repo_type": "github",
+    "last_updated": "2024-09-26T20:56:53Z",
+    "owner": "Scony",
+    "default_branch": "master",
+    "stars": 968,
+    "license": "MIT",
+    "languages": 
+{
+  "Python": 250123,
+  "GDScript": 103294,
+  "Emacs Lisp": 2445,
+  "GAP": 260,
+  "Makefile": 16
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "formatter",
+  "linter",
+  "parser",
+  "godot-engine"
+]
+  },
+  "V-Sekai/godot-vrm": {
+    "repo_type": "github",
+    "last_updated": "2024-09-13T03:24:51Z",
+    "owner": "V-Sekai",
+    "default_branch": "master",
+    "stars": 286,
+    "license": "NOASSERTION",
+    "languages": 
+{
+  "GDScript": 269930
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "gdscript",
+  "vrm",
+  "avatar",
+  "gltf2",
+  "godot-engine",
+  "godotengine"
+]
+  },
+  "V-Sekai/unidot_importer": {
+    "repo_type": "github",
+    "last_updated": "2024-05-30T08:09:09Z",
+    "owner": "V-Sekai",
+    "default_branch": "main",
+    "stars": 677,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 1020172
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "unity",
+  "game-development"
+]
+  },
+  "appsinacup/godot-rapier-physics": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T15:46:07Z",
+    "owner": "appsinacup",
+    "default_branch": "main",
+    "stars": 339,
+    "license": "MIT",
+    "languages": 
+{
+  "Rust": 766516,
+  "GDScript": 318910,
+  "Shell": 4841,
+  "PowerShell": 3055
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "godot4",
+  "godotengine",
+  "rapier"
+]
+  },
+  "bikemurt/blender-godot-pipeline": {
+    "repo_type": "github",
+    "last_updated": "2024-09-20T21:24:07Z",
+    "owner": "bikemurt",
+    "default_branch": "main",
+    "stars": 43,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 14167
+}
+    ,
+    "topics": 
+[]
+  },
+  "bikemurt/godot-vertex-painter": {
+    "repo_type": "github",
+    "last_updated": "2024-07-14T16:46:21Z",
+    "owner": "bikemurt",
+    "default_branch": "main",
+    "stars": 28,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 9944
+}
+    ,
+    "topics": 
+[]
+  },
+  "chickensoft-games/AutoInject": {
+    "repo_type": "github",
+    "last_updated": "2024-07-24T02:52:14Z",
+    "owner": "chickensoft-games",
+    "default_branch": "main",
+    "stars": 88,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 79150,
+  "Shell": 4125
+}
+    ,
+    "topics": 
+[
+  "autoinject",
+  "dependency-injection",
+  "dotnet",
+  "godot"
+]
+  },
+  "chickensoft-games/Collections": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T08:19:10Z",
+    "owner": "chickensoft-games",
+    "default_branch": "main",
+    "stars": 18,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 48830,
+  "Shell": 1026
+}
+    ,
+    "topics": 
+[
+  "blackboard",
+  "collections",
+  "utilities",
+  "reactive"
+]
+  },
+  "citizenll/godot-flexbox": {
+    "repo_type": "github",
+    "last_updated": "2024-08-17T02:49:31Z",
+    "owner": "citizenll",
+    "default_branch": "godot-4.x",
+    "stars": 113,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 226188
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "gui",
+  "flexbox",
+  "layout",
+  "yoga",
+  "container",
+  "ui",
+  "addons",
+  "gdnative",
+  "godot-addons",
+  "godot-engine",
+  "godot4"
+]
+  },
+  "cloudofoz/godot-linepath-2d": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T05:54:29Z",
+    "owner": "cloudofoz",
+    "default_branch": "main",
+    "stars": 29,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 9821
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "curve",
+  "godot",
+  "godot-engine",
+  "godot-plugin",
+  "grease-pencil",
+  "path2d",
+  "plugin"
+]
+  },
+  "daenvil/MarkdownLabel": {
+    "repo_type": "github",
+    "last_updated": "2024-06-04T18:52:34Z",
+    "owner": "daenvil",
+    "default_branch": "main",
+    "stars": 68,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 39723
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-addon",
+  "godot-addons",
+  "godot-engine",
+  "godot-plugin",
+  "markdown",
+  "markdown-converter",
+  "markdown-parser"
+]
+  },
+  "dreadpon/godot_spatial_gardener": {
+    "repo_type": "github",
+    "last_updated": "2024-06-10T09:07:27Z",
+    "owner": "dreadpon",
+    "default_branch": "master",
+    "stars": 823,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 550256,
+  "Shell": 1873
+}
+    ,
+    "topics": 
+[
+  "foliage",
+  "godot-engine",
+  "painting",
+  "surface",
+  "terrian"
+]
+  },
+  "godot-jolt/godot-jolt": {
+    "repo_type": "github",
+    "last_updated": "2024-09-24T14:13:59Z",
+    "owner": "godot-jolt",
+    "default_branch": "master",
+    "stars": 2097,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 739707,
+  "CMake": 46718,
+  "PowerShell": 9474
+}
+    ,
+    "topics": 
+[
+  "game-development",
+  "gdextension",
+  "godot",
+  "godot-engine",
+  "godotengine",
+  "physics",
+  "physics-simulation",
+  "gamedev"
+]
+  },
+  "haraldwer/GDExtensionTemplate": {
+    "repo_type": "github",
+    "last_updated": "2023-11-22T13:15:19Z",
+    "owner": "haraldwer",
+    "default_branch": "master",
+    "stars": 13,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 62384,
+  "C++": 3790,
+  "Python": 1263,
+  "C": 975,
+  "GDScript": 621,
+  "Batchfile": 287
+}
+    ,
+    "topics": 
+[
+  "gdextension",
+  "godot",
+  "godot-cpp"
+]
+  },
+  "insideout-andrew/simple-card-pile-ui": {
+    "repo_type": "github",
+    "last_updated": "2024-06-09T02:13:20Z",
+    "owner": "insideout-andrew",
+    "default_branch": "master",
+    "stars": 88,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 31068
+}
+    ,
+    "topics": 
+[]
+  },
+  "majikayogames/SimpleDungeons": {
+    "repo_type": "github",
+    "last_updated": "2024-06-19T03:55:56Z",
+    "owner": "majikayogames",
+    "default_branch": "main",
+    "stars": 237,
+    "license": "CC0-1.0",
+    "languages": 
+{
+  "GDScript": 128117
+}
+    ,
+    "topics": 
+[]
+  },
+  "markeel/godot-vizpath": {
+    "repo_type": "github",
+    "last_updated": "2023-06-26T16:25:51Z",
+    "owner": "markeel",
+    "default_branch": "main",
+    "stars": 13,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 49720
+}
+    ,
+    "topics": 
+[]
+  },
+  "mayuki/Cocona": {
+    "repo_type": "github",
+    "last_updated": "2024-08-13T15:28:41Z",
+    "owner": "mayuki",
+    "default_branch": "master",
+    "stars": 3228,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 851888,
+  "Shell": 8304
+}
+    ,
+    "topics": 
+[
+  "csharp",
+  "dotnet",
+  "cli",
+  "console",
+  "dotnet-core",
+  "command-line"
+]
+  },
+  "murikistudio/simple-gui-transitions": {
+    "repo_type": "github",
+    "last_updated": "2024-09-03T12:11:17Z",
+    "owner": "murikistudio",
+    "default_branch": "godot-4",
+    "stars": 133,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 36757
+}
+    ,
+    "topics": 
+[
+  "animation",
+  "godot",
+  "godot-addon",
+  "godot-engine",
+  "godot-plugin",
+  "gui",
+  "menu",
+  "transition",
+  "ui",
+  "user-interface",
+  "godot-3",
+  "godot-4",
+  "interface"
+]
+  },
+  "paddy-exe/ShaderFunction-Extras": {
+    "repo_type": "github",
+    "last_updated": "2023-12-18T23:38:58Z",
+    "owner": "paddy-exe",
+    "default_branch": "main",
+    "stars": 104,
+    "license": "MIT",
+    "languages": 
+{}
+    ,
+    "topics": 
+[]
+  },
+  "ryan-haskell/gdformat-on-save": {
+    "repo_type": "github",
+    "last_updated": "2024-08-05T09:36:09Z",
+    "owner": "ryan-haskell",
+    "default_branch": "main",
+    "stars": 14,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 2421
+}
+    ,
+    "topics": 
+[
+  "formatter",
+  "godot",
+  "plugin"
+]
+  },
+  "sanitygames/sg_godot_graph_plotter": {
+    "repo_type": "github",
+    "last_updated": "2023-09-02T17:34:18Z",
+    "owner": "sanitygames",
+    "default_branch": "master",
+    "stars": 1,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 16000
+}
+    ,
+    "topics": 
+[]
+  },
+  "soeren-m/pixelpart-plugin-godot4": {
+    "repo_type": "github",
+    "last_updated": "2024-09-08T10:34:49Z",
+    "owner": "soeren-m",
+    "default_branch": "master",
+    "stars": 3,
+    "license": "MIT",
+    "languages": 
+{
+  "C": 780516,
+  "C++": 257154,
+  "GLSL": 17274,
+  "GDScript": 4423,
+  "Python": 3031
+}
+    ,
+    "topics": 
+[]
+  },
+  "tcmug/godot_trailmesh": {
+    "repo_type": "github",
+    "last_updated": "2024-08-10T06:40:32Z",
+    "owner": "tcmug",
+    "default_branch": "main",
+    "stars": 37,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 17607,
+  "Python": 2057,
+  "GDScript": 76
+}
+    ,
+    "topics": 
+[]
+  },
+  "teebarjunk/godot_color_matrix": {
+    "repo_type": "github",
+    "last_updated": "2024-04-06T15:32:19Z",
+    "owner": "teebarjunk",
+    "default_branch": "main",
+    "stars": 10,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 22232
+}
+    ,
+    "topics": 
+[]
+  },
+  "the-mirror-gdp/the-mirror": {
+    "repo_type": "github",
+    "last_updated": "2024-09-18T13:58:19Z",
+    "owner": "the-mirror-gdp",
+    "default_branch": "dev",
+    "stars": 1148,
+    "license": "NOASSERTION",
+    "languages": 
+{
+  "GDScript": 2735384,
+  "TypeScript": 1325116,
+  "MDX": 233480,
+  "JavaScript": 86740,
+  "GLSL": 13869,
+  "Shell": 3521,
+  "CSS": 3384,
+  "Dockerfile": 1634
+}
+    ,
+    "topics": 
+[
+  "game-development",
+  "gaming",
+  "gdscript",
+  "godot",
+  "godot-engine",
+  "godotengine",
+  "mongodb",
+  "mongoose",
+  "multiplayer",
+  "nestjs",
+  "no-code",
+  "redis",
+  "roblox",
+  "server",
+  "uefn",
+  "unreal",
+  "visual-scripting",
+  "visual-scripting-language",
+  "mit",
+  "open-source"
+]
+  },
+  "ueshita/ADXLE-GodotPlugin": {
+    "repo_type": "github",
+    "last_updated": "2024-08-27T14:03:10Z",
+    "owner": "ueshita",
+    "default_branch": "main",
+    "stars": 15,
+    "license": "NOASSERTION",
+    "languages": 
+{
+  "C++": 46059,
+  "Python": 19114,
+  "GDScript": 2786,
+  "C": 1881
+}
+    ,
+    "topics": 
+[]
+  },
+  "Melvin8D/MelvinsGodotToonShader": {
+    "repo_type": "github",
+    "last_updated": "2023-09-15T15:23:57Z",
+    "owner": "Melvin8D",
+    "default_branch": "main",
+    "stars": 6,
+    "license": "MIT",
+    "languages": 
+{
+  "C#": 5983
+}
+    ,
+    "topics": 
+[]
+  },
+  "barcoderdev/unitypackage_godot": {
+    "repo_type": "github",
+    "last_updated": "2023-09-16T03:11:56Z",
+    "owner": "barcoderdev",
+    "default_branch": "main",
+    "stars": 588,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 98960
+}
+    ,
+    "topics": 
+[]
+  },
+  "2shady4u/godot-krita-importer": {
+    "repo_type": "github",
+    "last_updated": "2024-09-09T10:41:09Z",
+    "owner": "2shady4u",
+    "default_branch": "main",
+    "stars": 30,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 6823
+}
+    ,
+    "topics": 
+[]
+  },
+  "AllenDang/model_explorer_godot4": {
+    "repo_type": "github",
+    "last_updated": "2022-12-03T05:06:32Z",
+    "owner": "AllenDang",
+    "default_branch": "main",
+    "stars": 26,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 28418
+}
+    ,
+    "topics": 
+[
+  "gltf",
+  "godot"
+]
+  },
+  "AnidemDex/Blockflow": {
+    "repo_type": "github",
+    "last_updated": "2024-09-08T19:15:30Z",
+    "owner": "AnidemDex",
+    "default_branch": "main",
+    "stars": 83,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 162974
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "godot-plugin",
+  "godot4",
+  "godotengine",
+  "language",
+  "plugin"
+]
+  },
+  "BenjaTK/Gaea": {
+    "repo_type": "github",
+    "last_updated": "2024-08-30T18:37:04Z",
+    "owner": "BenjaTK",
+    "default_branch": "main",
+    "stars": 1058,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 144491
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "godot-addon",
+  "godot4",
+  "procedural-generation",
+  "procgen"
+]
+  },
+  "Bugwan91/vector2_array_resource_editor": {
+    "repo_type": "github",
+    "last_updated": "2023-11-22T13:52:27Z",
+    "owner": "Bugwan91",
+    "default_branch": "main",
+    "stars": 5,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 8487
+}
+    ,
+    "topics": 
+[]
+  },
+  "CBerry22/3d-Pixel-Art-In-Godot-4": {
+    "repo_type": "github",
+    "last_updated": "2024-01-17T11:39:20Z",
+    "owner": "CBerry22",
+    "default_branch": "master",
+    "stars": 108,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 282
+}
+    ,
+    "topics": 
+[]
+  },
+  "Calinou/godot-vintage-builds": {
+    "repo_type": "github",
+    "last_updated": "2024-07-26T22:41:24Z",
+    "owner": "Calinou",
+    "default_branch": "master",
+    "stars": 15,
+    "license": "MIT",
+    "languages": 
+{
+  "Shell": 545,
+  "Dockerfile": 320
+}
+    ,
+    "topics": 
+[
+  "godot-engine",
+  "godotengine",
+  "godot",
+  "software-preservation"
+]
+  },
+  "Daylily-Zeleen/ConfigTableManager": {
+    "repo_type": "github",
+    "last_updated": "2024-09-06T20:02:45Z",
+    "owner": "Daylily-Zeleen",
+    "default_branch": "main",
+    "stars": 33,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 112872,
+  "Python": 7639
+}
+    ,
+    "topics": 
+[]
+  },
+  "Daylily-Zeleen/GDScript-Formatter": {
+    "repo_type": "github",
+    "last_updated": "2024-09-07T07:57:01Z",
+    "owner": "Daylily-Zeleen",
+    "default_branch": "main",
+    "stars": 40,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 13966
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "formatter",
+  "formatter-plugin",
+  "gdscript",
+  "gdscript-language",
+  "godot",
+  "plugin",
+  "pip",
+  "python",
+  "gdformat",
+  "gdtoolkit"
+]
+  },
+  "DigitallyTailored/godot4-quadtree": {
+    "repo_type": "github",
+    "last_updated": "2023-12-13T14:10:54Z",
+    "owner": "DigitallyTailored",
+    "default_branch": "main",
+    "stars": 46,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 4479
+}
+    ,
+    "topics": 
+[]
+  },
+  "Godot-Languages-Support/godot-lang-support": {
+    "repo_type": "github",
+    "last_updated": "2023-09-16T23:20:52Z",
+    "owner": "Godot-Languages-Support",
+    "default_branch": "main",
+    "stars": 325,
+    "license": "CC-BY-4.0",
+    "languages": 
+{}
+    ,
+    "topics": 
+[
+  "pluginscript",
+  "modules"
+]
+  },
+  "Inspiaaa/ThemeGen": {
+    "repo_type": "github",
+    "last_updated": "2024-09-04T10:28:53Z",
+    "owner": "Inspiaaa",
+    "default_branch": "master",
+    "stars": 25,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 10325
+}
+    ,
+    "topics": 
+[
+  "dark-theme",
+  "gdscript",
+  "godot",
+  "godot-engine",
+  "godot4",
+  "semantic-colors",
+  "theme"
+]
+  },
+  "JekSun97/gdTree3D": {
+    "repo_type": "github",
+    "last_updated": "2024-09-13T15:33:09Z",
+    "owner": "JekSun97",
+    "default_branch": "main",
+    "stars": 162,
+    "license": "NOASSERTION",
+    "languages": 
+{
+  "C++": 51824,
+  "Python": 2242,
+  "Dockerfile": 211
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-addon",
+  "godot-engine",
+  "godot-plugin",
+  "godot4",
+  "tree"
+]
+  },
+  "Kehom/GDExtensionPack": {
+    "repo_type": "github",
+    "last_updated": "2024-08-15T20:21:32Z",
+    "owner": "Kehom",
+    "default_branch": "gd4.3",
+    "stars": 5,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 1219387,
+  "Python": 16958,
+  "C": 5167
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "addons",
+  "database",
+  "game-database",
+  "game-development",
+  "gamedev",
+  "godot-addons",
+  "godot-engine-4",
+  "godot4",
+  "tutorial",
+  "ui"
+]
+  },
+  "Little-Fish-hub/Gesture-Recognizer-Godot": {
+    "repo_type": "github",
+    "last_updated": "2024-09-25T01:44:08Z",
+    "owner": "Little-Fish-hub",
+    "default_branch": "main",
+    "stars": 8,
+    "license": "BSD-3-Clause",
+    "languages": 
+{
+  "GDScript": 18176
+}
+    ,
+    "topics": 
+[]
+  },
+  "MakovWait/godot-script-tabs": {
+    "repo_type": "github",
+    "last_updated": "2023-11-19T14:04:03Z",
+    "owner": "MakovWait",
+    "default_branch": "main",
+    "stars": 38,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 6686
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godot-addon",
+  "godot-editor",
+  "godot-engine",
+  "godot-engine-4",
+  "godot-plugin",
+  "godot4"
+]
+  },
+  "Maran23/script-ide": {
+    "repo_type": "github",
+    "last_updated": "2024-09-09T20:18:43Z",
+    "owner": "Maran23",
+    "default_branch": "master",
+    "stars": 251,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 34328
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "gdscript",
+  "godot",
+  "godot-addon",
+  "godot-engine",
+  "godot-plugin",
+  "godotengine",
+  "plugin"
+]
+  },
+  "NoctemCat/BottomPanelShortcuts": {
+    "repo_type": "github",
+    "last_updated": "2023-10-15T17:43:41Z",
+    "owner": "NoctemCat",
+    "default_branch": "main",
+    "stars": 4,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 9601
+}
+    ,
+    "topics": 
+[]
+  },
+  "QJPG/GodotNode2Tile": {
+    "repo_type": "github",
+    "last_updated": "2024-07-25T13:32:13Z",
+    "owner": "QJPG",
+    "default_branch": "main",
+    "stars": 49,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 29000
+}
+    ,
+    "topics": 
+[]
+  },
+  "RPicster/VPainter4": {
+    "repo_type": "github",
+    "last_updated": "2024-01-15T20:50:25Z",
+    "owner": "RPicster",
+    "default_branch": "master",
+    "stars": 32,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 18926,
+  "GLSL": 3692
+}
+    ,
+    "topics": 
+[]
+  },
+  "SmallConfusion/Fusion-Compute": {
+    "repo_type": "github",
+    "last_updated": "2024-09-19T01:49:57Z",
+    "owner": "SmallConfusion",
+    "default_branch": "main",
+    "stars": 6,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 10069,
+  "GLSL": 4067
+}
+    ,
+    "topics": 
+[]
+  },
+  "SoloCodeNet/godot-sprite-editor-addon": {
+    "repo_type": "github",
+    "last_updated": "2022-10-21T12:38:29Z",
+    "owner": "SoloCodeNet",
+    "default_branch": "main",
+    "stars": 30,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 9444
+}
+    ,
+    "topics": 
+[]
+  },
+  "TheDuckCow/godot-road-generator": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T23:03:20Z",
+    "owner": "TheDuckCow",
+    "default_branch": "main",
+    "stars": 346,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 276599,
+  "Shell": 1621
+}
+    ,
+    "topics": 
+[]
+  },
+  "Zorochase/ultimate-retro-shader-collection": {
+    "repo_type": "github",
+    "last_updated": "2024-09-01T15:51:00Z",
+    "owner": "Zorochase",
+    "default_branch": "main",
+    "stars": 154,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 1275
+}
+    ,
+    "topics": 
+[
+  "90s",
+  "game-development",
+  "low-poly",
+  "n64",
+  "ps1",
+  "psx",
+  "retro",
+  "shaders"
+]
+  },
+  "anthonyec/godot_little_camera_preview": {
+    "repo_type": "github",
+    "last_updated": "2024-04-26T11:43:15Z",
+    "owner": "anthonyec",
+    "default_branch": "main",
+    "stars": 606,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 17551
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot-addon",
+  "godotengine"
+]
+  },
+  "apples/godot-smooth-pixel-subviewport-container": {
+    "repo_type": "github",
+    "last_updated": "2024-09-17T02:50:58Z",
+    "owner": "apples",
+    "default_branch": "main",
+    "stars": 6,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 4932
+}
+    ,
+    "topics": 
+[
+  "godot-addon"
+]
+  },
+  "carenalgas/popochiu": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T13:36:34Z",
+    "owner": "carenalgas",
+    "default_branch": "develop",
+    "stars": 186,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 700791,
+  "GAP": 309
+}
+    ,
+    "topics": 
+[]
+  },
+  "ceceppa/anima-godot-4": {
+    "repo_type": "github",
+    "last_updated": "2024-09-16T16:35:55Z",
+    "owner": "ceceppa",
+    "default_branch": "main",
+    "stars": 25,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 130436
+}
+    ,
+    "topics": 
+[]
+  },
+  "chairfull/GodotEasyEditorButtons": {
+    "repo_type": "github",
+    "last_updated": "2024-09-02T13:01:36Z",
+    "owner": "chairfull",
+    "default_branch": "main",
+    "stars": 9,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 25093
+}
+    ,
+    "topics": 
+[]
+  },
+  "chairfull/GodotEasyZip": {
+    "repo_type": "github",
+    "last_updated": "2024-08-21T13:34:15Z",
+    "owner": "chairfull",
+    "default_branch": "main",
+    "stars": 6,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 6585
+}
+    ,
+    "topics": 
+[]
+  },
+  "daleblackwood/goshapes": {
+    "repo_type": "github",
+    "last_updated": "2024-09-20T17:30:40Z",
+    "owner": "daleblackwood",
+    "default_branch": "main",
+    "stars": 142,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 119799
+}
+    ,
+    "topics": 
+[]
+  },
+  "domske/godot-addon-simple-tool-button": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T18:33:04Z",
+    "owner": "domske",
+    "default_branch": "main",
+    "stars": 14,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 7938
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godot-addon",
+  "godot-plugin",
+  "godot-tool"
+]
+  },
+  "don-tnowe/godot-extra-controls": {
+    "repo_type": "github",
+    "last_updated": "2024-09-18T09:07:51Z",
+    "owner": "don-tnowe",
+    "default_branch": "master",
+    "stars": 62,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 103008
+}
+    ,
+    "topics": 
+[]
+  },
+  "endlessm/godot-block-coding": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T13:20:04Z",
+    "owner": "endlessm",
+    "default_branch": "main",
+    "stars": 251,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 595967,
+  "Harbour": 1011
+}
+    ,
+    "topics": 
+[
+  "block-coding",
+  "education",
+  "godot",
+  "godot4",
+  "visual-programming"
+]
+  },
+  "heygleeson/godot-ldtk-importer": {
+    "repo_type": "github",
+    "last_updated": "2024-09-19T17:01:03Z",
+    "owner": "heygleeson",
+    "default_branch": "main",
+    "stars": 132,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 66420
+}
+    ,
+    "topics": 
+[]
+  },
+  "huwpascoe/godot_resource_path": {
+    "repo_type": "github",
+    "last_updated": "2024-09-01T12:31:06Z",
+    "owner": "huwpascoe",
+    "default_branch": "master",
+    "stars": 12,
+    "license": "Unlicense",
+    "languages": 
+{
+  "GDScript": 2729
+}
+    ,
+    "topics": 
+[]
+  },
+  "jaydensipe/GD-Local-History": {
+    "repo_type": "github",
+    "last_updated": "2024-08-26T03:00:40Z",
+    "owner": "jaydensipe",
+    "default_branch": "main",
+    "stars": 4,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 6169
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "plugin",
+  "gdscript-language",
+  "godot4"
+]
+  },
+  "justinbangerter/gdscript-repl": {
+    "repo_type": "github",
+    "last_updated": "2024-09-12T04:50:04Z",
+    "owner": "justinbangerter",
+    "default_branch": "main",
+    "stars": 14,
+    "license": "BSD-3-Clause",
+    "languages": 
+{
+  "GDScript": 505191,
+  "Shell": 213
+}
+    ,
+    "topics": 
+[]
+  },
+  "karlak/godot-dataview": {
+    "repo_type": "github",
+    "last_updated": "2024-06-11T22:14:00Z",
+    "owner": "karlak",
+    "default_branch": "main",
+    "stars": 9,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 15680
+}
+    ,
+    "topics": 
+[
+  "godot-addon",
+  "godot4"
+]
+  },
+  "kibble-cabal/godot-rive": {
+    "repo_type": "github",
+    "last_updated": "2024-02-01T22:22:00Z",
+    "owner": "kibble-cabal",
+    "default_branch": "main",
+    "stars": 93,
+    "license": "Unknown",
+    "languages": 
+{
+  "C++": 79818,
+  "Python": 10129
+}
+    ,
+    "topics": 
+[
+  "gdextension",
+  "godot",
+  "godot4",
+  "rive",
+  "godot-plugin"
+]
+  },
+  "kuma-gee/godot-css-theme": {
+    "repo_type": "github",
+    "last_updated": "2024-09-06T17:28:12Z",
+    "owner": "kuma-gee",
+    "default_branch": "master",
+    "stars": 98,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 492784,
+  "CSS": 3063,
+  "Harbour": 470,
+  "Shell": 164
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "addon",
+  "css",
+  "theme",
+  "godot-engine"
+]
+  },
+  "marcelb/GodotSSRWater": {
+    "repo_type": "github",
+    "last_updated": "2024-09-24T22:48:40Z",
+    "owner": "marcelb",
+    "default_branch": "main",
+    "stars": 53,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 2535
+}
+    ,
+    "topics": 
+[]
+  },
+  "mathrick/godot-quick-layout-changer": {
+    "repo_type": "github",
+    "last_updated": "2024-09-14T19:16:24Z",
+    "owner": "mathrick",
+    "default_branch": "main",
+    "stars": 3,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 6036,
+  "Python": 2126
+}
+    ,
+    "topics": 
+[]
+  },
+  "migueldeicaza/SwiftGodot": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T13:34:19Z",
+    "owner": "migueldeicaza",
+    "default_branch": "main",
+    "stars": 1100,
+    "license": "MIT",
+    "languages": 
+{
+  "Swift": 1073834,
+  "C": 107947,
+  "Shell": 12469,
+  "GDScript": 3016,
+  "Makefile": 2205,
+  "HTML": 53
+}
+    ,
+    "topics": 
+[]
+  },
+  "naiiveprojects/gd.script_editor": {
+    "repo_type": "github",
+    "last_updated": "2024-07-02T08:16:19Z",
+    "owner": "naiiveprojects",
+    "default_branch": "3.x",
+    "stars": 3,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 6812
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-addons",
+  "godot-editor",
+  "godot-engine",
+  "godot-plugin"
+]
+  },
+  "neth392/godot-improved-json": {
+    "repo_type": "github",
+    "last_updated": "2024-09-20T16:00:05Z",
+    "owner": "neth392",
+    "default_branch": "main",
+    "stars": 14,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 570186,
+  "Shell": 157
+}
+    ,
+    "topics": 
+[]
+  },
+  "newjoker6/Asset-Drawer": {
+    "repo_type": "github",
+    "last_updated": "2024-09-20T21:53:01Z",
+    "owner": "newjoker6",
+    "default_branch": "main",
+    "stars": 139,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 3543
+}
+    ,
+    "topics": 
+[
+  "gdscript-language",
+  "godot4",
+  "gdscript",
+  "godot"
+]
+  },
+  "passivestar/godot-minimal-theme": {
+    "repo_type": "github",
+    "last_updated": "2024-07-16T10:56:45Z",
+    "owner": "passivestar",
+    "default_branch": "main",
+    "stars": 1671,
+    "license": "MIT",
+    "languages": 
+{}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "game-engine",
+  "gamedev"
+]
+  },
+  "phnix-dev/class-name-hider": {
+    "repo_type": "github",
+    "last_updated": "2024-08-22T16:57:13Z",
+    "owner": "phnix-dev",
+    "default_branch": "main",
+    "stars": 3,
+    "license": "MPL-2.0",
+    "languages": 
+{
+  "GDScript": 2539
+}
+    ,
+    "topics": 
+[]
+  },
+  "pkdawson/imgui-godot": {
+    "repo_type": "github",
+    "last_updated": "2024-09-10T20:16:19Z",
+    "owner": "pkdawson",
+    "default_branch": "master",
+    "stars": 417,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 123437,
+  "C#": 107657,
+  "Python": 23443,
+  "GDScript": 12927,
+  "CMake": 3518,
+  "GLSL": 748,
+  "Shell": 410
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "imgui",
+  "dear-imgui",
+  "godot4"
+]
+  },
+  "poingstudios/godot-admob-android": {
+    "repo_type": "github",
+    "last_updated": "2024-09-03T01:11:33Z",
+    "owner": "poingstudios",
+    "default_branch": "master",
+    "stars": 351,
+    "license": "MIT",
+    "languages": 
+{
+  "Kotlin": 81249,
+  "Shell": 1529,
+  "PowerShell": 1505
+}
+    ,
+    "topics": 
+[
+  "android",
+  "godot-admob",
+  "godot",
+  "admob",
+  "admob-plugin",
+  "admob-demo",
+  "admob-interstitial",
+  "admob-banner",
+  "module",
+  "plugin",
+  "godot-engine",
+  "godot-plugin",
+  "actions",
+  "github-actions",
+  "ump",
+  "gdscript",
+  "godotengine",
+  "mediation"
+]
+  },
+  "poingstudios/godot-admob-ios": {
+    "repo_type": "github",
+    "last_updated": "2024-08-16T01:19:26Z",
+    "owner": "poingstudios",
+    "default_branch": "master",
+    "stars": 104,
+    "license": "MIT",
+    "languages": 
+{
+  "Objective-C++": 94844,
+  "Objective-C": 41416,
+  "Python": 6345,
+  "C": 5638,
+  "Shell": 3653,
+  "Ruby": 2022,
+  "C++": 1453
+}
+    ,
+    "topics": 
+[
+  "admob",
+  "admob-demo",
+  "gdscript",
+  "github-actions",
+  "godot",
+  "godot-admob",
+  "godot-engine",
+  "ios",
+  "mediation",
+  "objective-c-plus-plus",
+  "plugin",
+  "ump"
+]
+  },
+  "poingstudios/godot-admob-plugin": {
+    "repo_type": "github",
+    "last_updated": "2024-05-31T01:49:41Z",
+    "owner": "poingstudios",
+    "default_branch": "master",
+    "stars": 312,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 112310,
+  "Python": 946
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "godotengine",
+  "editor",
+  "editor-plugin",
+  "godot-editor",
+  "admob",
+  "admob-plugin",
+  "ios",
+  "android",
+  "mediation"
+]
+  },
+  "real-ezTheDev/GodotEzDialoguePlugin": {
+    "repo_type": "github",
+    "last_updated": "2024-08-15T23:44:55Z",
+    "owner": "real-ezTheDev",
+    "default_branch": "main",
+    "stars": 136,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 59850
+}
+    ,
+    "topics": 
+[]
+  },
+  "reduz/larvita3": {
+    "repo_type": "github",
+    "last_updated": "2023-10-11T07:06:53Z",
+    "owner": "reduz",
+    "default_branch": "main",
+    "stars": 177,
+    "license": "MIT",
+    "languages": 
+{
+  "C": 22532761,
+  "C++": 22071959,
+  "Makefile": 559848,
+  "Perl": 558633,
+  "Lua": 351552,
+  "Assembly": 310754,
+  "DIGITAL Command Language": 206843,
+  "Shell": 89889,
+  "HTML": 82272,
+  "Batchfile": 47662,
+  "M4": 42520,
+  "Prolog": 29150,
+  "Python": 25982,
+  "GLSL": 24345,
+  "Objective-C": 11528,
+  "Euphoria": 9768,
+  "Rich Text Format": 6632,
+  "XS": 4319,
+  "Scheme": 4249,
+  "eC": 3575,
+  "Roff": 3366,
+  "C#": 2126,
+  "Elixir": 925,
+  "Emacs Lisp": 810
+}
+    ,
+    "topics": 
+[]
+  },
+  "thimenesup/GodotZigBindings": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T19:11:34Z",
+    "owner": "thimenesup",
+    "default_branch": "master",
+    "stars": 102,
+    "license": "MIT",
+    "languages": 
+{
+  "Zig": 339725
+}
+    ,
+    "topics": 
+[]
+  },
+  "timothyqiu/godot-csv-data-importer": {
+    "repo_type": "github",
+    "last_updated": "2023-04-04T06:10:45Z",
+    "owner": "timothyqiu",
+    "default_branch": "master",
+    "stars": 56,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 3509
+}
+    ,
+    "topics": 
+[
+  "godot-engine"
+]
+  },
+  "wojtossfm/godot_scml_importer": {
+    "repo_type": "github",
+    "last_updated": "2024-04-23T06:58:52Z",
+    "owner": "wojtossfm",
+    "default_branch": "master",
+    "stars": 33,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 36216
+}
+    ,
+    "topics": 
+[]
+  },
+  "xorblo-doitus/BBCodeEdit": {
+    "repo_type": "github",
+    "last_updated": "2024-09-20T12:23:53Z",
+    "owner": "xorblo-doitus",
+    "default_branch": "main",
+    "stars": 8,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 46569
+}
+    ,
+    "topics": 
+[
+  "bbcode",
+  "bbcode-editor",
+  "godot",
+  "godot-addon",
+  "godot-plugin",
+  "godot4"
+]
+  },
+  "zhangjt93/godot-imposter": {
+    "repo_type": "github",
+    "last_updated": "2024-09-03T07:36:56Z",
+    "owner": "zhangjt93",
+    "default_branch": "master",
+    "stars": 79,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 32093
+}
+    ,
+    "topics": 
+[]
+  },
+  "BenjaTK/Criss-Cross": {
+    "repo_type": "github",
+    "last_updated": "2023-09-11T03:22:52Z",
+    "owner": "BenjaTK",
+    "default_branch": "main",
+    "stars": 79,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 26913
+}
+    ,
+    "topics": 
+[]
+  },
+  "HungryProton/scatter": {
+    "repo_type": "github",
+    "last_updated": "2024-06-20T11:56:58Z",
+    "owner": "HungryProton",
+    "default_branch": "v4",
+    "stars": 2070,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 227884,
+  "GLSL": 1332
+}
+    ,
+    "topics": 
+[]
+  },
+  "Jairus04/Godot_4.0_Horror_Character_Controller": {
+    "repo_type": "github",
+    "last_updated": "2023-04-02T02:14:52Z",
+    "owner": "Jairus04",
+    "default_branch": "main",
+    "stars": 20,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 14663
+}
+    ,
+    "topics": 
+[]
+  },
+  "KoBeWi/Godot-Text-Database": {
+    "repo_type": "github",
+    "last_updated": "2024-08-13T13:18:16Z",
+    "owner": "KoBeWi",
+    "default_branch": "master",
+    "stars": 104,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 20019
+}
+    ,
+    "topics": 
+[
+  "godot"
+]
+  },
+  "duongvituan/godot-awesome-splash": {
+    "repo_type": "github",
+    "last_updated": "2023-07-09T12:38:26Z",
+    "owner": "duongvituan",
+    "default_branch": "master",
+    "stars": 246,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 118553
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "plugin",
+  "splash",
+  "awesome",
+  "gdaction",
+  "godot-engine",
+  "animation"
+]
+  },
+  "expressobits/character-controller": {
+    "repo_type": "github",
+    "last_updated": "2024-08-18T16:19:23Z",
+    "owner": "expressobits",
+    "default_branch": "main",
+    "stars": 309,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 36717
+}
+    ,
+    "topics": 
+[
+  "addon",
+  "charactercontroller",
+  "gdscript",
+  "godot",
+  "godot4",
+  "godotengine"
+]
+  },
+  "expressobits/inventory-system": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T12:05:27Z",
+    "owner": "expressobits",
+    "default_branch": "main",
+    "stars": 467,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 105139,
+  "CMake": 5740,
+  "C": 3227,
+  "Python": 2479
+}
+    ,
+    "topics": 
+[
+  "gdscript",
+  "godot",
+  "godot4",
+  "inventory",
+  "inventory-management",
+  "inventory-management-system",
+  "multiplayer",
+  "networking"
+]
+  },
+  "fenix-hub/godot-engine.easy-charts": {
+    "repo_type": "github",
+    "last_updated": "2024-06-24T07:14:00Z",
+    "owner": "fenix-hub",
+    "default_branch": "main",
+    "stars": 643,
+    "license": "MIT",
+    "languages": 
+{
+  "GDScript": 81353
+}
+    ,
+    "topics": 
+[
+  "godot-engine",
+  "charts",
+  "plot",
+  "tool",
+  "plugin",
+  "easy-charts",
+  "plot-charts",
+  "addon",
+  "hacktoberfest"
+]
+  },
+  "majikayogames/SimpleFPSController": {
+    "repo_type": "github",
+    "last_updated": "2024-09-18T02:26:54Z",
+    "owner": "majikayogames",
+    "default_branch": "main",
+    "stars": 41,
+    "license": "CC0-1.0",
+    "languages": 
+{
+  "GDScript": 27579
+}
+    ,
+    "topics": 
+[]
+  },
+  "rametta/godot-polygon-generator": {
+    "repo_type": "github",
+    "last_updated": "2023-08-28T13:56:03Z",
+    "owner": "rametta",
+    "default_branch": "main",
+    "stars": 14,
+    "license": "Unknown",
+    "languages": 
+{
+  "GDScript": 2929
+}
+    ,
+    "topics": 
+[
+  "godot",
+  "godot-engine",
+  "godot4"
+]
+  },
+  "Lcbx/GdScript2All": {
+    "repo_type": "github",
+    "last_updated": "2024-09-28T13:30:11Z",
+    "owner": "Lcbx",
+    "default_branch": "main",
+    "stars": 111,
+    "license": "GPL-3.0",
+    "languages": 
+{
+  "Python": 203687,
+  "C++": 27340,
+  "GDScript": 12760,
+  "C#": 12233
+}
+    ,
+    "topics": 
+[
+  "cpp",
+  "csharp",
+  "gdscript",
+  "godot",
+  "godot4",
+  "transpiler",
+  "python3",
+  "programming-language",
+  "scripting",
+  "scripting-language"
+]
+  },
+  "GodotSteam/GodotSteam": {
+    "repo_type": "github",
+    "last_updated": "2024-09-27T22:22:32Z",
+    "owner": "GodotSteam",
+    "default_branch": "godot4",
+    "stars": 2750,
+    "license": "MIT",
+    "languages": 
+{
+  "C++": 838664,
+  "C": 8345,
+  "Python": 243
+}
+    ,
+    "topics": 
+[
+  "godotengine",
+  "steamworks",
+  "steam-api",
+  "godot-engine",
+  "godot",
+  "game-development",
+  "gamedev"
+]
+  }
+}

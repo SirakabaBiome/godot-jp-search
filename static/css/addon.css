@@ -1,0 +1,359 @@
+:root {
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 720px;
+    --header-height: 60px;
+    --footer-height: 60px;
+    --radius: 8px;
+    --theme: rgb(255, 255, 255);
+    --entry: rgb(255, 255, 255);
+    --primary: rgb(30, 30, 30);
+    --secondary: rgb(108, 108, 108);
+    --tertiary: rgb(214, 214, 214);
+    --content: rgb(31, 31, 31);
+    --code-block-bg: rgb(28, 29, 33);
+    --code-bg: rgb(245, 245, 245);
+    --border: rgb(238, 238, 238);
+
+    --link: rgb(139, 139, 215);
+}
+
+.collapse {
+    display: none !important;
+}
+
+.collapse-btn {
+    display: inline;
+    padding: 4px 4px;
+    background: var(--tertiary);
+    border-radius: 6px;
+    transition: transform 0.1s;
+
+    /* 薄くする   */
+    color: var(--secondary);
+}
+
+.top-h2{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pin-container{
+    display: inline-flex;
+}
+
+.pin-btn {
+    display: inline;
+    padding: 4px 4px;
+    background: var(--tertiary);
+    border-radius: 6px;
+    transition: transform 0.1s;
+    margin-left: 64px;
+}
+
+.pin-on{
+    color: #ff8880;
+}
+
+.labal-pin{
+    color: var(--secondary);
+}
+
+.filter-container {
+    background: var(--entry);
+    border: 4px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 0 0 20px;
+}
+
+.grid-container{
+    border: 4px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 0 0 20px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4000;
+}
+
+.link {
+    color: var(--link);
+    /*    アンダーライン*/
+    text-decoration: underline;
+}
+
+.result-zero-tag {
+    color: var(--secondary);
+    background: var(--tertiary);
+    font-weight: normal;
+}
+
+.result-zero-tag sup {
+    color: #fca6a1;
+    background: var(--tertiary);
+}
+
+.addon-tags li {
+    display: inline-block;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.addon-tags img[gdicon] {
+    display: inline;
+    height: 24px;
+    top: 4px;
+    position: relative;
+}
+
+.addon-display-columns {
+    margin: 10px 0;
+}
+
+.addon-display-columns label {
+    margin: 0 10px;
+    padding: 12px 18px;
+    background: var(--tertiary);
+    border-radius: 6px;
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+.addon-display-columns label input[type="radio"] {
+    margin-right: 6px;
+    transform: scale(1.5);
+}
+
+.addon-andor {
+    height: 36px;
+}
+
+.addon-andor label {
+    margin: 0 10px;
+    padding: 6px 8px;
+    background: var(--tertiary);
+    border-radius: 6px;
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+.addon-tags label {
+    display: block;
+    padding: 3px 10px;
+    /*background-color: #56575e;*/
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    /*color: white;*/
+    text-transform: capitalize;
+
+    /* 選択不可 */
+    user-select: none;
+}
+
+/*checkbox*/
+.addon-tags input[type="checkbox"] {
+    margin-right: 6px;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.addon-tags label:hover {
+    color: #4db0a2 !important;
+}
+
+.addon-tags label:active {
+    color: #4db0a2 !important;
+}
+
+.addon-separator {
+    margin: 10px 0 5px;
+    padding: 2px 0;
+    background: var(--tertiary);
+}
+
+.clear-btn {
+    margin: 10px;
+    padding: 6px 12px;
+    background: var(--tertiary);
+    border-radius: 6px;
+    transition: transform 0.1s;
+}
+
+
+#AddonFilteredList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-height: 400px;
+    gap: 12px;
+    display: grid;
+}
+
+#AddonFilteredList li {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    max-width: var(--main-width);
+    /*flex: 1 1 var(--main-width);*/
+}
+
+.addon-entry {
+    position: relative;
+    margin-bottom: 8px;
+    /*padding: var(--gap);*/
+    background: var(--entry);
+    border-radius: var(--radius);
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    border: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 4px !important;
+
+    width: 100%;
+    min-width: var(--main-width);
+}
+
+.addon .post-div {
+    width: 100%;
+}
+
+.addon .entry-header {
+    width: 100%;
+    border-bottom: 1px solid var(--content);
+}
+
+.addon .entry-header-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding: 4px 0;
+}
+
+/*先頭アイテムは左寄せ*/
+.addon .entry-header-row > *:first-child {
+    margin-right: auto;
+}
+
+.addon .entry-hint-parent a {
+    text-decoration: underline;
+}
+
+.addon .entry-icon {
+    margin-right: 10px;
+}
+
+.addon .last-updated-label {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-left: 10px;
+}
+
+.addon .last-updated {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.addon .last-updated-label-list {
+    font-size: 12px;
+    color: var(--secondary);
+    margin-left: 10px;
+}
+
+.addon .last-updated-list {
+    font-size: 12px;
+    color: var(--secondary);
+}
+
+.addon ul.entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0;
+    list-style: none;
+    /* 子要素の間隔 */
+    gap: 4px;
+}
+
+.addon .entry-tags li {
+    font-size: 14px;
+    display: block;
+    padding: 2px 1px;
+    background-color: var(--tertiary);
+    border-radius: 6px;
+    transition: transform .1s;
+    text-transform: capitalize;
+    cursor: default !important;
+    color: var(--secondary);
+}
+
+.addon .entry-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.addon .entry-content {
+    /* 横並べ */
+    display: flex;
+    /* 子要素の間隔 */
+    gap: 10px;
+    color: var(--content);
+}
+
+.addon .entry-thumbnail {
+    min-width: 96px;
+    min-height: 96px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.addon .entry-thumbnail img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+}
+
+.addon .sub-images{
+    list-style: none;
+    min-height: 48px;
+    /*  横向き  */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*  子要素の間隔  */
+    gap: 4px;
+}
+
+.addon .sub-images a {
+}
+.addon .sub-images img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.addon .entry-summary {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.addon .entry-summary a {
+    text-decoration: underline;
+    color: var(--link);
+}

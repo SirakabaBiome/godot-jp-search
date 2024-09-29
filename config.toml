@@ -1,0 +1,45 @@
+baseURL = 'https://godot-japan.com/'
+languageCode = 'ja-JP'
+title = 'Godot Japan'
+theme = 'GodotJapan2024'
+
+defaultContentLanguage = "ja"
+
+#enableGitInfo = true
+ignoreLogs = ['error-remote-getjson']
+
+[pramas]
+dafaultNoimage = "/images/m_e_other_501.png"
+imageQuality = 75
+
+[mediaTypes]
+  [mediaTypes.'text/json']
+    suffixes = ['json']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
+      block = true
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 1
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "keyword"
+    weight = 100
+
+  [[related.indices]]
+    name = "tags"
+    weight = 80
+
+  [[related.indices]]
+    name = "date"
+    weight = 10

@@ -1,0 +1,1997 @@
+{{- define "main" }}
+
+{{ $file := "static/data/addon.json" }}
+
+{{- if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+        {{ .Description }}
+    </div>
+    {{- end }}
+</header>
+{{- end }}
+
+<!--概要-->
+<div style="margin: 0 0 1em 0;">
+    <p>
+        {{- if eq site.Language.Lang "ja" }}
+        Godot Engineのアドオンを一覧表示しています。 <a class="link" href="https://faultun.com/ko/addon">한국어</a> <a class="link" href="https://faultun.com/en/addon">English</a>
+        {{- else if eq site.Language.Lang "ko" }}
+        Godot Engine의 애드온을 목록으로 표시하고 있습니다.<a class="link" href="https://faultun.com/ja/addon">日本語</a><a class="link" href="https://faultun.com/en/addon">English</a>
+        {{- else }}
+        This is a list of Godot Engine add-ons.<a class="link" href="https://faultun.com/ja/addon">日本語</a><a class="link" href="https://faultun.com/ko/addon">한국어</a>
+        {{- end }}
+    </p>
+
+    <h3>
+        <button class="collapse-btn" data-collapse-btn="gaiyou">
+            <i class="fas fa-fw fa-eye collapse"></i>
+            <i class="fas fa-fw fa-eye-slash"></i>
+        </button>
+        {{- if eq site.Language.Lang "ja" }}
+        このサイトについて
+        {{- else if eq site.Language.Lang "ko" }}
+        이 사이트에 대해
+        {{- else }}
+        About this site
+        {{- end }}
+    </h3>
+
+    <div class="collapse" data-collapse-toggle="gaiyou">
+        {{- if eq site.Language.Lang "ja" }}
+        <p>
+            TODO 概要はどこかにいい感じに書く
+            概要、評価などはすべて筆者（ふぉるた）によるものです。<br>
+            このサイトは非公式です。Godot公式・Godotコミュニティとは関係ありませんのでご注意ください。<br><br>
+            誤りや追加要望があれば、こちらの<a class="link" href="https://forms.gle/DgCmjtGSSNrNojGW6">Google Form</a>からお知らせください。<br><br>
+            Godot4〜のものを都度追加していきます。<br>
+        </p>
+        <!-- セパレーター  -->
+        <div class="addon-separator"></div>
+        <p>
+            個人的な考え<br>
+            GitHubのスター数はそこまであてにならないと思っています。READMEの小綺麗さやyoutubeとかではねただけの可能性もあるので……<br>
+            自分のゲームで使えるかどうかで判断するのが一番！<br><br>
+            また、<img style="display: inline" gdicon src="/icon/AssetLib.svg" alt="AssetLib">AssetLibにないものが意外とスター数が少なくても良いものが多いイメージがあるので探してみてください。<br>
+        </p>
+        <!-- セパレーター  -->
+        <div class="addon-separator"></div>
+        <p>
+            ☑をつけた状態でブックマークすると検索条件を保存できます。<br>
+        </p>
+        {{- else if eq site.Language.Lang "ko" }}
+        <p>
+            요약, 평가 등은 모두 저자 (folt-a)가 작성했습니다.<br>
+            공식적이지 않습니다. Godot 공식 또는 Godot 커뮤니티에서 제공하는 것이 아닙니다. 주의해 주십시오.<br><br>
+            오류 또는 추가 요청이 있으면 이 <a class="link" href="https://forms.gle/DgCmjtGSSNrNojGW6">Google Form</a>을 통해 알려주십시오. <br><br>
+            Godot4 이상의 것들을 계속 추가할 예정입니다.
+        </p>
+        <!-- セパレーター  -->
+        <div class="addon-separator"></div>
+        <p>
+            ☑을 체크한 상태로 북마크하면 검색 조건을 저장할 수 있습니다.
+        </p>
+        {{- else }}
+        <p>
+            Summaries, evaluations, etc. are all written by the author (folt-a).<br>
+            This Site is unofficial. Please note that it is not provided by Godot official or Godot community.<br><br>
+            If you have any errors or additional requests, please let us know via this <a class="link" href="https://forms.gle/DgCmjtGSSNrNojGW6">Google Form</a>. <br><br>
+            We will continue to add Godot4 and later versions.
+        </p>
+        <!-- セパレーター  -->
+        <div class="addon-separator"></div>
+        <p>
+            If you bookmark it with a check mark, you can save the search conditions.
+        </p>
+        {{- end }}
+    </div>
+</div>
+
+{{ if (fileExists $file) }}
+{{ with (os.Stat $file) }}
+<p>最終更新日: {{ .ModTime.Format "2006-01-02" }}</p>
+{{ end }}
+{{ end }}
+
+<div class="filter-container">
+    <h2 class="top-h2">
+        <span>
+            <button class="collapse-btn" data-collapse-btn="filterall">
+                <i class="fas fa-fw fa-eye"></i>
+                <i class="fas fa-fw fa-eye-slash collapse"></i>
+            </button>
+            <span>
+                {{- if eq site.Language.Lang "ja" }}
+                検索条件
+                {{- else if eq site.Language.Lang "ko" }}
+                검색 조건
+                {{- else }}
+                Search
+                {{- end }}
+            </span>
+        </span>
+        <span class="pin-container">
+            <button id="PinBtn" class="pin-btn" data-pin-btn>
+                <i class="fas fa-fw fa-thumbtack"></i>
+                {{- if eq site.Language.Lang "ja" }}
+                条件を上に固定する
+                {{- else if eq site.Language.Lang "ko" }}
+                조건을 고정
+                {{- else }}
+                Pin fixed top
+                {{- end }}
+            </button>
+            <span class="labal-pin">
+
+            </span>
+        </span>
+    </h2>
+    <!-- セパレーター  -->
+    <div class="addon-separator" data-collapse-toggle="filterall"></div>
+
+    <div data-collapse-toggle="filterall" style="padding: 0">
+        <!-- タグフィルタ -->
+        <div class="tag-filter">
+            <div id="ForDuplicateExclude">
+                <h3 data-tag-head>
+                    <button class="collapse-btn" data-collapse-btn="daibunrui">
+                        <i class="fas fa-fw fa-eye"></i>
+                        <i class="fas fa-fw fa-eye-slash collapse"></i>
+                    </button>
+                    {{- if eq site.Language.Lang "ja" }}
+                    大分類
+                    {{- else if eq site.Language.Lang "ko" }}
+                    대분류
+                    {{- else }}
+                    Category
+                    {{- end }}
+                </h3>
+
+                <ul class="addon-tags" data-collapse-toggle="daibunrui">
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="2d">
+                            <img gdicon src="/icon/Node2D.svg" alt="Node2D">
+                            2D
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="3d" />
+                            <img gdicon src="/icon/Node3D.svg" alt="Node3D">
+                            3D
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="ui" />
+                            <img gdicon src="/icon/Control.svg" alt="Control">
+                            UI
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="other" />
+                            <img gdicon src="/icon/Node.svg" alt="Node">
+                            他
+                            <sup></sup>
+                        </label>
+                    </li>
+                </ul>
+
+                <ul class="addon-tags" data-collapse-toggle="daibunrui">
+                    <li>
+                        <label data-not-tag-condition>
+                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="notdemo" />
+                            <i class="fas fa-fw fa-do-not-enter"></i>
+                            {{- if eq site.Language.Lang "ja" }}
+                            デモを除外する
+                            {{- else if eq site.Language.Lang "ko" }}
+                            데모 제외
+                            {{- else }}
+                            Exclude demo
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-not-tag-condition>
+                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="withsummary" />
+                            <i class="fas fa-fw fa-comment"></i>
+                            {{- if eq site.Language.Lang "ja" }}
+                            概要・解説付き
+                            {{- else if eq site.Language.Lang "ko" }}
+                            요약 및 설명
+                            {{- else }}
+                            With Summary
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                </ul>
+
+                <!-- セパレーター  -->
+                <div class="addon-separator"></div>
+
+                <h3 data-tag-head>
+                    <button class="collapse-btn" data-collapse-btn="specialtag">
+                        <i class="fas fa-fw fa-eye"></i>
+                        <i class="fas fa-fw fa-eye-slash collapse"></i>
+                    </button>
+
+                    {{- if eq site.Language.Lang "ja" }}
+                    よく使いそうなタグ
+                    {{- else if eq site.Language.Lang "ko" }}
+                    자주 사용되는 태그
+                    {{- else }}
+                    Popular Tags
+                    {{- end }}
+                </h3>
+
+                <ul class="addon-tags" data-collapse-toggle="specialtag">
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="animation" />
+                            <img gdicon src="/icon/AnimationPlayer.svg" alt="Animation">
+                            {{- if eq site.Language.Lang "ja" }}
+                            アニメーション
+                            {{- else if eq site.Language.Lang "ko" }}
+                            애니메이션
+                            {{- else }}
+                            Animation
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="audio" />
+                            <img gdicon src="/icon/AudioStream.svg" alt="AudioStream">
+                            {{- if eq site.Language.Lang "ja" }}
+                            オーディオ
+                            {{- else if eq site.Language.Lang "ko" }}
+                            오디오
+                            {{- else }}
+                            Audio
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="navigation" />
+                            <img gdicon src="/icon/NavigationPolygon.svg" alt="NavigationPolygon">
+                            {{- if eq site.Language.Lang "ja" }}
+                            ナビゲーション
+                            {{- else if eq site.Language.Lang "ko" }}
+                            내비게이션
+                            {{- else }}
+                            Navigation
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="multiplayer" />
+                            <img gdicon src="/icon/MultiplayerSynchronizer.svg" alt="MultiplayerSynchronizer">
+                            {{- if eq site.Language.Lang "ja" }}
+                            マルチプレイ
+                            {{- else if eq site.Language.Lang "ko" }}
+                            멀티플레이
+                            {{- else }}
+                            Multiplayer
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="network" />
+                            <img gdicon src="/icon/MultiplayerSynchronizer.svg" alt="MultiplayerSynchronizer">
+                            {{- if eq site.Language.Lang "ja" }}
+                            ネットワーク
+                            {{- else if eq site.Language.Lang "ko" }}
+                            네트워크
+                            {{- else }}
+                            Networking
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="shader" />
+                            <img gdicon src="/icon/Shader.svg" alt="Shader">
+                            {{- if eq site.Language.Lang "ja" }}
+                            シェーダー
+                            {{- else if eq site.Language.Lang "ko" }}
+                            쉐이더
+                            {{- else }}
+                            Shader
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="xr" />
+                            <img gdicon src="/icon/XRCamera3D.svg" alt="XRCamera3D">
+                            {{- if eq site.Language.Lang "ja" }}
+                            AR/VR
+                            {{- else if eq site.Language.Lang "ko" }}
+                            AR/VR
+                            {{- else }}
+                            AR/VR
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="physics" />
+                            <img gdicon src="/icon/ViewportSpeed.svg" alt="Physics">
+                            {{- if eq site.Language.Lang "ja" }}
+                            物理
+                            {{- else if eq site.Language.Lang "ko" }}
+                            물리
+                            {{- else }}
+                            Physics
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                </ul>
+
+                <ul class="addon-tags" data-collapse-toggle="specialtag">
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="gdextension" />
+                            GDExtension
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="module" />
+                            {{- if eq site.Language.Lang "ja" }}
+                            モジュール
+                            {{- else if eq site.Language.Lang "ko" }}
+                            모듈
+                            {{- else }}
+                            Module
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="csharponly" />
+                            {{- if eq site.Language.Lang "ja" }}
+                            C#のみ
+                            {{- else if eq site.Language.Lang "ko" }}
+                            C#만
+                            {{- else }}
+                            C# Only
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="csharpwrapper" />
+                            {{- if eq site.Language.Lang "ja" }}
+                            C#ラッパーあり
+                            {{- else if eq site.Language.Lang "ko" }}
+                            C# 래퍼 있음
+                            {{- else }}
+                            C# Wrapper
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                </ul>
+
+                <!-- セパレーター  -->
+                <div class="addon-separator" data-collapse-toggle="specialtag"></div>
+
+                <ul class="addon-tags" data-collapse-toggle="specialtag">
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="editoronly" />
+                            <img gdicon src="/icon/EditorPlugin.svg" alt="EditorPlugin">
+                            {{- if eq site.Language.Lang "ja" }}
+                            エディタのみ
+                            {{- else if eq site.Language.Lang "ko" }}
+                            에디터 전용
+                            {{- else }}
+                            Editor Only
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-not-tag-condition>
+                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="assetlib" />
+                            <img gdicon src="/icon/AssetLib.svg" alt="AssetLib">
+                            {{- if eq site.Language.Lang "ja" }}
+                            AssetLibにある
+                            {{- else if eq site.Language.Lang "ko" }}
+                            AssetLib에 있는
+                            {{- else }}
+                            In AssetLib
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+                    <li>
+                        <label data-not-tag-condition>
+                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="notassetlib" />
+                            <img gdicon src="/icon/AssetLib.svg" alt="AssetLib">
+                            {{- if eq site.Language.Lang "ja" }}
+                            AssetLibにない
+                            {{- else if eq site.Language.Lang "ko" }}
+                            AssetLib에 없는
+                            {{- else }}
+                            Not in AssetLib
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label data-not-tag-condition>
+                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="github" />
+                            <i class="fab fa-fw fa-github"></i>
+                            GitHub
+                            <sup></sup>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label data-not-tag-condition>
+                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="gitlab" />
+                            <i class="fab fa-fw fa-gitlab"></i>
+                            GitLab
+                            <sup></sup>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="other" />
+                            <i class="fas fa-fw fa-link"></i>
+                            {{- if eq site.Language.Lang "ja" }}
+                            その他サイト
+                            {{- else if eq site.Language.Lang "ko" }}
+                            다른 링크
+                            {{- else }}
+                            Other Site
+                            {{- end }}
+                            <sup></sup>
+                        </label>
+                    </li>
+
+                    <li>
+                        {{- if eq site.Language.Lang "ja" }}
+                        <label title="ふぉるたがプロジェクトで使っているもの" data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="foltause" />
+                            使ってるやつ
+                            <sup></sup>
+                        </label>
+                        {{- else if eq site.Language.Lang "ko" }}
+                        <label title="저자가 프로젝트에서 사용하는 것" data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="foltause" />
+                            저자 사용
+                            <sup></sup>
+                        </label>
+                        {{- else }}
+                        <label title="What the author uses in the project" data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="foltause" />
+                            Author Use
+                            <sup></sup>
+                        </label>
+                        {{- end }}
+                    </li>
+
+                    <li>
+                        {{- if eq site.Language.Lang "ja" }}
+                        <label title="" data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="needcheck" />
+                            未チェック
+                            <sup></sup>
+                        </label>
+                        {{- else if eq site.Language.Lang "ko" }}
+                        <label title="" data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="needcheck" />
+                            미확인
+                            <sup></sup>
+                        </label>
+                        {{- else }}
+                        <label title="" data-commonly-tag>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="needcheck" />
+                            Need Check
+                            <sup></sup>
+                        </label>
+                        {{- end }}
+                    </li>
+                </ul>
+
+                <!-- セパレーター  -->
+                <div class="addon-separator"></div>
+
+                <h3 data-tag-head>
+                    <button class="collapse-btn" data-collapse-btn="license">
+                        <i class="fas fa-fw fa-eye"></i>
+                        <i class="fas fa-fw fa-eye-slash collapse"></i>
+                    </button>
+
+                    {{- if eq site.Language.Lang "ja" }}
+                    ライセンス他
+                    {{- else if eq site.Language.Lang "ko" }}
+                    라이센스 등
+                    {{- else }}
+                    License etc
+                    {{- end }}
+                </h3>
+
+                <ul id="FilterLicenseTags" class="addon-tags" data-collapse-toggle="license">
+                    <li data-license-tag-template style="display: none">
+                        <label data-tag-label>
+                            <input class="checkTag" data-check-tag type="checkbox" name="licenseTag" value="" data-tag-checkbox />
+                            <span data-tag-label-text></span>
+                            <sup data-tag-sup></sup>
+                        </label>
+                    </li>
+                </ul>
+
+                <!-- セパレーター  -->
+                <div class="addon-separator"></div>
+
+                <h3 data-tag-head>
+                    <button class="collapse-btn" data-collapse-btn="tag">
+                        <i class="fas fa-fw fa-eye"></i>
+                        <i class="fas fa-fw fa-eye-slash collapse"></i>
+                    </button>
+
+                    {{- if eq site.Language.Lang "ja" }}
+                    タグ
+                    {{- else if eq site.Language.Lang "ko" }}
+                    태그
+                    {{- else }}
+                    Tags
+                    {{- end }}
+                </h3>
+
+                <ul id="FilterTags" class="addon-tags" data-collapse-toggle="tag">
+                    <li data-tag-template style="display: none">
+                        <label data-tag-label>
+                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="" data-tag-checkbox />
+                            <span data-tag-label-text></span>
+                            <sup data-tag-sup></sup>
+                        </label>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- セパレーター  -->
+            <div class="addon-separator"></div>
+
+            <h3 data-tag-head>
+                <button class="collapse-btn" data-collapse-btn="filter">
+                    <i class="fas fa-fw fa-eye"></i>
+                    <i class="fas fa-fw fa-eye-slash collapse"></i>
+                </button>
+
+                {{- if eq site.Language.Lang "ja" }}
+                フィルタ組み合わせ方法
+                {{- else if eq site.Language.Lang "ko" }}
+                필터 조합 방법
+                {{- else }}
+                Filter Combination
+                {{- end }}
+            </h3>
+
+            <!-- OR, And のラジオボタン -->
+            <div class="addon-andor" data-collapse-toggle="filter">
+                <label for="FilterAnd">
+                    <input type="radio" id="FilterAnd" name="filter" value="and" checked>
+                    AND
+                </label>
+                <label for="FilterOr">
+                    <input type="radio" id="FilterOr" name="filter" value="or">
+                    OR
+                </label>
+            </div>
+
+            <!-- セパレーター  -->
+            <div class="addon-separator"></div>
+
+            <h3 data-tag-head>
+                <button class="collapse-btn" data-collapse-btn="exclude">
+                    <i class="fas fa-fw fa-eye collapse"></i>
+                    <i class="fas fa-fw fa-eye-slash"></i>
+                </button>
+
+                {{- if eq site.Language.Lang "ja" }}
+                除外条件
+                {{- else if eq site.Language.Lang "ko" }}
+                제외 조건
+                {{- else }}
+                Exclusion Condition
+                {{- end }}
+            </h3>
+
+            <div id="ExcludeTags" class="collapse" data-collapse-toggle="exclude" style="padding-left: 32px;">
+            </div>
+
+            <!-- セパレーター  -->
+            <div class="addon-separator"></div>
+
+            <!-- ワード検索  -->
+
+            <h3 data-tag-head>
+                <button class="collapse-btn" data-collapse-btn="search">
+                    <i class="fas fa-fw fa-eye"></i>
+                    <i class="fas fa-fw fa-eye-slash collapse"></i>
+                </button>
+
+                {{- if eq site.Language.Lang "ja" }}
+                ワード検索(部分一致)
+                {{- else if eq site.Language.Lang "ko" }}
+                단어 검색(부분 일치)
+                {{- else }}
+                Word Search(Partial Match)
+                {{- end }}
+            </h3>
+
+            <div class="addon-search" data-collapse-toggle="search">
+                <!-- プルダウンで対象を選択 title, author, summary -->
+                <select id="SearchTarget">
+                    <option value="any" selected>
+                        {{- if eq site.Language.Lang "ja" }}
+                        全て
+                        {{- else if eq site.Language.Lang "ko" }}
+                        모두
+                        {{- else }}
+                        ALL
+                        {{- end }}
+                    </option>
+                    <option value="title">
+                        {{- if eq site.Language.Lang "ja" }}
+                        アドオン名
+                        {{- else if eq site.Language.Lang "ko" }}
+                        애드온 이름
+                        {{- else }}
+                        Addon Name
+                        {{- end }}
+                    </option>
+                    <option value="author">
+                        {{- if eq site.Language.Lang "ja" }}
+                        作者名
+                        {{- else if eq site.Language.Lang "ko" }}
+                        작성자 이름
+                        {{- else }}
+                        Author Name
+                        {{- end }}
+                    </option>
+                    <option value="summary">
+                        {{- if eq site.Language.Lang "ja" }}
+                        概要
+                        {{- else if eq site.Language.Lang "ko" }}
+                        요약
+                        {{- else }}
+                        Summary
+                        {{- end }}
+                    </option>
+                </select>
+                <div id="searchbox">
+                    <input id="SearchInput" placeholder="検索" type="text" autocomplete="off" oninput="update()">
+                </div>
+            </div>
+
+            <!-- セパレーター  -->
+            <div class="addon-separator"></div>
+
+            <!-- クリア -->
+            <h3>
+                <button class="collapse-btn" data-collapse-btn="clear">
+                    <i class="fas fa-fw fa-eye"></i>
+                    <i class="fas fa-fw fa-eye-slash collapse"></i>
+                </button>
+                {{- if eq site.Language.Lang "ja" }}
+                条件全削除
+                {{- else if eq site.Language.Lang "ko" }}
+                모두 체크 해제
+                {{- else }}
+                Clear all
+                {{- end }}
+            </h3>
+
+            <div data-collapse-toggle="clear">
+                <button class="clear-btn" onclick="clearAll()">
+                    {{- if eq site.Language.Lang "ja" }}
+                    すべて☑を外す
+                    {{- else if eq site.Language.Lang "ko" }}
+                    모두 체크 해제
+                    {{- else }}
+                    Clear all
+                    {{- end }}
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="filter-container">
+    <h3>
+        <button class="collapse-btn" data-collapse-btn="order">
+            <i class="fas fa-fw fa-eye"></i>
+            <i class="fas fa-fw fa-eye-slash collapse"></i>
+        </button>
+        {{- if eq site.Language.Lang "ja" }}
+        表示順
+        {{- else if eq site.Language.Lang "ko" }}
+        표시 순서
+        {{- else }}
+        Display Order
+        {{- end }}
+    </h3>
+
+    <!-- 表示順 のラジオボタン -->
+    <div class="addon-andor" data-collapse-toggle="order">
+        <label>
+            <input type="radio" name="order" value="updated-addon-desc" id="order-updated-addon-desc" checked>
+            {{- if eq site.Language.Lang "ja" }}
+            アドオン最新日順
+            {{- else if eq site.Language.Lang "ko" }}
+            애드온 최신 날짜 순
+            {{- else }}
+            Addon Last Updated
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="add-addon-desc" id="order-add-addon-desc">
+            {{- if eq site.Language.Lang "ja" }}
+            この一覧更新最新順
+            {{- else if eq site.Language.Lang "ko" }}
+            추가된 순
+            {{- else }}
+            Addon Added Desc
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="stars-desc" id="order-stars-desc">
+            {{- if eq site.Language.Lang "ja" }}
+            GitHubスター数多い順
+            {{- else if eq site.Language.Lang "ko" }}
+            GitHub 스타 수 순
+            {{- else }}
+            GitHub Stars
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="title-asc" id="order-title-asc">
+            {{- if eq site.Language.Lang "ja" }}
+            アドオン名アルファベット順
+            {{- else if eq site.Language.Lang "ko" }}
+            애드온 이름 오름차순
+            {{- else }}
+            Addon Name Asc
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="author-asc" id="order-author-asc">
+            {{- if eq site.Language.Lang "ja" }}
+            作者名アルファベット順
+            {{- else if eq site.Language.Lang "ko" }}
+            작성자 이름 오름차순
+            {{- else }}
+            Author Name Asc
+            {{- end }}
+        </label>
+    </div>
+
+    <div class="addon-andor" data-collapse-toggle="order">
+        <label>
+            <input type="radio" name="order" value="updated-addon-asc" id="order-updated-addon-asc">
+            {{- if eq site.Language.Lang "ja" }}
+            アドオン古い日順
+            {{- else if eq site.Language.Lang "ko" }}
+            애드온 오래된 날짜 순
+            {{- else }}
+            Addon Old Updated
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="add-addon-asc" id="order-add-addon-asc">
+            {{- if eq site.Language.Lang "ja" }}
+            この一覧更新古い順
+            {{- else if eq site.Language.Lang "ko" }}
+            추가된 순
+            {{- else }}
+            Addon Added Asc
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="stars-asc" id="order-stars-asc">
+            {{- if eq site.Language.Lang "ja" }}
+            GitHubスター少ない順
+            {{- else if eq site.Language.Lang "ko" }}
+            GitHub 스타 적은 순
+            {{- else }}
+            GitHub Stars Asc
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="title-desc" id="order-title-desc">
+            {{- if eq site.Language.Lang "ja" }}
+            アドオン名アルファベット逆順
+            {{- else if eq site.Language.Lang "ko" }}
+            애드온 이름 내림차순
+            {{- else }}
+            Addon Name Desc
+            {{- end }}
+        </label>
+        <label>
+            <input type="radio" name="order" value="author-desc" id="order-author-desc">
+            {{- if eq site.Language.Lang "ja" }}
+            作者名アルファベット逆順
+            {{- else if eq site.Language.Lang "ko" }}
+            작성자 이름 내림차순
+            {{- else }}
+            Author Name Desc
+            {{- end }}
+        </label>
+    </div>
+
+    <!-- セパレーター  -->
+    <div class="addon-separator"></div>
+
+    <h3>
+        <button class="collapse-btn" data-collapse-btn="display-col">
+            <i class="fas fa-fw fa-eye"></i>
+            <i class="fas fa-fw fa-eye-slash collapse"></i>
+        </button>
+        {{- if eq site.Language.Lang "ja" }}
+        表示列数
+        {{- else if eq site.Language.Lang "ko" }}
+        열 수
+        {{- else }}
+        Column
+        {{- end }}
+    </h3>
+
+    <div id="ColControls" style="margin-top: 1em ;" class="addon-display-columns" data-collapse-toggle="display-col">
+    </div>
+</div>
+
+<!--Grid-->
+<div class="grid-container">
+    {{ if (fileExists $file) }}
+    {{ with (os.Stat $file) }}
+    <p>最終更新日時: {{ .ModTime.Format "2006-01-02 15:04" }}</p>
+    {{ end }}
+    {{ end }}
+
+    <!--　件数 -->
+    <div class="addon-count">
+        <span id="AddonCount"></span>
+    </div>
+
+    <!-- JavaScriptからDOM構築するための空の検索結果一覧リスト -->
+    <ul id="AddonFilteredList">
+    </ul>
+
+    <!-- アドオンカード　テンプレート -->
+    <ul class="addon" style="display: none">
+        <li>
+            <span data-github-template><i class="fab fa-fw fa-github"></i></span>
+            <span data-gitlab-template><i class="fab fa-fw fa-gitlab"></i></span>
+            <span data-otherlink-template><i class="fas fa-fw fa-link"></i></span>
+            <span data-star-template><i class="fas fa-fw fa-star fa-xs" style="margin-left: 4px"></i></span>
+        </li>
+        <li class="addon sub-thumbnail" data-sub-thumbnail-template>
+            <a href="" onclick="return showImagesLightBox();">
+                <img alt="" src=""/>
+            </a>
+        </li>
+        <li data-template>
+            <div class="addon addon-entry" style="transition: none">
+                <div class="addon post-div">
+                    <header class="addon entry-header">
+                        <div class="addon entry-header-row">
+                            <h2 class="addon entry-hint-parent" data-entry-title>
+                                <a href="" target="_blank" data-entry-title-link>
+                                    <span class="addon entry-icon" data-entry-icon></span>
+                                </a>
+                            </h2>
+                            <span class="addon entry-author-label" data-entry-author-label>
+                                {{- if eq site.Language.Lang "ja" }}
+                                作者:
+                                {{- else if eq site.Language.Lang "ko" }}
+                                작성자:
+                                {{- else }}
+                                Author:
+                                {{- end }}
+                            </span>
+                            <span class="addon entry-author" data-entry-author></span>
+                        </div>
+                        <!-- tags -->
+                        <ul class="addon entry-tags" data-entry-tags>
+                            <li class="addon entry-license" data-entry-license></li>
+                        </ul>
+                    </header>
+                    <div class="addon entry-content">
+                        <!-- サムネイル -->
+                        <div class="addon entry-thumbnail">
+                            <img src="" alt="" data-entry-thumbnail-image>
+                        </div>
+                        <div class="addon entry-main">
+                            <!-- サブサムネイル（説明画像） -->
+                            <ul class="addon sub-images" data-entry-sub-images>
+                            </ul>
+                            <p class="addon entry-summary" data-entry-summary>
+
+                            </p>
+                            <div>
+                                <a class="addon entry-assetlib-link link" href="" data-entry-assetlib-link></a>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="addon entry-footer">
+                        <span class="last-updated-label">
+                            {{- if eq site.Language.Lang "ja" }}
+                            最終更新日:
+                            {{- else if eq site.Language.Lang "ko" }}
+                            마지막 업데이트:
+                            {{- else }}
+                            Last Updated:
+                            {{- end }}
+                        </span>
+                        <time class="last-updated" datetime="" data-entry-last-updated></time>
+                        <span class="last-updated-label-list" data-entry-last-updated-list-label>
+                            {{- if eq site.Language.Lang "ja" }}
+                            一覧追加日:
+                            {{- else if eq site.Language.Lang "ko" }}
+                            이 목록에 추가된 날짜:
+                            {{- else }}
+                            Added to this list:
+                            {{- end }}
+                        </span>
+                        <time class="last-updated-list" datetime="" data-entry-last-updated-list></time>
+                        <br>
+                        <span class="addon entry-languages-label" data-entry-languages-label>
+                            {{- if eq site.Language.Lang "ja" }}
+                            リポジトリ内訳:
+                            {{- else if eq site.Language.Lang "ko" }}
+                            저장소 내용:
+                            {{- else }}
+                            Repository Structure:
+                            {{- end }}
+                            <span class="addon entry-languages" data-entry-languages></span>
+                        </span>
+                    </footer>
+                </div>
+                <!--                <a class="addon entry-link" href=""></a>-->
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script>
+    const DataList = {{ readFile "static/data/addon.json" | safeJS }};
+    const DatalistEntries = Object.entries(DataList);
+    let FilteredDataList = DatalistEntries;
+    const TagsTrList = {{ readFile "static/data/tag_translation.json" | safeJS }};
+
+    const DefaultThumbnail = "{{ "/icon/EditorPlugin.svg" | relURL }}";
+    const YoutubeIcon = "{{ "/images/youtube_social_squircle_red.png" | relURL }}";
+
+    const ThumbnailImageDirPath = "{{ "/images/addon/thumbnails/" | relURL }}";
+    const ImageMovieThumbnailImageDirPath = "{{ "/images/addon/imagethumbnails/" | relURL }}";
+    const ImageMovieOrgImageDirPath = "{{ "/images/addon/images/" | relURL }}";
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // 条件タグを生成
+        createTags();
+
+        // 除外タグを複製して生成する
+        duplicateToExcludeConditionElms();
+
+        // URLのクエリパラメータを条件・設定に適用
+        applyURLParamToConditions();
+
+        // 一覧データの初回表示
+        update();
+
+        // カードレイアウト(カラム数)を更新
+        updateLayout();
+
+        // ウィンドウリサイズ時にカードレイアウト(カラム数)を更新
+        window.addEventListener('resize', updateLayout);
+
+        // 折りたたみボタン
+        const collapseBtns = document.querySelectorAll('[data-collapse-btn]');
+        collapseBtns.forEach(btn => {
+            // 行全体をクリック時にしたいので、ボタンの親要素にイベントを設定する
+            btn.parentElement.addEventListener('click', () => {
+                toggleCollapse(btn);
+            });
+            btn.parentElement.style.cursor = 'pointer';
+            btn.parentElement.style.display = 'inline-block';
+        });
+
+        // 上部ピン留めボタン
+        document.getElementById("PinBtn").addEventListener('click', () => {
+            event.preventDefault();
+            event.stopPropagation();
+            const filterContainer = document.querySelector('.filter-container');
+            filterContainer.classList.toggle('fixed-top');
+            const pinBtn = document.querySelector('[data-pin-btn]');
+            pinBtn.classList.toggle('pin-on');
+        });
+
+        // タグのチェックボックスが変更されたらupdateを呼び出す
+        document.querySelectorAll('[data-check-tag]').forEach(function(el) {
+            el.addEventListener('change', update);
+        });
+        // フィルターのラジオボタンが変更されたらupdateを呼び出す
+        document.querySelectorAll('input[name="filter"]').forEach(function(el) {
+            el.addEventListener('change', update);
+        });
+        // ソートのラジオボタンが変更されたらupdateを呼び出す
+        document.querySelectorAll('input[name="order"]').forEach(function(el) {
+            el.addEventListener('change', update);
+        });
+
+        //上にスクロールする
+        window.scrollTo({
+            top: 0,
+            behavior: 'instant'
+        });
+    });
+
+    /**
+     * 全検索対象データJSONから一覧データの更新
+     */
+    function update() {
+        const selectedTags = Array.from(document.querySelectorAll('input[name="tag"]:checked')).map(el => el.value);
+        const filteredList = document.getElementById('AddonFilteredList');
+        const template = document.querySelector('li[data-template]');
+
+        const specialTags = Array.from(document.querySelectorAll('input[name="specialTag"]:checked')).map(el => el.value);
+        const licenseTags = Array.from(document.querySelectorAll('input[name="licenseTag"]:checked')).map(el => el.value);
+
+        const selectedExcludeTags = Array.from(document.querySelectorAll('input[name="excludeTag"]:checked')).map(el => el.value);
+        const specialExcludeTags = Array.from(document.querySelectorAll('input[name="excludespecialTag"]:checked')).map(el => el.value);
+        const licenseExcludeTags = Array.from(document.querySelectorAll('input[name="excludelicenseTag"]:checked')).map(el => el.value);
+        // 一旦リストを空にする
+        filteredList.innerHTML = '';
+
+        let query = new URLSearchParams();
+        selectedTags.forEach(tag => {
+            query.append('tag', tag);
+        });
+        selectedExcludeTags.forEach(tag => {
+            query.append('excludeTag', tag);
+        });
+        licenseTags.forEach(tag => {
+            query.append('licensetag', tag);
+        });
+
+        const filterType = document.querySelector('input[name="filter"]:checked').value;
+        query.append('filter', filterType);
+
+        const order = document.querySelector('input[name="order"]:checked').value;
+        query.append('order', order);
+
+        const searchTarget = document.getElementById('SearchTarget').value;
+        const search = document.getElementById('SearchInput').value;
+        query.append('search', search);
+        query.append('searchTarget', searchTarget);
+
+        history.replaceState(null, '', `?${query.toString()}`);
+
+        let count = 0;
+
+        const locale = "{{ site.Language.Lang }}";
+
+        const templategithub = document.querySelector('[data-github-template]');
+        const templategitlab = document.querySelector('[data-gitlab-template]');
+        const templateotherlink = document.querySelector('[data-otherlink-template]');
+        const templatestar = document.querySelector('[data-star-template]');
+
+        FilteredDataList = Object.entries(DataList)
+            .filter(([key, value]) => {
+                //specialTags
+                //Tags
+                if (key === 'tags'){
+                    return false;
+                }
+                //specialTags
+                if (specialTags.length === 0) {
+                    return true;
+                }
+
+                if (filterType === 'or'){
+                    return specialTags.some(tag => {
+                        return checkConditionNotTag(tag, value);
+                    });
+                }else if (filterType === 'and'){
+                    return specialTags.every(tag => {
+                        return checkConditionNotTag(tag, value);
+                    });
+                }
+                console.error('filter error');
+            })
+            .filter(([key, value]) => {
+                //licenseTags
+                if (licenseTags.length === 0) {
+                    return true;
+                }
+                if (filterType === 'or') {
+                    return licenseTags.some(tag => {
+                        if (value.license_override !== "") {
+                            return tag === value.license_override;
+                        } else if (value.license !== "") {
+                            return tag === value.license;
+                        }
+                    });
+                }else if (filterType === 'and') {
+                    return licenseTags.every(tag => {
+                        if (value.license_override !== "") {
+                            return tag === value.license_override;
+                        } else if (value.license !== "") {
+                            return tag === value.license;
+                        }
+                    });
+                }
+            })
+            .filter(([key, value]) => {
+                // 自動生成通常タグ
+                return (filterType === 'or' && selectedTags.some(tag => value.tags.includes(tag))) || (filterType === 'and' && selectedTags.length === 0 || selectedTags.every(tag => value.tags.includes(tag)));
+            })
+            .filter(([key, value]) => {
+                //specialExcludeTags
+                //specialTags
+                if (specialExcludeTags.length === 0) {
+                    return true;
+                }
+
+                return specialExcludeTags.every(tag => {
+                    return !checkConditionNotTag(tag, value);
+                });
+            })
+            .filter(([key, value]) => {
+                //licenseTags
+                if (licenseExcludeTags.length === 0) {
+                    return true;
+                }
+                return licenseExcludeTags.every(tag => {
+                    if (value.license_override !== "") {
+                        return tag !== value.license_override;
+                    } else if (value.license !== "") {
+                        return tag !== value.license;
+                    }
+                });
+            })
+            .filter(([key, value]) =>{
+                // 自動生成除外Tag
+                return (selectedExcludeTags.length === 0 || selectedExcludeTags.every(tag => !value.tags.includes(tag)));
+            })
+            .filter(([key, value]) => {
+                // 検索
+                if (search === '') {
+                    return true;
+                }
+                //部分一致
+                if (searchTarget === 'any') {
+                    return value.title.toLowerCase().includes(search.toLowerCase())
+                        || value.owner.toLowerCase().includes(search.toLowerCase())
+                    {{- if eq site.Language.Lang "ja" }}
+                || value.summary_ja.toLowerCase().includes(search.toLowerCase());
+                    {{- else if eq site.Language.Lang "ko" }}
+                || value.summary_ko.toLowerCase().includes(search.toLowerCase());
+                    {{- else }}
+                || value.summary_en.toLowerCase().includes(search.toLowerCase());
+                    {{- end }}
+
+                } else if (searchTarget === 'title') {
+                    return value.title.toLowerCase().includes(search.toLowerCase());
+                } else if (searchTarget === 'author') {
+                    return value.owner.toLowerCase().includes(search.toLowerCase());
+                } else if (searchTarget === 'summary') {
+                    {{- if eq site.Language.Lang "ja" }}
+                    return value.summary_ja.toLowerCase().includes(search.toLowerCase());
+                    {{- else if eq site.Language.Lang "ko" }}
+                    return value.summary_ko.toLowerCase().includes(search.toLowerCase());
+                    {{- else }}
+                    return value.summary_en.toLowerCase().includes(search.toLowerCase());
+                    {{- end }}
+                }
+            })
+            .sort((a, b) => {
+                if (order === 'title-asc') {
+                    return a[1].title.localeCompare(b[1].title, locale, {sensitivity: 'base'});
+                } else if (order === 'title-desc') {
+                    return b[1].title.localeCompare(a[1].title, locale, {sensitivity: 'base'});
+                } else if (order === 'author-asc') {
+                    if (a[1].owner === undefined || a[1].owner === null) {
+                        return 1;
+                    } else if (b[1].owner === undefined || b[1].owner === null) {
+                        return -1;
+                    }
+                    return a[1].owner.localeCompare(b[1].owner, locale, {sensitivity: 'base'});
+                } else if (order === 'author-desc') {
+                    if (a[1].owner === undefined || a[1].owner === null) {
+                        return 1;
+                    } else if (b[1].owner === undefined || b[1].owner === null) {
+                        return -1;
+                    }
+                    return b[1].owner.localeCompare(a[1].owner, locale, {sensitivity: 'base'});
+                } else if (order === 'add-addon-desc') {
+                    return new Date(b[1].listed_at) - new Date(a[1].listed_at);
+                } else if (order === 'add-addon-asc') {
+                    return new Date(a[1].listed_at) - new Date(b[1].listed_at);
+                } else if (order === 'updated-addon-desc') {
+                    // Dateでないものは最後に表示される
+                    if (a[1].last_updated === "") {
+                        return 1;
+                    } else if (b[1].last_updated === "") {
+                        return -1;
+                    }
+                    return new Date(b[1].last_updated) - new Date(a[1].last_updated);
+                } else if (order === 'updated-addon-asc') {
+                    // Dateでないものは最後に表示される
+                    if (a[1].last_updated === "") {
+                        return 1;
+                    } else if (b[1].last_updated === "") {
+                        return -1;
+                    }
+                    return new Date(a[1].last_updated) - new Date(b[1].last_updated);
+                } else if (order === 'stars-desc') {
+                    return b[1].stars - a[1].stars;
+                } else if (order === 'stars-asc') {
+                    return a[1].stars - b[1].stars;
+                }
+            })
+
+        FilteredDataList.forEach(function ([key, value]) {
+            if (value.title === undefined || value.title === null) {
+                return;
+            }
+
+            const clone = template.cloneNode(true);
+
+            // タイトル
+            const title = clone.querySelector('[data-entry-title]');
+            const a = title.querySelector('[data-entry-title-link]');
+            a.href = value.url;
+
+            // スター数
+            if (value.repo_type !== 'github') {
+
+            }
+            else if (value.stars !== undefined && value.stars !== null) {
+                const star = templatestar.cloneNode(true);
+                star.appendChild(document.createTextNode(value.stars));
+                title.appendChild(star);
+                // 500以上の場合は濃い赤色にする
+                if (value.stars >= 500) {
+                    star.style.color = 'crimson';
+                }else if (value.stars >= 100) {
+                    star.style.color = 'orange';
+                }else if (value.stars >= 50) {
+                    star.style.color = 'green';
+                }
+            }
+
+            // タイトルアイコン GitHub or GitLab or Other
+            const entryIcon = title.querySelector('[data-entry-icon]');
+            if (value.repo_type === 'github') {
+                const cloneIcon = templategithub.cloneNode(true);
+                entryIcon.appendChild(cloneIcon);
+            } else if (value.repo_type === 'gitlab') {
+                const cloneIcon = templategitlab.cloneNode(true);
+                entryIcon.appendChild(cloneIcon);
+            } else {
+                const cloneIcon = templateotherlink.cloneNode(true);
+                entryIcon.appendChild(cloneIcon);
+            }
+
+            // タイトル
+            a.appendChild(document.createTextNode(value.title));
+
+            // 作者
+            if (value.repo_type !== 'unknown' && value.owner !== undefined && value.owner !== null) {
+                if (value.owner === 'unknown') {
+                    //entry-author-labelの削除
+                    const authorLabel = clone.querySelector('[data-entry-author-label]');
+                    authorLabel.style.display = 'none';
+                }else{
+                    const author = clone.querySelector('[data-entry-author]');
+                    author.textContent = value.owner;
+                }
+            }else{
+                //entry-author-labelの削除
+                const authorLabel = clone.querySelector('[data-entry-author-label]');
+                authorLabel.style.display = 'none';
+            }
+
+            // ライセンス
+
+            if (value.license_override !== undefined &&
+                value.license_override !== null &&
+                value.license_override !== "") {
+                const license = clone.querySelector('[data-entry-license]');
+                license.textContent = value.license_override;
+            } else if (value.license !== undefined &&
+                value.license !== null &&
+                value.license !== "") {
+                const license = clone.querySelector('[data-entry-license]');
+                license.textContent = value.license;
+            }else{
+                //entry-licenseの削除
+                const license = clone.querySelector('[data-entry-license]');
+                license.style.display = 'none';
+            }
+
+            // タグ
+            const tagList = clone.querySelector('[data-entry-tags]');
+            if (value.tags !== undefined && value.tags !== null) {
+                value.tags.forEach(tag => {
+                    try {
+                        const li = document.createElement('li');
+                        {{- if eq site.Language.Lang "ja" }}
+                        li.textContent = TagsTrList[tag].ja;
+                        {{- else if eq site.Language.Lang "ko" }}
+                        li.textContent = TagsTrList[tag].ko;
+                        {{- else }}
+                        li.textContent = TagsTrList[tag].en;
+                        {{- end }}
+                        tagList.appendChild(li);
+                    } catch (e) {
+                        console.warn(`Tag translation not found: ${tag}`);
+                        console.error(e);
+                    }
+                });
+            }
+
+            // サムネイル
+            const thumbnail = clone.querySelector('[data-entry-thumbnail-image]');
+            if (value.has_thumbnail) {
+                thumbnail.src = ThumbnailImageDirPath + value.id + ".webp"
+            } else {
+                thumbnail.src = DefaultThumbnail;
+            }
+
+            // サブサムネイル(説明画像)
+            const subimages = clone.querySelector('[data-entry-sub-images]');
+            if (value.images !== undefined
+                && value.images !== null
+                && value.images.length > 0
+            ) {
+                value.images.forEach((thumbnail_extension, index) => {
+                    const subThumbnail = document.querySelector('li[data-sub-thumbnail-template]').cloneNode(true);
+                    const img = subThumbnail.querySelector('img');
+                    const a = subThumbnail.querySelector('a');
+                    const fileNameIndexStr = index === 0 ? "" : "_" + (index+1).toString();
+
+                    a.dataset.key = key;
+                    a.dataset.index = index;
+                    if (!['png', 'jpg', 'jpeg','webp','mp4', 'gif', "mov"].includes(thumbnail_extension)) {
+                        // youtube
+                        a.href = thumbnail_extension
+                        img.src = YoutubeIcon;
+                    }else{
+                        a.href = ImageMovieThumbnailImageDirPath + value.id + fileNameIndexStr + "." + thumbnail_extension
+                        img.src = ImageMovieThumbnailImageDirPath + value.id + fileNameIndexStr + ".webp";
+                    }
+                    subimages.appendChild(subThumbnail);
+                });
+            }else {
+                // 0件の場合はサブサムネイルの非表示
+                subimages.style.display = 'none';
+            }
+
+            // 概要
+            {{- if eq site.Language.Lang "ja" }}
+            clone.querySelector('[data-entry-summary]').innerHTML = value.summary_ja;
+            {{- else if eq site.Language.Lang "ko" }}
+            clone.querySelector('[data-entry-summary]').innerHTML = value.summary_ko;
+            {{- else }}
+            clone.querySelector('[data-entry-summary]').innerHTML = value.summary_en;
+            {{- end }}
+
+            // AssetLibリンク
+            const assetlibLink = clone.querySelector('[data-entry-assetlib-link]');
+            if (value.is_exists_assetlib && value.assetlib_path) {
+                assetlibLink.href = value.assetlib_path;
+                assetlibLink.textContent = 'AssetLib';
+            } else {
+                assetlibLink.style.display = 'none';
+            }
+
+            // プログラム言語
+            const languages = clone.querySelector('[data-entry-languages]');
+            if (value.languages !== undefined && value.languages !== null) {
+                if (Object.keys(value.languages).length === 0) {
+                    //entry-languages-labelの削除
+                    const entryLanguagesLabel = clone.querySelector('[data-entry-languages-label]');
+                    entryLanguagesLabel.style.display = 'none';
+
+                    //entry-languagesの削除
+                    const entryLanguages = clone.querySelector('[data-entry-languages]');
+                    entryLanguages.style.display = 'none';
+                }
+
+                const lang = Object.entries(value.languages).map(([key, value]) => {
+                    // const valueWithComma = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                    // K単位で表示
+                    const valueWithK = (value / 1000).toFixed(1);
+                    return `${key}=${valueWithK}k`;
+                }).join(', ');
+                languages.textContent = lang;
+            }else{
+                //entry-languages-labelの削除
+                const entryLanguagesLabel = clone.querySelector('[data-entry-languages-label]');
+                entryLanguagesLabel.style.display = 'none';
+
+                //entry-languagesの削除
+                const entryLanguages = clone.querySelector('[data-entry-languages]');
+                entryLanguages.style.display = 'none';
+            }
+
+
+            // 最終追加日
+            if (value.listed_at !== undefined && value.listed_at !== null) {
+                const lastUpdatedList = clone.querySelector('[data-entry-last-updated-list]');
+                lastUpdatedList.textContent = new Date(value.listed_at).toLocaleDateString();
+            }else{
+                //last-updated-labelの削除
+                const lastUpdatedLabelList = clone.querySelector('[data-entry-last-updated-list-label]');
+                lastUpdatedLabelList.style.display = 'none';
+            }
+
+            // 最終更新日
+            if (value.repo_type !== 'unknown' && value.last_updated !== undefined && value.last_updated !== null) {
+                const lastUpdated = clone.querySelector('[data-entry-last-updated]');
+                const lastUpdateDate = new Date(value.last_updated);
+
+                // 日付が未設定の場合は表示しない
+                if (isNaN(lastUpdateDate)) {
+                    //last-updated-labelの削除
+                    const lastUpdatedLabel = clone.querySelector('[data-entry-last-updated]');
+                    lastUpdatedLabel.style.display = 'none';
+                } else {
+
+                    //更新がない間の期間を算出して表示する
+                    const now = new Date();
+                    const diff = now - lastUpdateDate;
+                    const diffDays = diff / (1000 * 60 * 60 * 24);
+                    {{- if eq site.Language.Lang "ja" }}
+                    if (diffDays < 1) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + " " + lastUpdateDate.toLocaleTimeString() + ` ${Math.floor(diff / (1000 * 60 * 60))}時間前`;
+                        lastUpdated.style.color = 'green';
+                    } else if (diffDays < 30) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)}日前`;
+                        lastUpdated.style.color = 'green';
+                    } else if (diffDays < 365) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)}日前`;
+                    } else {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays / 30)}ヶ月前`;
+                    }
+                    {{- else if eq site.Language.Lang "ko" }}
+                    if (diffDays < 1) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diff / (1000 * 60 * 60))}시간 전`;
+                        lastUpdated.style.color = 'green';
+                    } else if (diffDays < 30) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)}일 전`;
+                        lastUpdated.style.color = 'green';
+                    } else if (diffDays < 365) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)}일 전`;
+                    } else {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays / 30)}개월 전`;
+                    }
+                    {{- else }}
+                    if (diffDays < 1) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diff / (1000 * 60 * 60))} hours ago`;
+                        lastUpdated.style.color = 'green';
+                    } else if (diffDays < 30) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)} days ago`;
+                        lastUpdated.style.color = 'green';
+                    } else if (diffDays < 365) {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)} days ago`;
+                    }else {
+                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays / 30)} months ago`;
+                        lastUpdated.style.color = 'red';
+                    }
+                    {{- end }}
+                }
+            }
+
+
+            // data-template属性を削除
+            clone.removeAttribute('data-template');
+            filteredList.appendChild(clone);
+            count++;
+        });
+
+        {{- if eq site.Language.Lang "ja" }}
+        document.getElementById('AddonCount').textContent = `${count} 件`;
+        {{- else if eq site.Language.Lang "ko" }}
+        document.getElementById('AddonCount').textContent = `${count} 개`;
+        {{- else }}
+        document.getElementById('AddonCount').textContent = `${count} items`;
+        {{- end }}
+
+        // Lightbox = GLightbox({
+        //     touchNavigation: true,
+        //     loop: true,
+        //     autoplayVideos: true
+        // });
+
+        updateTags();
+    }
+
+    /**
+     * タグJSONからタグを生成
+     */
+    function createTags(){
+        const tagTemplate = document.querySelector('li[data-tag-template]');
+        const fragment = document.createDocumentFragment();
+
+        const licenseTagTemplate = document.querySelector('li[data-license-tag-template]');
+        const licenseFragment = document.createDocumentFragment();
+        const licenseTags = new Set();
+        const locale = "{{ site.Language.Lang }}";
+        DataList.tags
+            .sort((a, b) => {
+                let localedA;
+                let localedB;
+                if (locale === "ja") {
+                    localedA = TagsTrList[a].ja;
+                    localedB = TagsTrList[b].ja;
+                } else if (locale === "ko") {
+                    localedA = TagsTrList[a].ko;
+                    localedB = TagsTrList[b].ko;
+                } else {
+                    localedA = TagsTrList[a].en;
+                    localedB = TagsTrList[b].en;
+                }
+                return localedA.localeCompare(localedB, locale, {sensitivity: 'base'})
+            })
+            .forEach(tag => {
+                const clone = tagTemplate.cloneNode(true);
+                const input = clone.querySelector('[data-tag-checkbox]');
+                input.value = tag;
+
+                // タグのラベルに翻訳を設定
+                const label = clone.querySelector('[data-tag-label]');
+                label.dataset.generatedTag = "";
+                try {
+                    const span = label.querySelector('[data-tag-label-text]');
+                    if (locale === "ja") {
+                        span.innerText = TagsTrList[tag].ja;
+                    } else if (locale === "ko") {
+                        span.innerText = TagsTrList[tag].ko;
+                    } else {
+                        span.innerText = TagsTrList[tag].en;
+                    }
+                } catch (e) {
+                    console.error(`Tag translation not found: ${tag}`);
+                }
+
+                clone.removeAttribute('data-tag-template');
+                clone.style.display = '';
+
+                // タグのチェックボックスが変更されたらupdateを呼び出す
+                input.addEventListener('change', update);
+
+                fragment.appendChild(clone);
+            });
+
+        document.getElementById("FilterTags").appendChild(fragment);
+
+        Object.entries(DataList).forEach(([key, value]) => {
+            if (value.license_override && value.license_override !== "") {
+                licenseTags.add(value.license_override);
+            } else if (value.license) {
+                licenseTags.add(value.license);
+            }
+        });
+        Array.from(licenseTags)
+            .sort()
+            .forEach(license => {
+                const clone = licenseTagTemplate.cloneNode(true);
+                const input = clone.querySelector('[data-tag-checkbox]');
+                input.value = license;
+
+                const label = clone.querySelector('[data-tag-label]');
+                label.dataset.generatedLicenseTag = "";
+                const span = label.querySelector('[data-tag-label-text]');
+                span.innerText = license;
+
+                clone.removeAttribute('data-license-tag-template');
+                clone.style.display = '';
+
+                // タグのチェックボックスが変更されたらupdateを呼び出す
+                input.addEventListener('change', update);
+
+                licenseFragment.appendChild(clone);
+            });
+
+        document.getElementById("FilterLicenseTags").appendChild(licenseFragment);
+    }
+
+    /**
+     * タグのデータ数を更新
+     */
+    function updateTags() {
+        // 最初からあるタグのデータ数を更新する
+        document.querySelectorAll('[data-commonly-tag]').forEach(el => {
+                const tag = el.querySelector('input').value;
+                const count = FilteredDataList.filter(([key, value]) => {
+                    if (key === 'tags') {
+                        return false;
+                    }
+                    if (value.tags === undefined) {
+                        return false;
+                    }
+                    return value.tags.includes(tag);
+                }).length;
+                //<sup>1</sup>
+                const sup = el.querySelector('sup');
+                sup.innerText = `${count}`;
+
+                if (count === 0) {
+                    el.classList.add('result-zero-tag');
+                } else {
+                    el.classList.remove('result-zero-tag');
+                }
+            }
+        );
+        document.querySelectorAll('[data-not-tag-condition]').forEach(el => {
+                const tag = el.querySelector('input').value;
+                const count = FilteredDataList.filter(([key, value]) => {
+                    if (key === 'tags') {
+                        return false;
+                    }
+                    if (value.tags === undefined) {
+                        return false;
+                    }
+                    return checkConditionNotTag(tag, value);
+                }).length;
+                //<sup>1</sup>
+                const sup = el.querySelector('sup');
+                sup.innerText = `${count}`;
+                if (count === 0) {
+                    el.classList.add('result-zero-tag');
+                } else {
+                    el.classList.remove('result-zero-tag');
+                }
+            }
+        );
+
+        document.querySelectorAll("[data-generated-tag]").forEach(el => {
+            const tag = el.querySelector('input').value;
+            const count = FilteredDataList.filter(([key, value]) => {
+                if (key === 'tags') {
+                    return false;
+                }
+                if (value.tags === undefined) {
+                    return false;
+                }
+                return value.tags.includes(tag);
+            }).length;
+            //<sup>1</sup>
+            const sup = el.querySelector('sup');
+            sup.innerText = `${count}`;
+            if (count === 0) {
+                el.classList.add('result-zero-tag');
+            } else {
+                el.classList.remove('result-zero-tag');
+            }
+        });
+
+        document.querySelectorAll("[data-generated-license-tag]").forEach(el => {
+            const tag = el.querySelector('input').value;
+            const count = FilteredDataList.filter(([key, value]) => {
+                if (key === 'tags') {
+                    return false;
+                }
+                if (value.tags === undefined) {
+                    return false;
+                }
+                if (value.license_override !== "") {
+                    return tag === value.license_override;
+                } else if (value.license !== "") {
+                    return tag === value.license;
+                }
+            }).length;
+            //<sup>1</sup>
+            const sup = el.querySelector('sup');
+            sup.innerText = `${count}`;
+            if (count === 0) {
+                el.classList.add('result-zero-tag');
+            } else {
+                el.classList.remove('result-zero-tag');
+            }
+        });
+    }
+
+    /**
+     * URLパラメータを条件に適用
+     * @param columnCount
+     * @param isMax
+     */
+    function applyURLParamToConditions() {
+        // URLのクエリパラメータを取得
+        const urlParams = new URLSearchParams(window.location.search);
+        const tags = urlParams.getAll('tag');
+        tags.forEach(tag => {
+            const el = document.querySelector(`input[value="${tag}"]`);
+            if (el) {
+                el.checked = true;
+            }
+        });
+        const filter = urlParams.get('filter');
+        if (filter) {
+            const el = document.querySelector(`input[id="${filter}"]`);
+            if (el) {
+                el.checked = true;
+            }
+        }
+        const order = urlParams.get('order');
+        if (order) {
+            const el = document.querySelector(`input[id="${order}"]`);
+            if (el) {
+                el.checked = true;
+            }
+        }
+        const search = urlParams.get('search');
+        if (search) {
+            const el = document.getElementById('SearchInput');
+            if (el) {
+                el.value = search;
+            }
+        }
+        const searchTarget = urlParams.get('searchTarget');
+        if (searchTarget) {
+            const el = document.getElementById('SearchTarget');
+            if (el) {
+                el.value = searchTarget;
+            }
+        }
+    }
+
+    /**
+     * タグのチェックボックスが変更されたらupdateを呼び出す
+     */
+    function clearAll(){
+        document.querySelectorAll('input[name="tag"]:checked').forEach(el => {
+            el.checked = false;
+        });
+        document.querySelectorAll('input[name="specialTag"]:checked').forEach(el => {
+            el.checked = false;
+        });
+        document.querySelectorAll('input[name="licenseTag"]:checked').forEach(el => {
+            el.checked = false;
+        });
+        document.querySelectorAll('input[name="excludeTag"]:checked').forEach(el => {
+            el.checked = false;
+        });
+        document.querySelectorAll('input[name="excludespecialTag"]:checked').forEach(el => {
+            el.checked = false;
+        });
+        document.querySelectorAll('input[name="excludelicenseTag"]:checked').forEach(el => {
+            el.checked = false;
+        });
+        document.getElementById('SearchInput').value = '';
+        document.getElementById('SearchTarget').value = 'any';
+        update();
+    }
+
+    /**
+     * 折りたたみ処理
+     * @param btn
+     */
+    function toggleCollapse(btn) {
+        const target = btn.getAttribute('data-collapse-btn');
+        const targetEls = document.querySelectorAll(`[data-collapse-toggle="${target}"]`);
+        targetEls.forEach(el => el.classList.toggle('collapse'));
+
+        // ボタンのアイコンを切り替える
+        if (targetEls[0].classList.contains('collapse')) {
+            btn.querySelector('i:first-child').classList.add('collapse');
+            btn.querySelector('i:last-child').classList.remove('collapse');
+        } else {
+            btn.querySelector('i:first-child').classList.remove('collapse');
+            btn.querySelector('i:last-child').classList.add('collapse');
+        }
+    }
+
+    /**
+     * 条件要素を複製して除外条件要素を追加する
+     */
+    function duplicateToExcludeConditionElms() {
+        // 除外条件をコピーする
+        // #ForDuplicateExcludeをコピーして、その内の要素のすべてid,nameを変更する
+        const excludeTags = document.getElementById('ExcludeTags');
+        const orgExclude = document.getElementById('ForDuplicateExclude');
+        const duplicatedExclude = orgExclude.cloneNode(true);
+        duplicatedExclude.id = 'duplicated-exclude';
+        duplicatedExclude.style.display = 'block';
+        duplicatedExclude.querySelectorAll('input').forEach(el => {
+            // id, nameを変更
+            el.id = `exclude${el.id}`;
+            el.name = `exclude${el.name}`;
+        });
+        //data-collapse-toggleを変更
+        duplicatedExclude.querySelectorAll('[data-collapse-toggle]').forEach(el => {
+            el.dataset.collapseToggle = '';
+        });
+
+        //すべてのタグ表示のテキスト,色を変更
+        duplicatedExclude.querySelectorAll('[data-tag-head]').forEach(el => {
+            {{- if eq site.Language.Lang "ja" }}
+            el.textContent += '(除外)';
+            {{- else if eq site.Language.Lang "ko" }}
+            el.textContent += '(제외)';
+            {{- else }}
+            el.textContent += '(Exclude)';
+            {{- end }}
+            el.style.color = 'red';
+        });
+
+        excludeTags.appendChild(duplicatedExclude);
+    }
+
+    /**
+     * カードレイアウト(カラム数)を更新する
+     */
+    function updateLayout() {
+        const container = document.getElementById('AddonFilteredList');
+        const controls = document.getElementById('ColControls');
+        const itemWidth = 740;
+
+        const containerParentWidth = container.clientWidth;
+
+        // const maxColumns = Math.floor(containerParentWidth / itemWidth);
+        // gapを考慮する 20px
+        const maxColumns = Math.floor(containerParentWidth / itemWidth);
+
+        //初期化
+        controls.innerHTML = '';
+
+        // ラジオボタンの更新
+        for (let i = 1; i <= maxColumns; i++) {
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.id = `Col${i}`;
+            radio.name = 'columns';
+            radio.value = i;
+            radio.addEventListener('change', () => applyColumnCount(i, i === maxColumns));
+
+            const label = document.createElement('label');
+            label.htmlFor = `Col${i}`;
+
+            label.appendChild(radio);
+            controls.appendChild(label);
+
+            let text = i.toString();
+            if (i === maxColumns) {
+                {{- if eq site.Language.Lang "ja" }}
+                text = '幅いっぱい';
+                {{- else if eq site.Language.Lang "ko" }}
+                text = '전체 너비';
+                {{- else }}
+                text = 'Full Width';
+                {{- end }}
+            }
+            label.appendChild(document.createTextNode(text));
+        }
+
+        // デフォルトで最大列数を選択
+        const defaultRadio = document.getElementById(`Col${maxColumns}`);
+        if (defaultRadio) {
+            defaultRadio.checked = true;
+            applyColumnCount(maxColumns, true);
+        }
+    }
+
+    /**
+     * カラム数を更新する
+     * @param columnCount
+     * @param isMax
+     */
+    function applyColumnCount(columnCount, isMax = false) {
+        const container = document.getElementById('AddonFilteredList');
+        const itemWidth = 740;
+        container.style.gridTemplateColumns = `repeat(${columnCount}, ${itemWidth}px)`;
+    }
+
+    /**
+     * 特別な判定をするチェックボックスの条件を満たすかどうか
+     * @param tag
+     * @param value
+     * @returns {*|boolean}
+     */
+    function checkConditionNotTag(tag, value) {
+        if (tag === 'assetlib') {
+            return value.is_exists_assetlib;
+        } else if (tag === 'notassetlib') {
+            return value.is_exists_assetlib || value.assetlib_path === '';
+        } else if (tag === 'github') {
+            return value.repo_type === 'github';
+        } else if (tag === 'gitlab') {
+            return value.repo_type === 'gitlab';
+        } else if (tag === 'other') {
+            return value.repo_type !== 'github' && value.repo_type !== 'gitlab';
+        } else if (tag === 'notdemo') {
+            if (value.tags === undefined) {
+                return false;
+            }
+            return !value.tags.includes('demo');
+        } else if (tag === 'withsummary') {
+            return value.summary_ja !== '' && value.summary_ko !== '' && value.summary_en !== '';
+        }
+    }
+
+    /**
+     * GLightboxを使って画像を表示する
+     * @returns {boolean}
+     */
+    function showImagesLightBox() {
+        const clicked = event.target;
+
+        const data = DataList[clicked.dataset.key];
+        const elements = data.images.map((thumbnail_extension,index) => {
+
+            // 画像
+            if (['png', 'jpg', 'jpeg','webp', "gif"].includes(thumbnail_extension)) {
+                const fileNameIndexStr = index === 0 ? "" : "_" + (index+1).toString();
+                return {
+                    href: ImageMovieOrgImageDirPath + data.id + fileNameIndexStr + "." + thumbnail_extension,
+                    type: 'image'
+                };
+            }
+            else if (['mp4', 'webm', "mov"].includes(thumbnail_extension)) {
+                const fileNameIndexStr = index === 0 ? "" : "_" + (index+1).toString();
+                return {
+                    href: ImageMovieOrgImageDirPath + data.id + fileNameIndexStr + "." + thumbnail_extension,
+                    type: 'video'
+                };
+            }
+            else{
+                // youtube
+                return {
+                    href: thumbnail_extension,
+                    type: 'video'
+                };
+            }
+        });
+        GLightbox(
+            {
+                elements: elements,
+                touchNavigation: true,
+                loop: true,
+
+                autoplayVideos: true
+            }
+        ).openAt(clicked.dataset.index);
+
+        return false;
+    }
+</script>
+
+{{- end }}{{/* end main */}}

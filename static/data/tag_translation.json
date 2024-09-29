@@ -1,0 +1,632 @@
+{
+  "2d": {
+    "ja": "2D",
+    "ko": "2D",
+    "en": "2D"
+  },
+  "3d": {
+    "ja": "3D",
+    "ko": "3D",
+    "en": "3D"
+  },
+  "ui": {
+    "ja": "UI",
+    "ko": "UI",
+    "en": "UI"
+  },
+  "other": {
+    "ja": "その他",
+    "ko": "기타",
+    "en": "Other"
+  },
+  "animation": {
+    "ja": "アニメーション",
+    "ko": "애니메이션",
+    "en": "Animation"
+  },
+  "audio": {
+    "ja": "オーディオ",
+    "ko": "오디오",
+    "en": "Audio"
+  },
+  "navigation": {
+    "ja": "ナビゲーション",
+    "ko": "네비게이션",
+    "en": "Navigation"
+  },
+  "multiplayer": {
+    "ja": "マルチプレイヤー",
+    "ko": "멀티플레이어",
+    "en": "Multiplayer"
+  },
+  "network": {
+    "ja": "ネットワーク",
+    "ko": "네트워크",
+    "en": "Network"
+  },
+  "shader": {
+    "ja": "シェーダー",
+    "ko": "셰이더",
+    "en": "Shader"
+  },
+  "xr": {
+    "ja": "AR/VR",
+    "ko": "AR/VR",
+    "en": "AR/VR"
+  },
+  "physics": {
+    "ja": "物理",
+    "ko": "물리",
+    "en": "Physics"
+  },
+  "mit": {
+    "ja": "MIT",
+    "ko": "MIT",
+    "en": "MIT"
+  },
+  "gpl": {
+    "ja": "GPL",
+    "ko": "GPL",
+    "en": "GPL"
+  },
+  "cc0": {
+    "ja": "CC0",
+    "ko": "CC0",
+    "en": "CC0"
+  },
+  "paid": {
+    "ja": "有料",
+    "ko": "유료",
+    "en": "Paid"
+  },
+  "editoronly": {
+    "ja": "エディタのみ",
+    "ko": "에디터 전용",
+    "en": "Editor Only"
+  },
+  "assetlib": {
+    "ja": "AssetLibにある",
+    "ko": "AssetLib에 있는",
+    "en": "In AssetLib"
+  },
+  "notassetlib": {
+    "ja": "AssetLibにない",
+    "ko": "AssetLib에 없는",
+    "en": "Not in AssetLib"
+  },
+  "needcheck": {
+    "ja": "動作未確認",
+    "ko": "동작 확인 필요",
+    "en": "Need Check"
+  },
+  "gdscript": {
+    "ja": "GDScript",
+    "ko": "GDScript",
+    "en": "GDScript"
+  },
+  "module": {
+    "ja": "モジュール",
+    "ko": "모듈",
+    "en": "Module"
+  },
+  "maybeuse": {
+    "ja": "使うかも",
+    "ko": "사용할지도",
+    "en": "maybeuse"
+  },
+  "gdswrapper": {
+    "ja": "主にC#で動作してGDScriptのラッパーあり",
+    "ko": "주로 C#에서 작동하며 GDScript 래퍼가 있음",
+    "en": "Mainly works in C# with GDScript wrapper"
+  },
+  "csharpwrapper": {
+    "ja": "C#のラッパーあり",
+    "ko": "C# 래퍼",
+    "en": "C# wrapper"
+  },
+  "csharponly": {
+    "ja": "C#のみ",
+    "ko": "C# 전용",
+    "en": "C# Only"
+  },
+  "camera": {
+    "ja": "カメラ",
+    "ko": "카메라",
+    "en": "camera"
+  },
+  "debugging": {
+    "ja": "デバッグ",
+    "ko": "디버깅",
+    "en": "debugging"
+  },
+  "design": {
+    "ja": "設計",
+    "ko": "디자인",
+    "en": "design"
+  },
+  "postprocess": {
+    "ja": "ポストプロセス",
+    "ko": "포스트 프로세스",
+    "en": "postprocess"
+  },
+  "psx": {
+    "ja": "PSX(プレステ風)",
+    "ko": "PSX(플레이스테이션)",
+    "en": "psx"
+  },
+  "retro": {
+    "ja": "レトロ",
+    "ko": "레트로",
+    "en": "retro"
+  },
+  "ainotgenerativeai": {
+    "ja": "AI(AI生成でない)",
+    "ko": "AI(생성되지 않은 AI)",
+    "en": "ainotgenerativeai"
+  },
+  "autoload": {
+    "ja": "自動読み込み",
+    "ko": "자동로드",
+    "en": "autoload"
+  },
+  "await": {
+    "ja": "await",
+    "ko": "await",
+    "en": "await"
+  },
+  "behavior": {
+    "ja": "behavior",
+    "ko": "behavior",
+    "en": "behavior"
+  },
+  "demo": {
+    "ja": "デモ",
+    "ko": "데모",
+    "en": "demo"
+  },
+  "effect": {
+    "ja": "エフェクト",
+    "ko": "효과",
+    "en": "effect"
+  },
+  "effekseer": {
+    "ja": "effekseer",
+    "ko": "effekseer",
+    "en": "effekseer"
+  },
+  "npc": {
+    "ja": "NPC",
+    "ko": "NPC",
+    "en": "NPC"
+  },
+  "particle": {
+    "ja": "パーティクル",
+    "ko": "파티클",
+    "en": "particle"
+  },
+  "statechart": {
+    "ja": "statechart",
+    "ko": "statechart",
+    "en": "statechart"
+  },
+  "statemachine": {
+    "ja": "ステートマシン",
+    "ko": "스테이트머신",
+    "en": "statemachine"
+  },
+  "vfx": {
+    "ja": "VFX",
+    "ko": "VFX",
+    "en": "VFX"
+  },
+  "foltause": {
+    "ja": "使ってるやつ",
+    "ko": "사용중",
+    "en": "using it"
+  },
+  "dialogue": {
+    "ja": "ダイアログ",
+    "ko": "대화",
+    "en": "dialogue"
+  },
+  "documentgood": {
+    "ja": "ドキュメントあり",
+    "ko": "문서가 있음",
+    "en": "document"
+  },
+  "export": {
+    "ja": "エクスポート",
+    "ko": "내보내기",
+    "en": "export"
+  },
+  "level": {
+    "ja": "レベルエディタ",
+    "ko": "레벨",
+    "en": "leveledit"
+  },
+  "bone": {
+    "ja": "ボーン",
+    "ko": "본",
+    "en": "bone"
+  },
+  "data": {
+    "ja": "データ",
+    "ko": "데이터",
+    "en": "data"
+  },
+  "filesystem": {
+    "ja": "ファイルシステム",
+    "ko": "파일시스템",
+    "en": "filesystem"
+  },
+  "protobuf": {
+    "ja": "protobuf",
+    "ko": "protobuf",
+    "en": "protobuf"
+  },
+  "resource": {
+    "ja": "リソース",
+    "ko": "리소스",
+    "en": "resource"
+  },
+  "scene": {
+    "ja": "シーン",
+    "ko": "씬",
+    "en": "scene"
+  },
+  "bsd3clause": {
+    "ja": "BSD 3-Clause",
+    "ko": "BSD 3-Clause",
+    "en": "BSD 3-Clause"
+  },
+  "gdextension": {
+    "ja": "GDExtension",
+    "ko": "GDExtension",
+    "en": "GDExtension"
+  },
+  "rust": {
+    "ja": "rust",
+    "ko": "rust",
+    "en": "rust"
+  },
+  "todo": {
+    "ja": "ToDo",
+    "ko": "ToDo",
+    "en": "ToDo"
+  },
+  "bugfix": {
+    "ja": "バグ修正",
+    "ko": "bugfix",
+    "en": "bugfix"
+  },
+  "excel": {
+    "ja": "excel",
+    "ko": "excel",
+    "en": "excel"
+  },
+  "fps": {
+    "ja": "fps",
+    "ko": "fps",
+    "en": "fps"
+  },
+  "inspector": {
+    "ja": "インスペクター",
+    "ko": "inspector",
+    "en": "inspector"
+  },
+  "interpolation": {
+    "ja": "補間",
+    "ko": "interpolation",
+    "en": "interpolation"
+  },
+  "kenney": {
+    "ja": "kenney",
+    "ko": "kenney",
+    "en": "kenney"
+  },
+  "model": {
+    "ja": "3Dモデル",
+    "ko": "3D 모델",
+    "en": "model"
+  },
+  "notaddon": {
+    "ja": "アドオンでない",
+    "ko": "애드온이 아님",
+    "en": "notaddon"
+  },
+  "polygon": {
+    "ja": "ポリゴン",
+    "ko": "polygon",
+    "en": "polygon"
+  },
+  "setting": {
+    "ja": "設定",
+    "ko": "설정",
+    "en": "setting"
+  },
+  "shooter": {
+    "ja": "シューティング",
+    "ko": "슈터",
+    "en": "shooter"
+  },
+  "template": {
+    "ja": "テンプレート",
+    "ko": "템플릿",
+    "en": "template"
+  },
+  "tilemap": {
+    "ja": "タイルマップ",
+    "ko": "타일맵",
+    "en": "tilemap"
+  },
+  "tool": {
+    "ja": "ツール",
+    "ko": "툴",
+    "en": "tool"
+  },
+  "tutorial": {
+    "ja": "チュートリアル",
+    "ko": "튜토리얼",
+    "en": "tutorial"
+  },
+  "character": {
+    "ja": "キャラクター操作",
+    "ko": "캐릭터",
+    "en": "character"
+  },
+  "chart": {
+    "ja": "チャート",
+    "ko": "차트",
+    "en": "chart"
+  },
+  "collect": {
+    "ja": "収集アイテム",
+    "ko": "수집 아이템",
+    "en": "collect"
+  },
+  "environment": {
+    "ja": "環境(Environment)",
+    "ko": "환경(Environment)",
+    "en": "environment"
+  },
+  "fog": {
+    "ja": "フォグ",
+    "ko": "안개",
+    "en": "fog"
+  },
+  "graph": {
+    "ja": "グラフ",
+    "ko": "그래프",
+    "en": "graph"
+  },
+  "inventory": {
+    "ja": "インベントリ",
+    "ko": "인벤토리",
+    "en": "inventory"
+  },
+  "joypad": {
+    "ja": "ジョイパッド",
+    "ko": "조이패드",
+    "en": "joypad"
+  },
+  "keysetting": {
+    "ja": "キー設定",
+    "ko": "키설정",
+    "en": "keysetting"
+  },
+  "lighting": {
+    "ja": "ライティング",
+    "ko": "조명",
+    "en": "lighting"
+  },
+  "mesh": {
+    "ja": "メッシュ",
+    "ko": "메쉬",
+    "en": "mesh"
+  },
+  "metroidvania": {
+    "ja": "メトロイドヴァニア",
+    "ko": "메트로이드바니아",
+    "en": "metroidvania"
+  },
+  "minecraft": {
+    "ja": "minecraft",
+    "ko": "minecraft",
+    "en": "minecraft"
+  },
+  "realistic": {
+    "ja": "リアル",
+    "ko": "리얼",
+    "en": "realistic"
+  },
+  "voxel": {
+    "ja": "ボクセル",
+    "ko": "voxel",
+    "en": "voxel"
+  },
+  "saveload": {
+    "ja": "セーブ・ロード",
+    "ko": "세이브로드",
+    "en": "saveload"
+  },
+  "2.5d": {
+    "ja": "2.5D",
+    "ko": "2.5D",
+    "en": "2.5D"
+  },
+  "beehave": {
+    "ja": "beehave",
+    "ko": "beehave",
+    "en": "beehave"
+  },
+  "collapse": {
+    "ja": "折りたたみ",
+    "ko": "접기",
+    "en": "collapse"
+  },
+  "dialogic": {
+    "ja": "dialogic",
+    "ko": "dialogic",
+    "en": "dialogic"
+  },
+  "discord": {
+    "ja": "discordあり",
+    "ko": "discordあり",
+    "en": "discordあり"
+  },
+  "dock": {
+    "ja": "ドック",
+    "ko": "도크",
+    "en": "dock"
+  },
+  "favorite": {
+    "ja": "お気に入り機能",
+    "ko": "즐겨찾기",
+    "en": "favorite"
+  },
+  "graphics": {
+    "ja": "グラフィック",
+    "ko": "그래픽",
+    "en": "graphics"
+  },
+  "mobile": {
+    "ja": "モバイル",
+    "ko": "모바일.",
+    "en": "mobile"
+  },
+  "modeling": {
+    "ja": "モデリング",
+    "ko": "모델링.",
+    "en": "modeling"
+  },
+  "platformer": {
+    "ja": "プラットフォーマー",
+    "ko": "platformer",
+    "en": "platformer"
+  },
+  "prototype": {
+    "ja": "プロトタイプ",
+    "ko": "prototype",
+    "en": "prototype"
+  },
+  "scenetransition": {
+    "ja": "シーン遷移",
+    "ko": "Scene 전이",
+    "en": "scenetransition"
+  },
+  "script": {
+    "ja": "スクリプト",
+    "ko": "스크립트",
+    "en": "script"
+  },
+  "splash": {
+    "ja": "スプラッシュ画面",
+    "ko": "splash",
+    "en": "splash"
+  },
+  "strategy": {
+    "ja": "ストラテジー",
+    "ko": "strategy",
+    "en": "strategy"
+  },
+  "svg": {
+    "ja": "svg",
+    "ko": "svg",
+    "en": "svg"
+  },
+  "tps": {
+    "ja": "tps",
+    "ko": "tps",
+    "en": "tps"
+  },
+  "youtube": {
+    "ja": "youtubeあり",
+    "ko": "youtubeあり",
+    "en": "youtubeあり"
+  },
+  "heightmap": {
+    "ja": "heightmap",
+    "ko": "heightmap",
+    "en": "heightmap"
+  },
+  "jiggle": {
+    "ja": "jiggle",
+    "ko": "jiggle",
+    "en": "jiggle"
+  },
+  "paint": {
+    "ja": "paint",
+    "ko": "paint",
+    "en": "paint"
+  },
+  "terrain": {
+    "ja": "terrain",
+    "ko": "terrain",
+    "en": "terrain"
+  },
+  "spriteframe": {
+    "ja": "spriteframe",
+    "ko": "spriteframe",
+    "en": "spriteframe"
+  },
+  "trail": {
+    "ja": "trail",
+    "ko": "trail",
+    "en": "trail"
+  },
+  "commandline": {
+    "ja": "commandline",
+    "ko": "commandline",
+    "en": "commandline"
+  },
+  "cpp": {
+    "ja": "cpp",
+    "ko": "cpp",
+    "en": "cpp"
+  },
+  "csharp": {
+    "ja": "csharp",
+    "ko": "csharp",
+    "en": "csharp"
+  },
+  "database": {
+    "ja": "database",
+    "ko": "database",
+    "en": "database"
+  },
+  "export-template": {
+    "ja": "export-template",
+    "ko": "export-template",
+    "en": "export-template"
+  },
+  "grid": {
+    "ja": "grid",
+    "ko": "grid",
+    "en": "grid"
+  },
+  "json": {
+    "ja": "json",
+    "ko": "json",
+    "en": "json"
+  },
+  "placement": {
+    "ja": "placement",
+    "ko": "placement",
+    "en": "placement"
+  },
+  "random": {
+    "ja": "random",
+    "ko": "random",
+    "en": "random"
+  },
+  "steam": {
+    "ja": "steam",
+    "ko": "steam",
+    "en": "steam"
+  },
+  "transpiler": {
+    "ja": "transpiler",
+    "ko": "transpiler",
+    "en": "transpiler"
+  }
+}

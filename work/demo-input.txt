@@ -1,0 +1,17 @@
+https://github.com/chickensoft-games/GameDemo
+https://github.com/Tralexium/Chippy_Avoidance
+https://github.com/moraguma/GamutoWare
+https://github.com/perfoon/Abandoned-Spaceship-Godot-Demo
+https://github.com/GDQuest/learn-gdscript
+https://github.com/gdquest-demos/godot-4-3D-Characters
+https://github.com/Nodragem/twin-stick-shooter-starter-kit
+https://github.com/RPicster/godot4-demo-desert-light
+https://github.com/antimundo/poder-solar
+https://github.com/cesko/godot_fps_test
+https://github.com/crystal-bit/platform-3d
+https://github.com/mbakgor/space-ship-ride
+https://github.com/mikatomik/Godot-4-Overgrown-Subway-Demo
+https://github.com/mrlev/FloatingIslandsDemo
+https://github.com/nikixos/EcoTribu
+https://github.com/msnsk/TileMapLayerTrial
+https://github.com/KenneyNL/Starter-Kit-FPS

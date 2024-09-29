@@ -1,0 +1,15 @@
+{
+    "name": "godot-jp-search",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "s": "hugo server",
+        "d": "hugo server -D",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "new": "hugo new",
+        "build": "hugo --minify"
+    },
+    "author": "",
+    "license": "ISC"
+}
