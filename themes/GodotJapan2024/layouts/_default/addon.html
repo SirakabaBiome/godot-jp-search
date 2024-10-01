@@ -2,6 +2,7 @@
 
 {{ $file := "static/data/addon.json" }}
 
+<article>
 {{- if .Title }}
 <header class="page-header">
     <h1>{{ .Title }}</h1>
@@ -26,10 +27,6 @@
     </p>
 
     <h3>
-        <button class="collapse-btn" data-collapse-btn="gaiyou">
-            <i class="fas fa-fw fa-eye collapse"></i>
-            <i class="fas fa-fw fa-eye-slash"></i>
-        </button>
         {{- if eq site.Language.Lang "ja" }}
         このサイトについて
         {{- else if eq site.Language.Lang "ko" }}
@@ -49,7 +46,7 @@
             Godot4〜のものを都度追加していきます。<br>
         </p>
         <!-- セパレーター  -->
-        <div class="addon-separator"></div>
+        <hr>
         <p>
             個人的な考え<br>
             GitHubのスター数はそこまであてにならないと思っています。READMEの小綺麗さやyoutubeとかではねただけの可能性もあるので……<br>
@@ -57,7 +54,7 @@
             また、<img style="display: inline" gdicon src="/icon/AssetLib.svg" alt="AssetLib">AssetLibにないものが意外とスター数が少なくても良いものが多いイメージがあるので探してみてください。<br>
         </p>
         <!-- セパレーター  -->
-        <div class="addon-separator"></div>
+        <hr>
         <p>
             ☑をつけた状態でブックマークすると検索条件を保存できます。<br>
         </p>
@@ -69,7 +66,7 @@
             Godot4 이상의 것들을 계속 추가할 예정입니다.
         </p>
         <!-- セパレーター  -->
-        <div class="addon-separator"></div>
+        <hr>
         <p>
             ☑을 체크한 상태로 북마크하면 검색 조건을 저장할 수 있습니다.
         </p>
@@ -81,7 +78,7 @@
             We will continue to add Godot4 and later versions.
         </p>
         <!-- セパレーター  -->
-        <div class="addon-separator"></div>
+        <hr>
         <p>
             If you bookmark it with a check mark, you can save the search conditions.
         </p>
@@ -96,13 +93,9 @@
 {{ end }}
 
 <div class="filter-container">
-    <h2 class="top-h2">
-        <span>
-            <button class="collapse-btn" data-collapse-btn="filterall">
-                <i class="fas fa-fw fa-eye"></i>
-                <i class="fas fa-fw fa-eye-slash collapse"></i>
-            </button>
-            <span>
+    <details open>
+                <summary>
+                    <h3>
                 {{- if eq site.Language.Lang "ja" }}
                 検索条件
                 {{- else if eq site.Language.Lang "ko" }}
@@ -110,8 +103,8 @@
                 {{- else }}
                 Search
                 {{- end }}
-            </span>
-        </span>
+                </h3>
+            </summary>
         <span class="pin-container">
             <button id="PinBtn" class="pin-btn" data-pin-btn>
                 <i class="fas fa-fw fa-thumbtack"></i>
@@ -127,19 +120,14 @@
 
             </span>
         </span>
-    </h2>
     <!-- セパレーター  -->
-    <div class="addon-separator" data-collapse-toggle="filterall"></div>
+        <hr>
 
-    <div data-collapse-toggle="filterall" style="padding: 0">
         <!-- タグフィルタ -->
         <div class="tag-filter">
             <div id="ForDuplicateExclude">
-                <h3 data-tag-head>
-                    <button class="collapse-btn" data-collapse-btn="daibunrui">
-                        <i class="fas fa-fw fa-eye"></i>
-                        <i class="fas fa-fw fa-eye-slash collapse"></i>
-                    </button>
+                <details open>
+                    <summary>
                     {{- if eq site.Language.Lang "ja" }}
                     大分類
                     {{- else if eq site.Language.Lang "ko" }}
@@ -147,8 +135,7 @@
                     {{- else }}
                     Category
                     {{- end }}
-                </h3>
-
+                    </summary>
                 <ul class="addon-tags" data-collapse-toggle="daibunrui">
                     <li>
                         <label data-commonly-tag>
@@ -214,16 +201,12 @@
                         </label>
                     </li>
                 </ul>
-
+            </details>
                 <!-- セパレーター  -->
-                <div class="addon-separator"></div>
+        <hr>
 
-                <h3 data-tag-head>
-                    <button class="collapse-btn" data-collapse-btn="specialtag">
-                        <i class="fas fa-fw fa-eye"></i>
-                        <i class="fas fa-fw fa-eye-slash collapse"></i>
-                    </button>
-
+                <details open>
+                    <summary>
                     {{- if eq site.Language.Lang "ja" }}
                     よく使いそうなタグ
                     {{- else if eq site.Language.Lang "ko" }}
@@ -231,8 +214,7 @@
                     {{- else }}
                     Popular Tags
                     {{- end }}
-                </h3>
-
+                        </summary>
                 <ul class="addon-tags" data-collapse-toggle="specialtag">
                     <li>
                         <label data-commonly-tag>
@@ -396,9 +378,8 @@
                         </label>
                     </li>
                 </ul>
-
                 <!-- セパレーター  -->
-                <div class="addon-separator" data-collapse-toggle="specialtag"></div>
+        <hr>
 
                 <ul class="addon-tags" data-collapse-toggle="specialtag">
                     <li>
@@ -522,15 +503,12 @@
                     </li>
                 </ul>
 
+            </details>
                 <!-- セパレーター  -->
-                <div class="addon-separator"></div>
+        <hr>
 
-                <h3 data-tag-head>
-                    <button class="collapse-btn" data-collapse-btn="license">
-                        <i class="fas fa-fw fa-eye"></i>
-                        <i class="fas fa-fw fa-eye-slash collapse"></i>
-                    </button>
-
+                <details open>
+                    <summary>
                     {{- if eq site.Language.Lang "ja" }}
                     ライセンス他
                     {{- else if eq site.Language.Lang "ko" }}
@@ -538,8 +516,7 @@
                     {{- else }}
                     License etc
                     {{- end }}
-                </h3>
-
+                </summary>
                 <ul id="FilterLicenseTags" class="addon-tags" data-collapse-toggle="license">
                     <li data-license-tag-template style="display: none">
                         <label data-tag-label>
@@ -549,16 +526,13 @@
                         </label>
                     </li>
                 </ul>
-
+            </details>
                 <!-- セパレーター  -->
-                <div class="addon-separator"></div>
+                
+        <hr>
 
-                <h3 data-tag-head>
-                    <button class="collapse-btn" data-collapse-btn="tag">
-                        <i class="fas fa-fw fa-eye"></i>
-                        <i class="fas fa-fw fa-eye-slash collapse"></i>
-                    </button>
-
+                <details open>
+                    <summary>
                     {{- if eq site.Language.Lang "ja" }}
                     タグ
                     {{- else if eq site.Language.Lang "ko" }}
@@ -566,7 +540,7 @@
                     {{- else }}
                     Tags
                     {{- end }}
-                </h3>
+                    </summary>
 
                 <ul id="FilterTags" class="addon-tags" data-collapse-toggle="tag">
                     <li data-tag-template style="display: none">
@@ -577,18 +551,13 @@
                         </label>
                     </li>
                 </ul>
-
-            </div>
-
+        </details>
+            
             <!-- セパレーター  -->
-            <div class="addon-separator"></div>
+        <hr>
 
-            <h3 data-tag-head>
-                <button class="collapse-btn" data-collapse-btn="filter">
-                    <i class="fas fa-fw fa-eye"></i>
-                    <i class="fas fa-fw fa-eye-slash collapse"></i>
-                </button>
-
+            <details open>
+                <summary>
                 {{- if eq site.Language.Lang "ja" }}
                 フィルタ組み合わせ方法
                 {{- else if eq site.Language.Lang "ko" }}
@@ -596,10 +565,9 @@
                 {{- else }}
                 Filter Combination
                 {{- end }}
-            </h3>
+                </summary>
 
             <!-- OR, And のラジオボタン -->
-            <div class="addon-andor" data-collapse-toggle="filter">
                 <label for="FilterAnd">
                     <input type="radio" id="FilterAnd" name="filter" value="and" checked>
                     AND
@@ -608,17 +576,12 @@
                     <input type="radio" id="FilterOr" name="filter" value="or">
                     OR
                 </label>
-            </div>
-
+            </details>
             <!-- セパレーター  -->
-            <div class="addon-separator"></div>
+        <hr>
 
-            <h3 data-tag-head>
-                <button class="collapse-btn" data-collapse-btn="exclude">
-                    <i class="fas fa-fw fa-eye collapse"></i>
-                    <i class="fas fa-fw fa-eye-slash"></i>
-                </button>
-
+            <details open>
+                <summary>
                 {{- if eq site.Language.Lang "ja" }}
                 除外条件
                 {{- else if eq site.Language.Lang "ko" }}
@@ -626,22 +589,17 @@
                 {{- else }}
                 Exclusion Condition
                 {{- end }}
-            </h3>
-
-            <div id="ExcludeTags" class="collapse" data-collapse-toggle="exclude" style="padding-left: 32px;">
+                    </summary>
+            <div id="ExcludeTags" data-collapse-toggle="exclude" style="padding-left: 32px;">
             </div>
-
+        </details>
             <!-- セパレーター  -->
-            <div class="addon-separator"></div>
+        <hr>
 
             <!-- ワード検索  -->
 
-            <h3 data-tag-head>
-                <button class="collapse-btn" data-collapse-btn="search">
-                    <i class="fas fa-fw fa-eye"></i>
-                    <i class="fas fa-fw fa-eye-slash collapse"></i>
-                </button>
-
+            <details>
+<summary>
                 {{- if eq site.Language.Lang "ja" }}
                 ワード検索(部分一致)
                 {{- else if eq site.Language.Lang "ko" }}
@@ -649,8 +607,7 @@
                 {{- else }}
                 Word Search(Partial Match)
                 {{- end }}
-            </h3>
-
+            </summary>
             <div class="addon-search" data-collapse-toggle="search">
                 <!-- プルダウンで対象を選択 title, author, summary -->
                 <select id="SearchTarget">
@@ -695,16 +652,11 @@
                     <input id="SearchInput" placeholder="検索" type="text" autocomplete="off" oninput="update()">
                 </div>
             </div>
-
+        </details>
             <!-- セパレーター  -->
-            <div class="addon-separator"></div>
-
+        <hr>
             <!-- クリア -->
-            <h3>
-                <button class="collapse-btn" data-collapse-btn="clear">
-                    <i class="fas fa-fw fa-eye"></i>
-                    <i class="fas fa-fw fa-eye-slash collapse"></i>
-                </button>
+
                 {{- if eq site.Language.Lang "ja" }}
                 条件全削除
                 {{- else if eq site.Language.Lang "ko" }}
@@ -712,9 +664,7 @@
                 {{- else }}
                 Clear all
                 {{- end }}
-            </h3>
 
-            <div data-collapse-toggle="clear">
                 <button class="clear-btn" onclick="clearAll()">
                     {{- if eq site.Language.Lang "ja" }}
                     すべて☑を外す
@@ -724,19 +674,9 @@
                     Clear all
                     {{- end }}
                 </button>
-            </div>
 
-        </div>
-
-    </div>
-</div>
 
 <div class="filter-container">
-    <h3>
-        <button class="collapse-btn" data-collapse-btn="order">
-            <i class="fas fa-fw fa-eye"></i>
-            <i class="fas fa-fw fa-eye-slash collapse"></i>
-        </button>
         {{- if eq site.Language.Lang "ja" }}
         表示順
         {{- else if eq site.Language.Lang "ko" }}
@@ -744,7 +684,6 @@
         {{- else }}
         Display Order
         {{- end }}
-    </h3>
 
     <!-- 表示順 のラジオボタン -->
     <div class="addon-andor" data-collapse-toggle="order">
@@ -852,15 +791,9 @@
             {{- end }}
         </label>
     </div>
-
     <!-- セパレーター  -->
-    <div class="addon-separator"></div>
+        <hr>
 
-    <h3>
-        <button class="collapse-btn" data-collapse-btn="display-col">
-            <i class="fas fa-fw fa-eye"></i>
-            <i class="fas fa-fw fa-eye-slash collapse"></i>
-        </button>
         {{- if eq site.Language.Lang "ja" }}
         表示列数
         {{- else if eq site.Language.Lang "ko" }}
@@ -868,10 +801,7 @@
         {{- else }}
         Column
         {{- end }}
-    </h3>
-
-    <div id="ColControls" style="margin-top: 1em ;" class="addon-display-columns" data-collapse-toggle="display-col">
-    </div>
+</details>
 </div>
 
 <!--Grid-->
@@ -897,7 +827,7 @@
             <span data-github-template><i class="fab fa-fw fa-github"></i></span>
             <span data-gitlab-template><i class="fab fa-fw fa-gitlab"></i></span>
             <span data-otherlink-template><i class="fas fa-fw fa-link"></i></span>
-            <span data-star-template><i class="fas fa-fw fa-star fa-xs" style="margin-left: 4px"></i></span>
+            <span data-star-template>★ </span>
         </li>
         <li class="addon sub-thumbnail" data-sub-thumbnail-template>
             <a href="" onclick="return showImagesLightBox();">
@@ -986,7 +916,7 @@
         </li>
     </ul>
 </div>
-
+</article>
 <script>
     const DataList = {{ readFile "static/data/addon.json" | safeJS }};
     const DatalistEntries = Object.entries(DataList);
@@ -1805,21 +1735,6 @@
      * 折りたたみ処理
      * @param btn
      */
-    function toggleCollapse(btn) {
-        const target = btn.getAttribute('data-collapse-btn');
-        const targetEls = document.querySelectorAll(`[data-collapse-toggle="${target}"]`);
-        targetEls.forEach(el => el.classList.toggle('collapse'));
-
-        // ボタンのアイコンを切り替える
-        if (targetEls[0].classList.contains('collapse')) {
-            btn.querySelector('i:first-child').classList.add('collapse');
-            btn.querySelector('i:last-child').classList.remove('collapse');
-        } else {
-            btn.querySelector('i:first-child').classList.remove('collapse');
-            btn.querySelector('i:last-child').classList.add('collapse');
-        }
-    }
-
     /**
      * 条件要素を複製して除外条件要素を追加する
      */
