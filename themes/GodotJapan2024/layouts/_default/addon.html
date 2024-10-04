@@ -2,7 +2,6 @@
 
 {{ $file := "static/data/addon.json" }}
 
-<article>
 {{- if .Title }}
 <header class="page-header">
     <h1>{{ .Title }}</h1>
@@ -14,6 +13,7 @@
 </header>
 {{- end }}
 
+<article class="addon">
 <!--概要-->
 <div style="margin: 0 0 1em 0;">
     <p>
@@ -107,7 +107,7 @@
             </summary>
         <span class="pin-container">
             <button id="PinBtn" class="pin-btn" data-pin-btn>
-                <i class="fas fa-fw fa-thumbtack"></i>
+                📌
                 {{- if eq site.Language.Lang "ja" }}
                 条件を上に固定する
                 {{- else if eq site.Language.Lang "ko" }}
@@ -556,8 +556,6 @@
             <!-- セパレーター  -->
         <hr>
 
-            <details open>
-                <summary>
                 {{- if eq site.Language.Lang "ja" }}
                 フィルタ組み合わせ方法
                 {{- else if eq site.Language.Lang "ko" }}
@@ -565,9 +563,9 @@
                 {{- else }}
                 Filter Combination
                 {{- end }}
-                </summary>
 
             <!-- OR, And のラジオボタン -->
+            <div class="block">
                 <label for="FilterAnd">
                     <input type="radio" id="FilterAnd" name="filter" value="and" checked>
                     AND
@@ -576,11 +574,11 @@
                     <input type="radio" id="FilterOr" name="filter" value="or">
                     OR
                 </label>
-            </details>
+                </div>
             <!-- セパレーター  -->
         <hr>
 
-            <details open>
+            <details>
                 <summary>
                 {{- if eq site.Language.Lang "ja" }}
                 除外条件
@@ -598,7 +596,7 @@
 
             <!-- ワード検索  -->
 
-            <details>
+            <details open>
 <summary>
                 {{- if eq site.Language.Lang "ja" }}
                 ワード検索(部分一致)
@@ -655,28 +653,31 @@
         </details>
             <!-- セパレーター  -->
         <hr>
-            <!-- クリア -->
 
+
+
+    <!-- 表示順 のラジオボタン -->
+    <div class="addon-andor" data-collapse-toggle="order">
+        <!-- クリア -->
+
+            {{- if eq site.Language.Lang "ja" }}
+            条件全削除
+            {{- else if eq site.Language.Lang "ko" }}
+            모두 체크 해제
+            {{- else }}
+            Clear all
+            {{- end }}
+
+            <button class="clear-btn" onclick="clearAll()">
                 {{- if eq site.Language.Lang "ja" }}
-                条件全削除
+                すべて☑を外す
                 {{- else if eq site.Language.Lang "ko" }}
                 모두 체크 해제
                 {{- else }}
                 Clear all
                 {{- end }}
+            </button>
 
-                <button class="clear-btn" onclick="clearAll()">
-                    {{- if eq site.Language.Lang "ja" }}
-                    すべて☑を外す
-                    {{- else if eq site.Language.Lang "ko" }}
-                    모두 체크 해제
-                    {{- else }}
-                    Clear all
-                    {{- end }}
-                </button>
-
-
-<div class="filter-container">
         {{- if eq site.Language.Lang "ja" }}
         表示順
         {{- else if eq site.Language.Lang "ko" }}
@@ -684,112 +685,98 @@
         {{- else }}
         Display Order
         {{- end }}
-
-    <!-- 表示順 のラジオボタン -->
-    <div class="addon-andor" data-collapse-toggle="order">
-        <label>
-            <input type="radio" name="order" value="updated-addon-desc" id="order-updated-addon-desc" checked>
-            {{- if eq site.Language.Lang "ja" }}
-            アドオン最新日順
-            {{- else if eq site.Language.Lang "ko" }}
-            애드온 최신 날짜 순
-            {{- else }}
-            Addon Last Updated
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="add-addon-desc" id="order-add-addon-desc">
-            {{- if eq site.Language.Lang "ja" }}
-            この一覧更新最新順
-            {{- else if eq site.Language.Lang "ko" }}
-            추가된 순
-            {{- else }}
-            Addon Added Desc
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="stars-desc" id="order-stars-desc">
-            {{- if eq site.Language.Lang "ja" }}
-            GitHubスター数多い順
-            {{- else if eq site.Language.Lang "ko" }}
-            GitHub 스타 수 순
-            {{- else }}
-            GitHub Stars
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="title-asc" id="order-title-asc">
-            {{- if eq site.Language.Lang "ja" }}
-            アドオン名アルファベット順
-            {{- else if eq site.Language.Lang "ko" }}
-            애드온 이름 오름차순
-            {{- else }}
-            Addon Name Asc
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="author-asc" id="order-author-asc">
-            {{- if eq site.Language.Lang "ja" }}
-            作者名アルファベット順
-            {{- else if eq site.Language.Lang "ko" }}
-            작성자 이름 오름차순
-            {{- else }}
-            Author Name Asc
-            {{- end }}
-        </label>
-    </div>
-
-    <div class="addon-andor" data-collapse-toggle="order">
-        <label>
-            <input type="radio" name="order" value="updated-addon-asc" id="order-updated-addon-asc">
-            {{- if eq site.Language.Lang "ja" }}
-            アドオン古い日順
-            {{- else if eq site.Language.Lang "ko" }}
-            애드온 오래된 날짜 순
-            {{- else }}
-            Addon Old Updated
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="add-addon-asc" id="order-add-addon-asc">
-            {{- if eq site.Language.Lang "ja" }}
-            この一覧更新古い順
-            {{- else if eq site.Language.Lang "ko" }}
-            추가된 순
-            {{- else }}
-            Addon Added Asc
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="stars-asc" id="order-stars-asc">
-            {{- if eq site.Language.Lang "ja" }}
-            GitHubスター少ない順
-            {{- else if eq site.Language.Lang "ko" }}
-            GitHub 스타 적은 순
-            {{- else }}
-            GitHub Stars Asc
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="title-desc" id="order-title-desc">
-            {{- if eq site.Language.Lang "ja" }}
-            アドオン名アルファベット逆順
-            {{- else if eq site.Language.Lang "ko" }}
-            애드온 이름 내림차순
-            {{- else }}
-            Addon Name Desc
-            {{- end }}
-        </label>
-        <label>
-            <input type="radio" name="order" value="author-desc" id="order-author-desc">
-            {{- if eq site.Language.Lang "ja" }}
-            作者名アルファベット逆順
-            {{- else if eq site.Language.Lang "ko" }}
-            작성자 이름 내림차순
-            {{- else }}
-            Author Name Desc
-            {{- end }}
-        </label>
+        <select id="addon-order">
+                <option name="order" value="updated-addon-desc" id="order-updated-addon-desc" checked>
+                {{- if eq site.Language.Lang "ja" }}
+                アドオン最新日順
+                {{- else if eq site.Language.Lang "ko" }}
+                애드온 최신 날짜 순
+                {{- else }}
+                Addon Last Updated
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="updated-addon-asc" id="order-updated-addon-asc">
+                {{- if eq site.Language.Lang "ja" }}
+                アドオン古い日順
+                {{- else if eq site.Language.Lang "ko" }}
+                애드온 오래된 날짜 순
+                {{- else }}
+                Addon Old Updated
+                {{- end }}
+                </option>
+                <option name="order" value="add-addon-desc" id="order-add-addon-desc">
+                {{- if eq site.Language.Lang "ja" }}
+                この一覧更新最新順
+                {{- else if eq site.Language.Lang "ko" }}
+                추가된 순
+                {{- else }}
+                Addon Added Desc
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="add-addon-asc" id="order-add-addon-asc">
+                {{- if eq site.Language.Lang "ja" }}
+                この一覧更新古い順
+                {{- else if eq site.Language.Lang "ko" }}
+                추가된 순
+                {{- else }}
+                Addon Added Asc
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="stars-desc" id="order-stars-desc">
+                {{- if eq site.Language.Lang "ja" }}
+                GitHubスター数多い順
+                {{- else if eq site.Language.Lang "ko" }}
+                GitHub 스타 수 순
+                {{- else }}
+                GitHub Stars
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="stars-asc" id="order-stars-asc">
+                {{- if eq site.Language.Lang "ja" }}
+                GitHubスター少ない順
+                {{- else if eq site.Language.Lang "ko" }}
+                GitHub 스타 적은 순
+                {{- else }}
+                GitHub Stars Asc
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="title-asc" id="order-title-asc">
+                {{- if eq site.Language.Lang "ja" }}
+                アドオン名アルファベット順
+                {{- else if eq site.Language.Lang "ko" }}
+                애드온 이름 오름차순
+                {{- else }}
+                Addon Name Asc
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="title-desc" id="order-title-desc">
+                {{- if eq site.Language.Lang "ja" }}
+                アドオン名アルファベット逆順
+                {{- else if eq site.Language.Lang "ko" }}
+                애드온 이름 내림차순
+                {{- else }}
+                Addon Name Desc
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="author-asc" id="order-author-asc">
+                {{- if eq site.Language.Lang "ja" }}
+                作者名アルファベット順
+                {{- else if eq site.Language.Lang "ko" }}
+                작성자 이름 오름차순
+                {{- else }}
+                Author Name Asc
+                {{- end }}
+                </option>
+                <option type="radio" name="order" value="author-desc" id="order-author-desc">
+                {{- if eq site.Language.Lang "ja" }}
+                作者名アルファベット逆順
+                {{- else if eq site.Language.Lang "ko" }}
+                작성자 이름 내림차순
+                {{- else }}
+                Author Name Desc
+                {{- end }}
+                </option>
+        </select>
     </div>
     <!-- セパレーター  -->
         <hr>
@@ -801,8 +788,9 @@
         {{- else }}
         Column
         {{- end }}
+        <div id="ColControls" style="margin-top: 1em ;" class="addon-display-columns" data-collapse-toggle="display-col">
+        </div>
 </details>
-</div>
 
 <!--Grid-->
 <div class="grid-container">
@@ -931,6 +919,8 @@
     const ImageMovieOrgImageDirPath = "{{ "/images/addon/images/" | relURL }}";
 
     document.addEventListener('DOMContentLoaded', () => {
+        // ソートのセレクトが変更されたらupdateを呼び出す
+        document.querySelector('select#addon-order').addEventListener('change', update);
         // 条件タグを生成
         createTags();
 
@@ -978,10 +968,6 @@
         document.querySelectorAll('input[name="filter"]').forEach(function(el) {
             el.addEventListener('change', update);
         });
-        // ソートのラジオボタンが変更されたらupdateを呼び出す
-        document.querySelectorAll('input[name="order"]').forEach(function(el) {
-            el.addEventListener('change', update);
-        });
 
         //上にスクロールする
         window.scrollTo({
@@ -1021,7 +1007,7 @@
         const filterType = document.querySelector('input[name="filter"]:checked').value;
         query.append('filter', filterType);
 
-        const order = document.querySelector('input[name="order"]:checked').value;
+        const order = document.querySelector('select#addon-order').value;
         query.append('order', order);
 
         const searchTarget = document.getElementById('SearchTarget').value;
