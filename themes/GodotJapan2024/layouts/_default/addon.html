@@ -14,898 +14,544 @@
 {{- end }}
 
 <article class="addon">
-<!--概要-->
-<div style="margin: 0 0 1em 0;">
-    <p>
-        {{- if eq site.Language.Lang "ja" }}
-        Godot Engineのアドオンを一覧表示しています。 <a class="link" href="https://faultun.com/ko/addon">한국어</a> <a class="link" href="https://faultun.com/en/addon">English</a>
-        {{- else if eq site.Language.Lang "ko" }}
-        Godot Engine의 애드온을 목록으로 표시하고 있습니다.<a class="link" href="https://faultun.com/ja/addon">日本語</a><a class="link" href="https://faultun.com/en/addon">English</a>
-        {{- else }}
-        This is a list of Godot Engine add-ons.<a class="link" href="https://faultun.com/ja/addon">日本語</a><a class="link" href="https://faultun.com/ko/addon">한국어</a>
-        {{- end }}
-    </p>
+    <!--概要-->
+    <div style="margin: 0 0 1em 0;">
+        <p>
+            Godot Engineのアドオンを一覧表示しています。 <a class="link" href="https://faultun.com/ko/addon">한국어</a> <a
+                class="link" href="https://faultun.com/en/addon">English</a>
+        </p>
 
-    <h3>
-        {{- if eq site.Language.Lang "ja" }}
-        このサイトについて
-        {{- else if eq site.Language.Lang "ko" }}
-        이 사이트에 대해
-        {{- else }}
-        About this site
-        {{- end }}
-    </h3>
+        <h3>
+            このサイトについて
+        </h3>
 
-    <div class="collapse" data-collapse-toggle="gaiyou">
-        {{- if eq site.Language.Lang "ja" }}
-        <p>
-            TODO 概要はどこかにいい感じに書く
-            概要、評価などはすべて筆者（ふぉるた）によるものです。<br>
-            このサイトは非公式です。Godot公式・Godotコミュニティとは関係ありませんのでご注意ください。<br><br>
-            誤りや追加要望があれば、こちらの<a class="link" href="https://forms.gle/DgCmjtGSSNrNojGW6">Google Form</a>からお知らせください。<br><br>
-            Godot4〜のものを都度追加していきます。<br>
-        </p>
-        <!-- セパレーター  -->
-        <hr>
-        <p>
-            個人的な考え<br>
-            GitHubのスター数はそこまであてにならないと思っています。READMEの小綺麗さやyoutubeとかではねただけの可能性もあるので……<br>
-            自分のゲームで使えるかどうかで判断するのが一番！<br><br>
-            また、<img style="display: inline" gdicon src="/icon/AssetLib.svg" alt="AssetLib">AssetLibにないものが意外とスター数が少なくても良いものが多いイメージがあるので探してみてください。<br>
-        </p>
-        <!-- セパレーター  -->
-        <hr>
-        <p>
-            ☑をつけた状態でブックマークすると検索条件を保存できます。<br>
-        </p>
-        {{- else if eq site.Language.Lang "ko" }}
-        <p>
-            요약, 평가 등은 모두 저자 (folt-a)가 작성했습니다.<br>
-            공식적이지 않습니다. Godot 공식 또는 Godot 커뮤니티에서 제공하는 것이 아닙니다. 주의해 주십시오.<br><br>
-            오류 또는 추가 요청이 있으면 이 <a class="link" href="https://forms.gle/DgCmjtGSSNrNojGW6">Google Form</a>을 통해 알려주십시오. <br><br>
-            Godot4 이상의 것들을 계속 추가할 예정입니다.
-        </p>
-        <!-- セパレーター  -->
-        <hr>
-        <p>
-            ☑을 체크한 상태로 북마크하면 검색 조건을 저장할 수 있습니다.
-        </p>
-        {{- else }}
-        <p>
-            Summaries, evaluations, etc. are all written by the author (folt-a).<br>
-            This Site is unofficial. Please note that it is not provided by Godot official or Godot community.<br><br>
-            If you have any errors or additional requests, please let us know via this <a class="link" href="https://forms.gle/DgCmjtGSSNrNojGW6">Google Form</a>. <br><br>
-            We will continue to add Godot4 and later versions.
-        </p>
-        <!-- セパレーター  -->
-        <hr>
-        <p>
-            If you bookmark it with a check mark, you can save the search conditions.
-        </p>
-        {{- end }}
+        <div class="collapse" data-collapse-toggle="gaiyou">
+            <p>
+                TODO 概要はどこかにいい感じに書く
+                概要、評価などはすべて筆者（ふぉるた）によるものです。<br>
+                このサイトは非公式です。Godot公式・Godotコミュニティとは関係ありませんのでご注意ください。<br><br>
+                誤りや追加要望があれば、こちらの<a class="link" href="https://forms.gle/DgCmjtGSSNrNojGW6">Google
+                Form</a>からお知らせください。<br><br>
+                Godot4〜のものを都度追加していきます。<br>
+            </p>
+            <!-- セパレーター  -->
+            <hr>
+            <p>
+                個人的な考え<br>
+                GitHubのスター数はそこまであてにならないと思っています。READMEの小綺麗さやyoutubeとかではねただけの可能性もあるので……<br>
+                自分のゲームで使えるかどうかで判断するのが一番！<br><br>
+                また、<img style="display: inline" gdicon src="/icon/AssetLib.svg" alt="AssetLib">AssetLibにないものが意外とスター数が少なくても良いものが多いイメージがあるので探してみてください。<br>
+            </p>
+            <!-- セパレーター  -->
+            <hr>
+            <p>
+                ☑をつけた状態でブックマークすると検索条件を保存できます。<br>
+            </p>
+        </div>
     </div>
-</div>
 
-{{ if (fileExists $file) }}
-{{ with (os.Stat $file) }}
-<p>最終更新日: {{ .ModTime.Format "2006-01-02" }}</p>
-{{ end }}
-{{ end }}
+    {{ if (fileExists $file) }}
+    {{ with (os.Stat $file) }}
+    <p>最終更新日: {{ .ModTime.Format "2006-01-02" }}</p>
+    {{ end }}
+    {{ end }}
 
-<div class="filter-container">
-    <details open>
-                <summary>
-                    <h3>
-                {{- if eq site.Language.Lang "ja" }}
-                検索条件
-                {{- else if eq site.Language.Lang "ko" }}
-                검색 조건
-                {{- else }}
-                Search
-                {{- end }}
+    <div class="filter-container">
+        <details open>
+            <summary>
+                <h3>
+                    検索条件
                 </h3>
             </summary>
-        <span class="pin-container">
+            <span class="pin-container">
             <button id="PinBtn" class="pin-btn" data-pin-btn>
                 📌
-                {{- if eq site.Language.Lang "ja" }}
                 条件を上に固定する
-                {{- else if eq site.Language.Lang "ko" }}
-                조건을 고정
-                {{- else }}
-                Pin fixed top
-                {{- end }}
             </button>
             <span class="labal-pin">
 
             </span>
         </span>
-    <!-- セパレーター  -->
-        <hr>
+            <!-- セパレーター  -->
+            <hr>
 
-        <!-- タグフィルタ -->
-        <div class="tag-filter">
-            <div id="ForDuplicateExclude">
-                <details open>
-                    <summary>
-                    {{- if eq site.Language.Lang "ja" }}
-                    大分類
-                    {{- else if eq site.Language.Lang "ko" }}
-                    대분류
-                    {{- else }}
-                    Category
-                    {{- end }}
-                    </summary>
-                <ul class="addon-tags" data-collapse-toggle="daibunrui">
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="2d">
-                            <img gdicon src="/icon/Node2D.svg" alt="Node2D">
-                            2D
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="3d" />
-                            <img gdicon src="/icon/Node3D.svg" alt="Node3D">
-                            3D
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="ui" />
-                            <img gdicon src="/icon/Control.svg" alt="Control">
-                            UI
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="other" />
-                            <img gdicon src="/icon/Node.svg" alt="Node">
-                            他
-                            <sup></sup>
-                        </label>
-                    </li>
-                </ul>
-
-                <ul class="addon-tags" data-collapse-toggle="daibunrui">
-                    <li>
-                        <label data-not-tag-condition>
-                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="notdemo" />
-                            <i class="fas fa-fw fa-do-not-enter"></i>
-                            {{- if eq site.Language.Lang "ja" }}
-                            デモを除外する
-                            {{- else if eq site.Language.Lang "ko" }}
-                            데모 제외
-                            {{- else }}
-                            Exclude demo
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-not-tag-condition>
-                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="withsummary" />
-                            <i class="fas fa-fw fa-comment"></i>
-                            {{- if eq site.Language.Lang "ja" }}
-                            概要・解説付き
-                            {{- else if eq site.Language.Lang "ko" }}
-                            요약 및 설명
-                            {{- else }}
-                            With Summary
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                </ul>
-            </details>
-                <!-- セパレーター  -->
-        <hr>
-
-                <details open>
-                    <summary>
-                    {{- if eq site.Language.Lang "ja" }}
-                    よく使いそうなタグ
-                    {{- else if eq site.Language.Lang "ko" }}
-                    자주 사용되는 태그
-                    {{- else }}
-                    Popular Tags
-                    {{- end }}
+            <!-- タグフィルタ -->
+            <div class="tag-filter">
+                <div id="ForDuplicateExclude">
+                    <details open>
+                        <summary>
+                            大分類
                         </summary>
-                <ul class="addon-tags" data-collapse-toggle="specialtag">
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="animation" />
-                            <img gdicon src="/icon/AnimationPlayer.svg" alt="Animation">
-                            {{- if eq site.Language.Lang "ja" }}
-                            アニメーション
-                            {{- else if eq site.Language.Lang "ko" }}
-                            애니메이션
-                            {{- else }}
-                            Animation
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="audio" />
-                            <img gdicon src="/icon/AudioStream.svg" alt="AudioStream">
-                            {{- if eq site.Language.Lang "ja" }}
-                            オーディオ
-                            {{- else if eq site.Language.Lang "ko" }}
-                            오디오
-                            {{- else }}
-                            Audio
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="navigation" />
-                            <img gdicon src="/icon/NavigationPolygon.svg" alt="NavigationPolygon">
-                            {{- if eq site.Language.Lang "ja" }}
-                            ナビゲーション
-                            {{- else if eq site.Language.Lang "ko" }}
-                            내비게이션
-                            {{- else }}
-                            Navigation
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="multiplayer" />
-                            <img gdicon src="/icon/MultiplayerSynchronizer.svg" alt="MultiplayerSynchronizer">
-                            {{- if eq site.Language.Lang "ja" }}
-                            マルチプレイ
-                            {{- else if eq site.Language.Lang "ko" }}
-                            멀티플레이
-                            {{- else }}
-                            Multiplayer
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="network" />
-                            <img gdicon src="/icon/MultiplayerSynchronizer.svg" alt="MultiplayerSynchronizer">
-                            {{- if eq site.Language.Lang "ja" }}
-                            ネットワーク
-                            {{- else if eq site.Language.Lang "ko" }}
-                            네트워크
-                            {{- else }}
-                            Networking
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="shader" />
-                            <img gdicon src="/icon/Shader.svg" alt="Shader">
-                            {{- if eq site.Language.Lang "ja" }}
-                            シェーダー
-                            {{- else if eq site.Language.Lang "ko" }}
-                            쉐이더
-                            {{- else }}
-                            Shader
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="xr" />
-                            <img gdicon src="/icon/XRCamera3D.svg" alt="XRCamera3D">
-                            {{- if eq site.Language.Lang "ja" }}
-                            AR/VR
-                            {{- else if eq site.Language.Lang "ko" }}
-                            AR/VR
-                            {{- else }}
-                            AR/VR
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="physics" />
-                            <img gdicon src="/icon/ViewportSpeed.svg" alt="Physics">
-                            {{- if eq site.Language.Lang "ja" }}
-                            物理
-                            {{- else if eq site.Language.Lang "ko" }}
-                            물리
-                            {{- else }}
-                            Physics
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                </ul>
-
-                <ul class="addon-tags" data-collapse-toggle="specialtag">
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="gdextension" />
-                            GDExtension
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="module" />
-                            {{- if eq site.Language.Lang "ja" }}
-                            モジュール
-                            {{- else if eq site.Language.Lang "ko" }}
-                            모듈
-                            {{- else }}
-                            Module
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="csharponly" />
-                            {{- if eq site.Language.Lang "ja" }}
-                            C#のみ
-                            {{- else if eq site.Language.Lang "ko" }}
-                            C#만
-                            {{- else }}
-                            C# Only
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="csharpwrapper" />
-                            {{- if eq site.Language.Lang "ja" }}
-                            C#ラッパーあり
-                            {{- else if eq site.Language.Lang "ko" }}
-                            C# 래퍼 있음
-                            {{- else }}
-                            C# Wrapper
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                </ul>
-                <!-- セパレーター  -->
-        <hr>
-
-                <ul class="addon-tags" data-collapse-toggle="specialtag">
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="editoronly" />
-                            <img gdicon src="/icon/EditorPlugin.svg" alt="EditorPlugin">
-                            {{- if eq site.Language.Lang "ja" }}
-                            エディタのみ
-                            {{- else if eq site.Language.Lang "ko" }}
-                            에디터 전용
-                            {{- else }}
-                            Editor Only
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-not-tag-condition>
-                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="assetlib" />
-                            <img gdicon src="/icon/AssetLib.svg" alt="AssetLib">
-                            {{- if eq site.Language.Lang "ja" }}
-                            AssetLibにある
-                            {{- else if eq site.Language.Lang "ko" }}
-                            AssetLib에 있는
-                            {{- else }}
-                            In AssetLib
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-not-tag-condition>
-                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="notassetlib" />
-                            <img gdicon src="/icon/AssetLib.svg" alt="AssetLib">
-                            {{- if eq site.Language.Lang "ja" }}
-                            AssetLibにない
-                            {{- else if eq site.Language.Lang "ko" }}
-                            AssetLib에 없는
-                            {{- else }}
-                            Not in AssetLib
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label data-not-tag-condition>
-                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="github" />
-                            <i class="fab fa-fw fa-github"></i>
-                            GitHub
-                            <sup></sup>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label data-not-tag-condition>
-                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="gitlab" />
-                            <i class="fab fa-fw fa-gitlab"></i>
-                            GitLab
-                            <sup></sup>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="specialTag" value="other" />
-                            <i class="fas fa-fw fa-link"></i>
-                            {{- if eq site.Language.Lang "ja" }}
-                            その他サイト
-                            {{- else if eq site.Language.Lang "ko" }}
-                            다른 링크
-                            {{- else }}
-                            Other Site
-                            {{- end }}
-                            <sup></sup>
-                        </label>
-                    </li>
-
-                    <li>
-                        {{- if eq site.Language.Lang "ja" }}
-                        <label title="ふぉるたがプロジェクトで使っているもの" data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="foltause" />
-                            使ってるやつ
-                            <sup></sup>
-                        </label>
-                        {{- else if eq site.Language.Lang "ko" }}
-                        <label title="저자가 프로젝트에서 사용하는 것" data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="foltause" />
-                            저자 사용
-                            <sup></sup>
-                        </label>
-                        {{- else }}
-                        <label title="What the author uses in the project" data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="foltause" />
-                            Author Use
-                            <sup></sup>
-                        </label>
-                        {{- end }}
-                    </li>
-
-                    <li>
-                        {{- if eq site.Language.Lang "ja" }}
-                        <label title="" data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="needcheck" />
-                            未チェック
-                            <sup></sup>
-                        </label>
-                        {{- else if eq site.Language.Lang "ko" }}
-                        <label title="" data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="needcheck" />
-                            미확인
-                            <sup></sup>
-                        </label>
-                        {{- else }}
-                        <label title="" data-commonly-tag>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="needcheck" />
-                            Need Check
-                            <sup></sup>
-                        </label>
-                        {{- end }}
-                    </li>
-                </ul>
-
-            </details>
-                <!-- セパレーター  -->
-        <hr>
-
-                <details open>
-                    <summary>
-                    {{- if eq site.Language.Lang "ja" }}
-                    ライセンス他
-                    {{- else if eq site.Language.Lang "ko" }}
-                    라이센스 등
-                    {{- else }}
-                    License etc
-                    {{- end }}
-                </summary>
-                <ul id="FilterLicenseTags" class="addon-tags" data-collapse-toggle="license">
-                    <li data-license-tag-template style="display: none">
-                        <label data-tag-label>
-                            <input class="checkTag" data-check-tag type="checkbox" name="licenseTag" value="" data-tag-checkbox />
-                            <span data-tag-label-text></span>
-                            <sup data-tag-sup></sup>
-                        </label>
-                    </li>
-                </ul>
-            </details>
-                <!-- セパレーター  -->
-                
-        <hr>
-
-                <details open>
-                    <summary>
-                    {{- if eq site.Language.Lang "ja" }}
-                    タグ
-                    {{- else if eq site.Language.Lang "ko" }}
-                    태그
-                    {{- else }}
-                    Tags
-                    {{- end }}
-                    </summary>
-
-                <ul id="FilterTags" class="addon-tags" data-collapse-toggle="tag">
-                    <li data-tag-template style="display: none">
-                        <label data-tag-label>
-                            <input class="checkTag" data-check-tag type="checkbox" name="tag" value="" data-tag-checkbox />
-                            <span data-tag-label-text></span>
-                            <sup data-tag-sup></sup>
-                        </label>
-                    </li>
-                </ul>
-        </details>
-            
-            <!-- セパレーター  -->
-        <hr>
-
-                {{- if eq site.Language.Lang "ja" }}
-                フィルタ組み合わせ方法
-                {{- else if eq site.Language.Lang "ko" }}
-                필터 조합 방법
-                {{- else }}
-                Filter Combination
-                {{- end }}
-
-            <!-- OR, And のラジオボタン -->
-            <div class="block">
-                <label for="FilterAnd">
-                    <input type="radio" id="FilterAnd" name="filter" value="and" checked>
-                    AND
-                </label>
-                <label for="FilterOr">
-                    <input type="radio" id="FilterOr" name="filter" value="or">
-                    OR
-                </label>
-                </div>
-            <!-- セパレーター  -->
-        <hr>
-
-            <details>
-                <summary>
-                {{- if eq site.Language.Lang "ja" }}
-                除外条件
-                {{- else if eq site.Language.Lang "ko" }}
-                제외 조건
-                {{- else }}
-                Exclusion Condition
-                {{- end }}
-                    </summary>
-            <div id="ExcludeTags" data-collapse-toggle="exclude" style="padding-left: 32px;">
-            </div>
-        </details>
-            <!-- セパレーター  -->
-        <hr>
-
-            <!-- ワード検索  -->
-
-            <details open>
-<summary>
-                {{- if eq site.Language.Lang "ja" }}
-                ワード検索(部分一致)
-                {{- else if eq site.Language.Lang "ko" }}
-                단어 검색(부분 일치)
-                {{- else }}
-                Word Search(Partial Match)
-                {{- end }}
-            </summary>
-            <div class="addon-search" data-collapse-toggle="search">
-                <!-- プルダウンで対象を選択 title, author, summary -->
-                <select id="SearchTarget">
-                    <option value="any" selected>
-                        {{- if eq site.Language.Lang "ja" }}
-                        全て
-                        {{- else if eq site.Language.Lang "ko" }}
-                        모두
-                        {{- else }}
-                        ALL
-                        {{- end }}
-                    </option>
-                    <option value="title">
-                        {{- if eq site.Language.Lang "ja" }}
-                        アドオン名
-                        {{- else if eq site.Language.Lang "ko" }}
-                        애드온 이름
-                        {{- else }}
-                        Addon Name
-                        {{- end }}
-                    </option>
-                    <option value="author">
-                        {{- if eq site.Language.Lang "ja" }}
-                        作者名
-                        {{- else if eq site.Language.Lang "ko" }}
-                        작성자 이름
-                        {{- else }}
-                        Author Name
-                        {{- end }}
-                    </option>
-                    <option value="summary">
-                        {{- if eq site.Language.Lang "ja" }}
-                        概要
-                        {{- else if eq site.Language.Lang "ko" }}
-                        요약
-                        {{- else }}
-                        Summary
-                        {{- end }}
-                    </option>
-                </select>
-                <div id="searchbox">
-                    <input id="SearchInput" placeholder="検索" type="text" autocomplete="off" oninput="update()">
-                </div>
-            </div>
-        </details>
-            <!-- セパレーター  -->
-        <hr>
-
-
-
-    <!-- 表示順 のラジオボタン -->
-    <div class="addon-andor" data-collapse-toggle="order">
-        <!-- クリア -->
-
-            {{- if eq site.Language.Lang "ja" }}
-            条件全削除
-            {{- else if eq site.Language.Lang "ko" }}
-            모두 체크 해제
-            {{- else }}
-            Clear all
-            {{- end }}
-
-            <button class="clear-btn" onclick="clearAll()">
-                {{- if eq site.Language.Lang "ja" }}
-                すべて☑を外す
-                {{- else if eq site.Language.Lang "ko" }}
-                모두 체크 해제
-                {{- else }}
-                Clear all
-                {{- end }}
-            </button>
-
-        {{- if eq site.Language.Lang "ja" }}
-        表示順
-        {{- else if eq site.Language.Lang "ko" }}
-        표시 순서
-        {{- else }}
-        Display Order
-        {{- end }}
-        <select id="addon-order">
-                <option name="order" value="updated-addon-desc" id="order-updated-addon-desc" checked>
-                {{- if eq site.Language.Lang "ja" }}
-                アドオン最新日順
-                {{- else if eq site.Language.Lang "ko" }}
-                애드온 최신 날짜 순
-                {{- else }}
-                Addon Last Updated
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="updated-addon-asc" id="order-updated-addon-asc">
-                {{- if eq site.Language.Lang "ja" }}
-                アドオン古い日順
-                {{- else if eq site.Language.Lang "ko" }}
-                애드온 오래된 날짜 순
-                {{- else }}
-                Addon Old Updated
-                {{- end }}
-                </option>
-                <option name="order" value="add-addon-desc" id="order-add-addon-desc">
-                {{- if eq site.Language.Lang "ja" }}
-                この一覧更新最新順
-                {{- else if eq site.Language.Lang "ko" }}
-                추가된 순
-                {{- else }}
-                Addon Added Desc
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="add-addon-asc" id="order-add-addon-asc">
-                {{- if eq site.Language.Lang "ja" }}
-                この一覧更新古い順
-                {{- else if eq site.Language.Lang "ko" }}
-                추가된 순
-                {{- else }}
-                Addon Added Asc
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="stars-desc" id="order-stars-desc">
-                {{- if eq site.Language.Lang "ja" }}
-                GitHubスター数多い順
-                {{- else if eq site.Language.Lang "ko" }}
-                GitHub 스타 수 순
-                {{- else }}
-                GitHub Stars
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="stars-asc" id="order-stars-asc">
-                {{- if eq site.Language.Lang "ja" }}
-                GitHubスター少ない順
-                {{- else if eq site.Language.Lang "ko" }}
-                GitHub 스타 적은 순
-                {{- else }}
-                GitHub Stars Asc
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="title-asc" id="order-title-asc">
-                {{- if eq site.Language.Lang "ja" }}
-                アドオン名アルファベット順
-                {{- else if eq site.Language.Lang "ko" }}
-                애드온 이름 오름차순
-                {{- else }}
-                Addon Name Asc
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="title-desc" id="order-title-desc">
-                {{- if eq site.Language.Lang "ja" }}
-                アドオン名アルファベット逆順
-                {{- else if eq site.Language.Lang "ko" }}
-                애드온 이름 내림차순
-                {{- else }}
-                Addon Name Desc
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="author-asc" id="order-author-asc">
-                {{- if eq site.Language.Lang "ja" }}
-                作者名アルファベット順
-                {{- else if eq site.Language.Lang "ko" }}
-                작성자 이름 오름차순
-                {{- else }}
-                Author Name Asc
-                {{- end }}
-                </option>
-                <option type="radio" name="order" value="author-desc" id="order-author-desc">
-                {{- if eq site.Language.Lang "ja" }}
-                作者名アルファベット逆順
-                {{- else if eq site.Language.Lang "ko" }}
-                작성자 이름 내림차순
-                {{- else }}
-                Author Name Desc
-                {{- end }}
-                </option>
-        </select>
-    </div>
-    <!-- セパレーター  -->
-        <hr>
-
-        {{- if eq site.Language.Lang "ja" }}
-        表示列数
-        {{- else if eq site.Language.Lang "ko" }}
-        열 수
-        {{- else }}
-        Column
-        {{- end }}
-        <div id="ColControls" style="margin-top: 1em ;" class="addon-display-columns" data-collapse-toggle="display-col">
-        </div>
-</details>
-
-<!--Grid-->
-<div class="grid-container">
-    {{ if (fileExists $file) }}
-    {{ with (os.Stat $file) }}
-    <p>最終更新日時: {{ .ModTime.Format "2006-01-02 15:04" }}</p>
-    {{ end }}
-    {{ end }}
-
-    <!--　件数 -->
-    <div class="addon-count">
-        <span id="AddonCount"></span>
-    </div>
-
-    <!-- JavaScriptからDOM構築するための空の検索結果一覧リスト -->
-    <ul id="AddonFilteredList">
-    </ul>
-
-    <!-- アドオンカード　テンプレート -->
-    <ul class="addon" style="display: none">
-        <li>
-            <span data-github-template><i class="fab fa-fw fa-github"></i></span>
-            <span data-gitlab-template><i class="fab fa-fw fa-gitlab"></i></span>
-            <span data-otherlink-template><i class="fas fa-fw fa-link"></i></span>
-            <span data-star-template>★ </span>
-        </li>
-        <li class="addon sub-thumbnail" data-sub-thumbnail-template>
-            <a href="" onclick="return showImagesLightBox();">
-                <img alt="" src=""/>
-            </a>
-        </li>
-        <li data-template>
-            <div class="addon addon-entry" style="transition: none">
-                <div class="addon post-div">
-                    <header class="addon entry-header">
-                        <div class="addon entry-header-row">
-                            <h2 class="addon entry-hint-parent" data-entry-title>
-                                <a href="" target="_blank" data-entry-title-link>
-                                    <span class="addon entry-icon" data-entry-icon></span>
-                                </a>
-                            </h2>
-                            <span class="addon entry-author-label" data-entry-author-label>
-                                {{- if eq site.Language.Lang "ja" }}
-                                作者:
-                                {{- else if eq site.Language.Lang "ko" }}
-                                작성자:
-                                {{- else }}
-                                Author:
-                                {{- end }}
-                            </span>
-                            <span class="addon entry-author" data-entry-author></span>
-                        </div>
-                        <!-- tags -->
-                        <ul class="addon entry-tags" data-entry-tags>
-                            <li class="addon entry-license" data-entry-license></li>
+                        <ul class="addon-tags" data-collapse-toggle="daibunrui">
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="2d">
+                                    <img gdicon src="/icon/Node2D.svg" alt="Node2D">
+                                    2D
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="3d"/>
+                                    <img gdicon src="/icon/Node3D.svg" alt="Node3D">
+                                    3D
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="ui"/>
+                                    <img gdicon src="/icon/Control.svg" alt="Control">
+                                    UI
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="other"/>
+                                    <img gdicon src="/icon/Node.svg" alt="Node">
+                                    他
+                                    <sup></sup>
+                                </label>
+                            </li>
                         </ul>
-                    </header>
-                    <div class="addon entry-content">
-                        <!-- サムネイル -->
-                        <div class="addon entry-thumbnail">
-                            <img src="" alt="" data-entry-thumbnail-image>
-                        </div>
-                        <div class="addon entry-main">
-                            <!-- サブサムネイル（説明画像） -->
-                            <ul class="addon sub-images" data-entry-sub-images>
-                            </ul>
-                            <p class="addon entry-summary" data-entry-summary>
 
-                            </p>
-                            <div>
-                                <a class="addon entry-assetlib-link link" href="" data-entry-assetlib-link></a>
+                        <ul class="addon-tags" data-collapse-toggle="daibunrui">
+                            <li>
+                                <label data-not-tag-condition>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="specialTag"
+                                           value="notdemo"/>
+                                    <i class="fas fa-fw fa-do-not-enter"></i>
+                                    デモを除外する
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-not-tag-condition>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="specialTag"
+                                           value="withsummary"/>
+                                    <i class="fas fa-fw fa-comment"></i>
+                                    概要・解説付き
+                                    <sup></sup>
+                                </label>
+                            </li>
+                        </ul>
+                    </details>
+                    <!-- セパレーター  -->
+                    <hr>
+
+                    <details open>
+                        <summary>
+                            よく使いそうなタグ
+                        </summary>
+                        <ul class="addon-tags" data-collapse-toggle="specialtag">
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag"
+                                           value="animation"/>
+                                    <img gdicon src="/icon/AnimationPlayer.svg" alt="Animation">
+                                    アニメーション
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="audio"/>
+                                    <img gdicon src="/icon/AudioStream.svg" alt="AudioStream">
+                                    オーディオ
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag"
+                                           value="navigation"/>
+                                    <img gdicon src="/icon/NavigationPolygon.svg" alt="NavigationPolygon">
+                                    ナビゲーション
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag"
+                                           value="multiplayer"/>
+                                    <img gdicon src="/icon/MultiplayerSynchronizer.svg" alt="MultiplayerSynchronizer">
+                                    マルチプレイ
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="network"/>
+                                    <img gdicon src="/icon/MultiplayerSynchronizer.svg" alt="MultiplayerSynchronizer">
+                                    ネットワーク
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="shader"/>
+                                    <img gdicon src="/icon/Shader.svg" alt="Shader">
+                                    シェーダー
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="xr"/>
+                                    <img gdicon src="/icon/XRCamera3D.svg" alt="XRCamera3D">
+                                    AR/VR
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="physics"/>
+                                    <img gdicon src="/icon/ViewportSpeed.svg" alt="Physics">
+                                    物理
+                                    <sup></sup>
+                                </label>
+                            </li>
+                        </ul>
+
+                        <ul class="addon-tags" data-collapse-toggle="specialtag">
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag"
+                                           value="gdextension"/>
+                                    GDExtension
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value="module"/>
+                                    モジュール
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag"
+                                           value="csharponly"/>
+                                    C#のみ
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag"
+                                           value="csharpwrapper"/>
+                                    C#ラッパーあり
+                                    <sup></sup>
+                                </label>
+                            </li>
+                        </ul>
+                        <!-- セパレーター  -->
+                        <hr>
+
+                        <ul class="addon-tags" data-collapse-toggle="specialtag">
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag"
+                                           value="editoronly"/>
+                                    <img gdicon src="/icon/EditorPlugin.svg" alt="EditorPlugin">
+                                    エディタのみ
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-not-tag-condition>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="specialTag"
+                                           value="assetlib"/>
+                                    <img gdicon src="/icon/AssetLib.svg" alt="AssetLib">
+                                    AssetLibにある
+                                    <sup></sup>
+                                </label>
+                            </li>
+                            <li>
+                                <label data-not-tag-condition>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="specialTag"
+                                           value="notassetlib"/>
+                                    <img gdicon src="/icon/AssetLib.svg" alt="AssetLib">
+                                    AssetLibにない
+                                    <sup></sup>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label data-not-tag-condition>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="specialTag"
+                                           value="github"/>
+                                    <i class="fab fa-fw fa-github"></i>
+                                    GitHub
+                                    <sup></sup>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label data-not-tag-condition>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="specialTag"
+                                           value="gitlab"/>
+                                    <i class="fab fa-fw fa-gitlab"></i>
+                                    GitLab
+                                    <sup></sup>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label data-commonly-tag>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="specialTag"
+                                           value="other"/>
+                                    <i class="fas fa-fw fa-link"></i>
+                                    その他サイト
+                                    <sup></sup>
+                                </label>
+                            </li>
+                        </ul>
+
+                    </details>
+                    <!-- セパレーター  -->
+                    <hr>
+
+                    <details open>
+                        <summary>
+                            ライセンス他
+                        </summary>
+                        <ul id="FilterLicenseTags" class="addon-tags" data-collapse-toggle="license">
+                            <li data-license-tag-template style="display: none">
+                                <label data-tag-label>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="licenseTag" value=""
+                                           data-tag-checkbox/>
+                                    <span data-tag-label-text></span>
+                                    <sup data-tag-sup></sup>
+                                </label>
+                            </li>
+                        </ul>
+                    </details>
+                    <!-- セパレーター  -->
+
+                    <hr>
+
+                    <details open>
+                        <summary>
+                            タグ
+                        </summary>
+
+                        <ul id="FilterTags" class="addon-tags" data-collapse-toggle="tag">
+                            <li data-tag-template style="display: none">
+                                <label data-tag-label>
+                                    <input class="checkTag" data-check-tag type="checkbox" name="tag" value=""
+                                           data-tag-checkbox/>
+                                    <span data-tag-label-text></span>
+                                    <sup data-tag-sup></sup>
+                                </label>
+                            </li>
+                        </ul>
+                    </details>
+
+                    <!-- セパレーター  -->
+                    <hr>
+                    フィルタ組み合わせ方法
+                    <!-- OR, And のラジオボタン -->
+                    <div class="block">
+                        <label for="FilterAnd">
+                            <input type="radio" id="FilterAnd" name="filter" value="and" checked>
+                            AND
+                        </label>
+                        <label for="FilterOr">
+                            <input type="radio" id="FilterOr" name="filter" value="or">
+                            OR
+                        </label>
+                    </div>
+                    <!-- セパレーター  -->
+                    <hr>
+
+                    <details>
+                        <summary>
+                            除外条件
+                        </summary>
+                        <div id="ExcludeTags" data-collapse-toggle="exclude" style="padding-left: 32px;">
+                        </div>
+                    </details>
+                    <!-- セパレーター  -->
+                    <hr>
+
+                    <!-- ワード検索  -->
+
+                    <details open>
+                        <summary>
+                            ワード検索(部分一致)
+                        </summary>
+                        <div class="addon-search" data-collapse-toggle="search">
+                            <!-- プルダウンで対象を選択 title, author, summary -->
+                            <select id="SearchTarget">
+                                <option value="any" selected>
+                                    全て
+                                </option>
+                                <option value="title">
+                                    アドオン名
+                                </option>
+                                <option value="author">
+                                    作者名
+                                </option>
+                                <option value="summary">
+                                    概要
+                                </option>
+                            </select>
+                            <div id="searchbox">
+                                <input id="SearchInput" placeholder="検索" type="text" autocomplete="off"
+                                       oninput="update()">
                             </div>
                         </div>
+                    </details>
+                    <!-- セパレーター  -->
+                    <hr>
+
+
+                    <!-- 表示順 のラジオボタン -->
+                    <div class="addon-andor" data-collapse-toggle="order">
+                        <!-- クリア -->
+                        条件全削除
+                        <button class="clear-btn" onclick="clearAll()">
+                            すべて☑を外す
+                        </button>
+
+                        表示順
+                        <select id="addon-order">
+                            <option name="order" value="updated-addon-desc" id="order-updated-addon-desc" checked>
+                                アドオン最新日順
+                            </option>
+                            <option type="radio" name="order" value="updated-addon-asc" id="order-updated-addon-asc">
+                                アドオン古い日順
+                            </option>
+                            <option name="order" value="add-addon-desc" id="order-add-addon-desc">
+                                この一覧更新最新順
+                            </option>
+                            <option type="radio" name="order" value="add-addon-asc" id="order-add-addon-asc">
+                                この一覧更新古い順
+                            </option>
+                            <option type="radio" name="order" value="stars-desc" id="order-stars-desc">
+                                GitHubスター数多い順
+                            </option>
+                            <option type="radio" name="order" value="stars-asc" id="order-stars-asc">
+                                GitHubスター少ない順
+                            </option>
+                            <option type="radio" name="order" value="title-asc" id="order-title-asc">
+                                アドオン名アルファベット順
+                            </option>
+                            <option type="radio" name="order" value="title-desc" id="order-title-desc">
+                                アドオン名アルファベット逆順
+                            </option>
+                            <option type="radio" name="order" value="author-asc" id="order-author-asc">
+                                作者名アルファベット順
+                            </option>
+                            <option type="radio" name="order" value="author-desc" id="order-author-desc">
+                                作者名アルファベット逆順
+                            </option>
+                        </select>
                     </div>
-                    <footer class="addon entry-footer">
+                    <!-- セパレーター  -->
+                    <hr>
+
+                    表示列数
+                    <div id="ColControls" style="margin-top: 1em ;" class="addon-display-columns"
+                         data-collapse-toggle="display-col">
+                    </div>
+        </details>
+
+        <!--Grid-->
+        <div class="grid-container">
+            {{ if (fileExists $file) }}
+            {{ with (os.Stat $file) }}
+            <p>最終更新日時: {{ .ModTime.Format "2006-01-02 15:04" }}</p>
+            {{ end }}
+            {{ end }}
+
+            <!--　件数 -->
+            <div class="addon-count">
+                <span id="AddonCount"></span>
+            </div>
+
+            <!-- JavaScriptからDOM構築するための空の検索結果一覧リスト -->
+            <ul id="AddonFilteredList">
+            </ul>
+
+            <!-- アドオンカード　テンプレート -->
+            <ul class="addon" style="display: none">
+                <li>
+                    <span data-github-template><i class="fab fa-fw fa-github"></i></span>
+                    <span data-gitlab-template><i class="fab fa-fw fa-gitlab"></i></span>
+                    <span data-otherlink-template><i class="fas fa-fw fa-link"></i></span>
+                    <span data-star-template>★ </span>
+                </li>
+                <li class="addon sub-thumbnail" data-sub-thumbnail-template>
+                    <a href="" onclick="return showImagesLightBox();">
+                        <img alt="" src=""/>
+                    </a>
+                </li>
+                <li data-template>
+                    <div class="addon addon-entry" style="transition: none">
+                        <div class="addon post-div">
+                            <header class="addon entry-header">
+                                <div class="addon entry-header-row">
+                                    <h2 class="addon entry-hint-parent" data-entry-title>
+                                        <a href="" target="_blank" data-entry-title-link>
+                                            <span class="addon entry-icon" data-entry-icon></span>
+                                        </a>
+                                    </h2>
+                                    <span class="addon entry-author-label" data-entry-author-label>
+                                作者:
+                            </span>
+                                    <span class="addon entry-author" data-entry-author></span>
+                                </div>
+                                <!-- tags -->
+                                <ul class="addon entry-tags" data-entry-tags>
+                                    <li class="addon entry-license" data-entry-license></li>
+                                </ul>
+                            </header>
+                            <div class="addon entry-content">
+                                <!-- サムネイル -->
+                                <div class="addon entry-thumbnail">
+                                    <img src="" alt="" data-entry-thumbnail-image>
+                                </div>
+                                <div class="addon entry-main">
+                                    <!-- サブサムネイル（説明画像） -->
+                                    <ul class="addon sub-images" data-entry-sub-images>
+                                    </ul>
+                                    <p class="addon entry-summary" data-entry-summary>
+
+                                    </p>
+                                    <div>
+                                        <a class="addon entry-assetlib-link link" href="" data-entry-assetlib-link></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="addon entry-footer">
                         <span class="last-updated-label">
-                            {{- if eq site.Language.Lang "ja" }}
                             最終更新日:
-                            {{- else if eq site.Language.Lang "ko" }}
-                            마지막 업데이트:
-                            {{- else }}
-                            Last Updated:
-                            {{- end }}
                         </span>
-                        <time class="last-updated" datetime="" data-entry-last-updated></time>
-                        <span class="last-updated-label-list" data-entry-last-updated-list-label>
-                            {{- if eq site.Language.Lang "ja" }}
+                                <time class="last-updated" datetime="" data-entry-last-updated></time>
+                                <span class="last-updated-label-list" data-entry-last-updated-list-label>
                             一覧追加日:
-                            {{- else if eq site.Language.Lang "ko" }}
-                            이 목록에 추가된 날짜:
-                            {{- else }}
-                            Added to this list:
-                            {{- end }}
                         </span>
-                        <time class="last-updated-list" datetime="" data-entry-last-updated-list></time>
-                        <br>
-                        <span class="addon entry-languages-label" data-entry-languages-label>
-                            {{- if eq site.Language.Lang "ja" }}
+                                <time class="last-updated-list" datetime="" data-entry-last-updated-list></time>
+                                <br>
+                                <span class="addon entry-languages-label" data-entry-languages-label>
                             リポジトリ内訳:
-                            {{- else if eq site.Language.Lang "ko" }}
-                            저장소 내용:
-                            {{- else }}
-                            Repository Structure:
-                            {{- end }}
                             <span class="addon entry-languages" data-entry-languages></span>
                         </span>
-                    </footer>
-                </div>
-                <!--                <a class="addon entry-link" href=""></a>-->
-            </div>
-        </li>
-    </ul>
-</div>
+                            </footer>
+                        </div>
+                        <!--                <a class="addon entry-link" href=""></a>-->
+                    </div>
+                </li>
+            </ul>
+        </div>
 </article>
 <script>
+
     const DataList = {{ readFile "static/data/addon.json" | safeJS }};
     const DatalistEntries = Object.entries(DataList);
     let FilteredDataList = DatalistEntries;
@@ -961,11 +607,11 @@
         });
 
         // タグのチェックボックスが変更されたらupdateを呼び出す
-        document.querySelectorAll('[data-check-tag]').forEach(function(el) {
+        document.querySelectorAll('[data-check-tag]').forEach(function (el) {
             el.addEventListener('change', update);
         });
         // フィルターのラジオボタンが変更されたらupdateを呼び出す
-        document.querySelectorAll('input[name="filter"]').forEach(function(el) {
+        document.querySelectorAll('input[name="filter"]').forEach(function (el) {
             el.addEventListener('change', update);
         });
 
@@ -1030,7 +676,7 @@
             .filter(([key, value]) => {
                 //specialTags
                 //Tags
-                if (key === 'tags'){
+                if (key === 'tags') {
                     return false;
                 }
                 //specialTags
@@ -1038,11 +684,11 @@
                     return true;
                 }
 
-                if (filterType === 'or'){
+                if (filterType === 'or') {
                     return specialTags.some(tag => {
                         return checkConditionNotTag(tag, value);
                     });
-                }else if (filterType === 'and'){
+                } else if (filterType === 'and') {
                     return specialTags.every(tag => {
                         return checkConditionNotTag(tag, value);
                     });
@@ -1062,7 +708,7 @@
                             return tag === value.license;
                         }
                     });
-                }else if (filterType === 'and') {
+                } else if (filterType === 'and') {
                     return licenseTags.every(tag => {
                         if (value.license_override !== "") {
                             return tag === value.license_override;
@@ -1100,7 +746,7 @@
                     }
                 });
             })
-            .filter(([key, value]) =>{
+            .filter(([key, value]) => {
                 // 自動生成除外Tag
                 return (selectedExcludeTags.length === 0 || selectedExcludeTags.every(tag => !value.tags.includes(tag)));
             })
@@ -1113,26 +759,14 @@
                 if (searchTarget === 'any') {
                     return value.title.toLowerCase().includes(search.toLowerCase())
                         || value.owner.toLowerCase().includes(search.toLowerCase())
-                    {{- if eq site.Language.Lang "ja" }}
-                || value.summary_ja.toLowerCase().includes(search.toLowerCase());
-                    {{- else if eq site.Language.Lang "ko" }}
-                || value.summary_ko.toLowerCase().includes(search.toLowerCase());
-                    {{- else }}
-                || value.summary_en.toLowerCase().includes(search.toLowerCase());
-                    {{- end }}
+                        || value.summary_ja.toLowerCase().includes(search.toLowerCase());
 
                 } else if (searchTarget === 'title') {
                     return value.title.toLowerCase().includes(search.toLowerCase());
                 } else if (searchTarget === 'author') {
                     return value.owner.toLowerCase().includes(search.toLowerCase());
                 } else if (searchTarget === 'summary') {
-                    {{- if eq site.Language.Lang "ja" }}
                     return value.summary_ja.toLowerCase().includes(search.toLowerCase());
-                    {{- else if eq site.Language.Lang "ko" }}
-                    return value.summary_ko.toLowerCase().includes(search.toLowerCase());
-                    {{- else }}
-                    return value.summary_en.toLowerCase().includes(search.toLowerCase());
-                    {{- end }}
                 }
             })
             .sort((a, b) => {
@@ -1196,17 +830,16 @@
             // スター数
             if (value.repo_type !== 'github') {
 
-            }
-            else if (value.stars !== undefined && value.stars !== null) {
+            } else if (value.stars !== undefined && value.stars !== null) {
                 const star = templatestar.cloneNode(true);
                 star.appendChild(document.createTextNode(value.stars));
                 title.appendChild(star);
                 // 500以上の場合は濃い赤色にする
                 if (value.stars >= 500) {
                     star.style.color = 'crimson';
-                }else if (value.stars >= 100) {
+                } else if (value.stars >= 100) {
                     star.style.color = 'orange';
-                }else if (value.stars >= 50) {
+                } else if (value.stars >= 50) {
                     star.style.color = 'green';
                 }
             }
@@ -1233,11 +866,11 @@
                     //entry-author-labelの削除
                     const authorLabel = clone.querySelector('[data-entry-author-label]');
                     authorLabel.style.display = 'none';
-                }else{
+                } else {
                     const author = clone.querySelector('[data-entry-author]');
                     author.textContent = value.owner;
                 }
-            }else{
+            } else {
                 //entry-author-labelの削除
                 const authorLabel = clone.querySelector('[data-entry-author-label]');
                 authorLabel.style.display = 'none';
@@ -1255,7 +888,7 @@
                 value.license !== "") {
                 const license = clone.querySelector('[data-entry-license]');
                 license.textContent = value.license;
-            }else{
+            } else {
                 //entry-licenseの削除
                 const license = clone.querySelector('[data-entry-license]');
                 license.style.display = 'none';
@@ -1267,13 +900,7 @@
                 value.tags.forEach(tag => {
                     try {
                         const li = document.createElement('li');
-                        {{- if eq site.Language.Lang "ja" }}
                         li.textContent = TagsTrList[tag].ja;
-                        {{- else if eq site.Language.Lang "ko" }}
-                        li.textContent = TagsTrList[tag].ko;
-                        {{- else }}
-                        li.textContent = TagsTrList[tag].en;
-                        {{- end }}
                         tagList.appendChild(li);
                     } catch (e) {
                         console.warn(`Tag translation not found: ${tag}`);
@@ -1300,33 +927,27 @@
                     const subThumbnail = document.querySelector('li[data-sub-thumbnail-template]').cloneNode(true);
                     const img = subThumbnail.querySelector('img');
                     const a = subThumbnail.querySelector('a');
-                    const fileNameIndexStr = index === 0 ? "" : "_" + (index+1).toString();
+                    const fileNameIndexStr = index === 0 ? "" : "_" + (index + 1).toString();
 
                     a.dataset.key = key;
                     a.dataset.index = index;
-                    if (!['png', 'jpg', 'jpeg','webp','mp4', 'gif', "mov"].includes(thumbnail_extension)) {
+                    if (!['png', 'jpg', 'jpeg', 'webp', 'mp4', 'gif', "mov"].includes(thumbnail_extension)) {
                         // youtube
                         a.href = thumbnail_extension
                         img.src = YoutubeIcon;
-                    }else{
+                    } else {
                         a.href = ImageMovieThumbnailImageDirPath + value.id + fileNameIndexStr + "." + thumbnail_extension
                         img.src = ImageMovieThumbnailImageDirPath + value.id + fileNameIndexStr + ".webp";
                     }
                     subimages.appendChild(subThumbnail);
                 });
-            }else {
+            } else {
                 // 0件の場合はサブサムネイルの非表示
                 subimages.style.display = 'none';
             }
 
             // 概要
-            {{- if eq site.Language.Lang "ja" }}
             clone.querySelector('[data-entry-summary]').innerHTML = value.summary_ja;
-            {{- else if eq site.Language.Lang "ko" }}
-            clone.querySelector('[data-entry-summary]').innerHTML = value.summary_ko;
-            {{- else }}
-            clone.querySelector('[data-entry-summary]').innerHTML = value.summary_en;
-            {{- end }}
 
             // AssetLibリンク
             const assetlibLink = clone.querySelector('[data-entry-assetlib-link]');
@@ -1357,7 +978,7 @@
                     return `${key}=${valueWithK}k`;
                 }).join(', ');
                 languages.textContent = lang;
-            }else{
+            } else {
                 //entry-languages-labelの削除
                 const entryLanguagesLabel = clone.querySelector('[data-entry-languages-label]');
                 entryLanguagesLabel.style.display = 'none';
@@ -1372,7 +993,7 @@
             if (value.listed_at !== undefined && value.listed_at !== null) {
                 const lastUpdatedList = clone.querySelector('[data-entry-last-updated-list]');
                 lastUpdatedList.textContent = new Date(value.listed_at).toLocaleDateString();
-            }else{
+            } else {
                 //last-updated-labelの削除
                 const lastUpdatedLabelList = clone.querySelector('[data-entry-last-updated-list-label]');
                 lastUpdatedLabelList.style.display = 'none';
@@ -1394,7 +1015,6 @@
                     const now = new Date();
                     const diff = now - lastUpdateDate;
                     const diffDays = diff / (1000 * 60 * 60 * 24);
-                    {{- if eq site.Language.Lang "ja" }}
                     if (diffDays < 1) {
                         lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + " " + lastUpdateDate.toLocaleTimeString() + ` ${Math.floor(diff / (1000 * 60 * 60))}時間前`;
                         lastUpdated.style.color = 'green';
@@ -1406,32 +1026,6 @@
                     } else {
                         lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays / 30)}ヶ月前`;
                     }
-                    {{- else if eq site.Language.Lang "ko" }}
-                    if (diffDays < 1) {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diff / (1000 * 60 * 60))}시간 전`;
-                        lastUpdated.style.color = 'green';
-                    } else if (diffDays < 30) {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)}일 전`;
-                        lastUpdated.style.color = 'green';
-                    } else if (diffDays < 365) {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)}일 전`;
-                    } else {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays / 30)}개월 전`;
-                    }
-                    {{- else }}
-                    if (diffDays < 1) {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diff / (1000 * 60 * 60))} hours ago`;
-                        lastUpdated.style.color = 'green';
-                    } else if (diffDays < 30) {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)} days ago`;
-                        lastUpdated.style.color = 'green';
-                    } else if (diffDays < 365) {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays)} days ago`;
-                    }else {
-                        lastUpdated.textContent = lastUpdateDate.toLocaleDateString() + ` ${Math.floor(diffDays / 30)} months ago`;
-                        lastUpdated.style.color = 'red';
-                    }
-                    {{- end }}
                 }
             }
 
@@ -1442,13 +1036,7 @@
             count++;
         });
 
-        {{- if eq site.Language.Lang "ja" }}
         document.getElementById('AddonCount').textContent = `${count} 件`;
-        {{- else if eq site.Language.Lang "ko" }}
-        document.getElementById('AddonCount').textContent = `${count} 개`;
-        {{- else }}
-        document.getElementById('AddonCount').textContent = `${count} items`;
-        {{- end }}
 
         // Lightbox = GLightbox({
         //     touchNavigation: true,
@@ -1462,7 +1050,7 @@
     /**
      * タグJSONからタグを生成
      */
-    function createTags(){
+    function createTags() {
         const tagTemplate = document.querySelector('li[data-tag-template]');
         const fragment = document.createDocumentFragment();
 
@@ -1472,18 +1060,8 @@
         const locale = "{{ site.Language.Lang }}";
         DataList.tags
             .sort((a, b) => {
-                let localedA;
-                let localedB;
-                if (locale === "ja") {
-                    localedA = TagsTrList[a].ja;
-                    localedB = TagsTrList[b].ja;
-                } else if (locale === "ko") {
-                    localedA = TagsTrList[a].ko;
-                    localedB = TagsTrList[b].ko;
-                } else {
-                    localedA = TagsTrList[a].en;
-                    localedB = TagsTrList[b].en;
-                }
+                let localedA = TagsTrList[a].ja;
+                let localedB = TagsTrList[b].ja;
                 return localedA.localeCompare(localedB, locale, {sensitivity: 'base'})
             })
             .forEach(tag => {
@@ -1693,7 +1271,7 @@
     /**
      * タグのチェックボックスが変更されたらupdateを呼び出す
      */
-    function clearAll(){
+    function clearAll() {
         document.querySelectorAll('input[name="tag"]:checked').forEach(el => {
             el.checked = false;
         });
@@ -1744,13 +1322,7 @@
 
         //すべてのタグ表示のテキスト,色を変更
         duplicatedExclude.querySelectorAll('[data-tag-head]').forEach(el => {
-            {{- if eq site.Language.Lang "ja" }}
             el.textContent += '(除外)';
-            {{- else if eq site.Language.Lang "ko" }}
-            el.textContent += '(제외)';
-            {{- else }}
-            el.textContent += '(Exclude)';
-            {{- end }}
             el.style.color = 'red';
         });
 
@@ -1791,13 +1363,7 @@
 
             let text = i.toString();
             if (i === maxColumns) {
-                {{- if eq site.Language.Lang "ja" }}
                 text = '幅いっぱい';
-                {{- else if eq site.Language.Lang "ko" }}
-                text = '전체 너비';
-                {{- else }}
-                text = 'Full Width';
-                {{- end }}
             }
             label.appendChild(document.createTextNode(text));
         }
@@ -1856,24 +1422,22 @@
         const clicked = event.target;
 
         const data = DataList[clicked.dataset.key];
-        const elements = data.images.map((thumbnail_extension,index) => {
+        const elements = data.images.map((thumbnail_extension, index) => {
 
             // 画像
-            if (['png', 'jpg', 'jpeg','webp', "gif"].includes(thumbnail_extension)) {
-                const fileNameIndexStr = index === 0 ? "" : "_" + (index+1).toString();
+            if (['png', 'jpg', 'jpeg', 'webp', "gif"].includes(thumbnail_extension)) {
+                const fileNameIndexStr = index === 0 ? "" : "_" + (index + 1).toString();
                 return {
                     href: ImageMovieOrgImageDirPath + data.id + fileNameIndexStr + "." + thumbnail_extension,
                     type: 'image'
                 };
-            }
-            else if (['mp4', 'webm', "mov"].includes(thumbnail_extension)) {
-                const fileNameIndexStr = index === 0 ? "" : "_" + (index+1).toString();
+            } else if (['mp4', 'webm', "mov"].includes(thumbnail_extension)) {
+                const fileNameIndexStr = index === 0 ? "" : "_" + (index + 1).toString();
                 return {
                     href: ImageMovieOrgImageDirPath + data.id + fileNameIndexStr + "." + thumbnail_extension,
                     type: 'video'
                 };
-            }
-            else{
+            } else {
                 // youtube
                 return {
                     href: thumbnail_extension,
