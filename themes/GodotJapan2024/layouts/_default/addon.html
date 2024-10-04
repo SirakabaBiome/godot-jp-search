@@ -463,95 +463,94 @@
                 </div>
             </div>
         </details>
+    </div>
+    <!--Grid-->
+    <div class="grid-container">
+        {{ if (fileExists $file) }}
+        {{ with (os.Stat $file) }}
+        <p>最終更新日時: {{ .ModTime.Format "2006-01-02 15:04" }}</p>
+        {{ end }}
+        {{ end }}
 
-        <!--Grid-->
-        <div class="grid-container">
-            {{ if (fileExists $file) }}
-            {{ with (os.Stat $file) }}
-            <p>最終更新日時: {{ .ModTime.Format "2006-01-02 15:04" }}</p>
-            {{ end }}
-            {{ end }}
+        <!--　件数 -->
+        <div class="addon-count">
+            <span id="AddonCount"></span>
+        </div>
 
-            <!--　件数 -->
-            <div class="addon-count">
-                <span id="AddonCount"></span>
-            </div>
+        <!-- JavaScriptからDOM構築するための空の検索結果一覧リスト -->
+        <ul id="AddonFilteredList">
+        </ul>
 
-            <!-- JavaScriptからDOM構築するための空の検索結果一覧リスト -->
-            <ul id="AddonFilteredList">
-            </ul>
-
-            <!-- アドオンカード　テンプレート -->
-            <ul class="addon" style="display: none">
-                <li>
-                    <span data-github-template><i class="fab fa-fw fa-github"></i></span>
-                    <span data-gitlab-template><i class="fab fa-fw fa-gitlab"></i></span>
-                    <span data-otherlink-template><i class="fas fa-fw fa-link"></i></span>
-                    <span data-star-template>★ </span>
-                </li>
-                <li class="addon sub-thumbnail" data-sub-thumbnail-template>
-                    <a href="" onclick="return showImagesLightBox();">
-                        <img alt="" src=""/>
-                    </a>
-                </li>
-                <li data-template>
-                    <div class="addon addon-entry" style="transition: none">
-                        <div class="addon post-div">
-                            <header class="addon entry-header">
-                                <div class="addon entry-header-row">
-                                    <h2 class="addon entry-hint-parent" data-entry-title>
-                                        <a href="" target="_blank" data-entry-title-link>
-                                            <span class="addon entry-icon" data-entry-icon></span>
-                                        </a>
-                                    </h2>
-                                    <span class="addon entry-author-label" data-entry-author-label>
+        <!-- アドオンカード　テンプレート -->
+        <ul class="addon" style="display: none">
+            <li>
+                <span data-github-template><i class="fab fa-fw fa-github"></i></span>
+                <span data-gitlab-template><i class="fab fa-fw fa-gitlab"></i></span>
+                <span data-otherlink-template><i class="fas fa-fw fa-link"></i></span>
+                <span data-star-template>★ </span>
+            </li>
+            <li class="addon sub-thumbnail" data-sub-thumbnail-template>
+                <a href="" onclick="return showImagesLightBox();">
+                    <img alt="" src=""/>
+                </a>
+            </li>
+            <li data-template>
+                <div class="addon addon-entry" style="transition: none">
+                    <div class="addon post-div">
+                        <header class="addon entry-header">
+                            <div class="addon entry-header-row">
+                                <h2 class="addon entry-hint-parent" data-entry-title>
+                                    <a href="" target="_blank" data-entry-title-link>
+                                        <span class="addon entry-icon" data-entry-icon></span>
+                                    </a>
+                                </h2>
+                                <span class="addon entry-author-label" data-entry-author-label>
                                 作者:
                             </span>
-                                    <span class="addon entry-author" data-entry-author></span>
-                                </div>
-                                <!-- tags -->
-                                <ul class="addon entry-tags" data-entry-tags>
-                                    <li class="addon entry-license" data-entry-license></li>
+                                <span class="addon entry-author" data-entry-author></span>
+                            </div>
+                            <!-- tags -->
+                            <ul class="addon entry-tags" data-entry-tags>
+                                <li class="addon entry-license" data-entry-license></li>
+                            </ul>
+                        </header>
+                        <div class="addon entry-content">
+                            <!-- サムネイル -->
+                            <div class="addon entry-thumbnail">
+                                <img src="" alt="" data-entry-thumbnail-image>
+                            </div>
+                            <div class="addon entry-main">
+                                <!-- サブサムネイル（説明画像） -->
+                                <ul class="addon sub-images" data-entry-sub-images>
                                 </ul>
-                            </header>
-                            <div class="addon entry-content">
-                                <!-- サムネイル -->
-                                <div class="addon entry-thumbnail">
-                                    <img src="" alt="" data-entry-thumbnail-image>
-                                </div>
-                                <div class="addon entry-main">
-                                    <!-- サブサムネイル（説明画像） -->
-                                    <ul class="addon sub-images" data-entry-sub-images>
-                                    </ul>
-                                    <p class="addon entry-summary" data-entry-summary>
+                                <p class="addon entry-summary" data-entry-summary>
 
-                                    </p>
-                                    <div>
-                                        <a class="addon entry-assetlib-link link" href="" data-entry-assetlib-link></a>
-                                    </div>
+                                </p>
+                                <div>
+                                    <a class="addon entry-assetlib-link link" href="" data-entry-assetlib-link></a>
                                 </div>
                             </div>
-                            <footer class="addon entry-footer">
+                        </div>
+                        <footer class="addon entry-footer">
                         <span class="last-updated-label">
                             最終更新日:
                         </span>
-                                <time class="last-updated" datetime="" data-entry-last-updated></time>
-                                <span class="last-updated-label-list" data-entry-last-updated-list-label>
+                            <time class="last-updated" datetime="" data-entry-last-updated></time>
+                            <span class="last-updated-label-list" data-entry-last-updated-list-label>
                             一覧追加日:
                         </span>
-                                <time class="last-updated-list" datetime="" data-entry-last-updated-list></time>
-                                <br>
-                                <span class="addon entry-languages-label" data-entry-languages-label>
+                            <time class="last-updated-list" datetime="" data-entry-last-updated-list></time>
+                            <br>
+                            <span class="addon entry-languages-label" data-entry-languages-label>
                             リポジトリ内訳:
                             <span class="addon entry-languages" data-entry-languages></span>
                         </span>
-                            </footer>
-                        </div>
-                        <!--                <a class="addon entry-link" href=""></a>-->
+                        </footer>
                     </div>
-                </li>
-            </ul>
-        </div>
+                    <!--                <a class="addon entry-link" href=""></a>-->
+                </div>
+            </li>
+        </ul>
     </div>
 </article>
 <script>
