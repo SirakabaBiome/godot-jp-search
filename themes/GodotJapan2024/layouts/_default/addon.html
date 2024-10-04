@@ -64,14 +64,14 @@
                 </h3>
             </summary>
             <span class="pin-container">
-            <button id="PinBtn" class="pin-btn" data-pin-btn>
-                📌
-                条件を上に固定する
-            </button>
-            <span class="labal-pin">
+                <button id="PinBtn" class="pin-btn" data-pin-btn>
+                    📌
+                    条件を上に固定する
+                </button>
+                <span class="labal-pin">
 
+                </span>
             </span>
-        </span>
             <!-- セパレーター  -->
             <hr>
 
@@ -351,114 +351,117 @@
                         </ul>
                     </details>
 
-                    <!-- セパレーター  -->
-                    <hr>
-                    フィルタ組み合わせ方法
-                    <!-- OR, And のラジオボタン -->
-                    <div class="block">
-                        <label for="FilterAnd">
-                            <input type="radio" id="FilterAnd" name="filter" value="and" checked>
-                            AND
-                        </label>
-                        <label for="FilterOr">
-                            <input type="radio" id="FilterOr" name="filter" value="or">
-                            OR
-                        </label>
+                </div>
+
+                <!-- セパレーター  -->
+                <hr>
+                フィルタ組み合わせ方法
+                <!-- OR, And のラジオボタン -->
+                <div class="block">
+                    <label for="FilterAnd">
+                        <input type="radio" id="FilterAnd" name="filter" value="and" checked>
+                        AND
+                    </label>
+                    <label for="FilterOr">
+                        <input type="radio" id="FilterOr" name="filter" value="or">
+                        OR
+                    </label>
+                </div>
+                <!-- セパレーター  -->
+                <hr>
+
+                <details>
+                    <summary>
+                        除外条件
+                    </summary>
+                    <div id="ExcludeTags" data-collapse-toggle="exclude" style="padding-left: 32px;">
                     </div>
-                    <!-- セパレーター  -->
-                    <hr>
+                </details>
+                <!-- セパレーター  -->
+                <hr>
 
-                    <details>
-                        <summary>
-                            除外条件
-                        </summary>
-                        <div id="ExcludeTags" data-collapse-toggle="exclude" style="padding-left: 32px;">
-                        </div>
-                    </details>
-                    <!-- セパレーター  -->
-                    <hr>
+                <!-- ワード検索  -->
 
-                    <!-- ワード検索  -->
-
-                    <details open>
-                        <summary>
-                            ワード検索(部分一致)
-                        </summary>
-                        <div class="addon-search" data-collapse-toggle="search">
-                            <!-- プルダウンで対象を選択 title, author, summary -->
-                            <select id="SearchTarget">
-                                <option value="any" selected>
-                                    全て
-                                </option>
-                                <option value="title">
-                                    アドオン名
-                                </option>
-                                <option value="author">
-                                    作者名
-                                </option>
-                                <option value="summary">
-                                    概要
-                                </option>
-                            </select>
-                            <div id="searchbox">
-                                <input id="SearchInput" placeholder="検索" type="text" autocomplete="off"
-                                       oninput="update()">
-                            </div>
-                        </div>
-                    </details>
-                    <!-- セパレーター  -->
-                    <hr>
-
-
-                    <!-- 表示順 のラジオボタン -->
-                    <div class="addon-andor" data-collapse-toggle="order">
-                        <!-- クリア -->
-                        条件全削除
-                        <button class="clear-btn" onclick="clearAll()">
-                            すべて☑を外す
-                        </button>
-
-                        表示順
-                        <select id="addon-order">
-                            <option name="order" value="updated-addon-desc" id="order-updated-addon-desc" checked>
-                                アドオン最新日順
+                <details open>
+                    <summary>
+                        ワード検索(部分一致)
+                    </summary>
+                    <div class="addon-search" data-collapse-toggle="search">
+                        <!-- プルダウンで対象を選択 title, author, summary -->
+                        <select id="SearchTarget">
+                            <option value="any" selected>
+                                全て
                             </option>
-                            <option type="radio" name="order" value="updated-addon-asc" id="order-updated-addon-asc">
-                                アドオン古い日順
+                            <option value="title">
+                                アドオン名
                             </option>
-                            <option name="order" value="add-addon-desc" id="order-add-addon-desc">
-                                この一覧更新最新順
+                            <option value="author">
+                                作者名
                             </option>
-                            <option type="radio" name="order" value="add-addon-asc" id="order-add-addon-asc">
-                                この一覧更新古い順
-                            </option>
-                            <option type="radio" name="order" value="stars-desc" id="order-stars-desc">
-                                GitHubスター数多い順
-                            </option>
-                            <option type="radio" name="order" value="stars-asc" id="order-stars-asc">
-                                GitHubスター少ない順
-                            </option>
-                            <option type="radio" name="order" value="title-asc" id="order-title-asc">
-                                アドオン名アルファベット順
-                            </option>
-                            <option type="radio" name="order" value="title-desc" id="order-title-desc">
-                                アドオン名アルファベット逆順
-                            </option>
-                            <option type="radio" name="order" value="author-asc" id="order-author-asc">
-                                作者名アルファベット順
-                            </option>
-                            <option type="radio" name="order" value="author-desc" id="order-author-desc">
-                                作者名アルファベット逆順
+                            <option value="summary">
+                                概要
                             </option>
                         </select>
+                        <div id="searchbox">
+                            <input id="SearchInput" placeholder="検索" type="text" autocomplete="off"
+                                   oninput="update()">
+                        </div>
                     </div>
-                    <!-- セパレーター  -->
-                    <hr>
+                </details>
+                <!-- セパレーター  -->
+                <hr>
 
-                    表示列数
-                    <div id="ColControls" style="margin-top: 1em ;" class="addon-display-columns"
-                         data-collapse-toggle="display-col">
-                    </div>
+
+                <!-- 表示順 のラジオボタン -->
+                <div class="addon-andor" data-collapse-toggle="order">
+                    <!-- クリア -->
+                    条件全削除
+                    <button class="clear-btn" onclick="clearAll()">
+                        すべて☑を外す
+                    </button>
+
+                    表示順
+                    <select id="addon-order">
+                        <option name="order" value="updated-addon-desc" id="order-updated-addon-desc">
+                            アドオン最新日順
+                        </option>
+                        <option name="order" value="updated-addon-asc" id="order-updated-addon-asc">
+                            アドオン古い日順
+                        </option>
+                        <option name="order" value="add-addon-desc" id="order-add-addon-desc">
+                            この一覧更新最新順
+                        </option>
+                        <option name="order" value="add-addon-asc" id="order-add-addon-asc">
+                            この一覧更新古い順
+                        </option>
+                        <option name="order" value="stars-desc" id="order-stars-desc">
+                            GitHubスター数多い順
+                        </option>
+                        <option name="order" value="stars-asc" id="order-stars-asc">
+                            GitHubスター少ない順
+                        </option>
+                        <option name="order" value="title-asc" id="order-title-asc">
+                            アドオン名アルファベット順
+                        </option>
+                        <option name="order" value="title-desc" id="order-title-desc">
+                            アドオン名アルファベット逆順
+                        </option>
+                        <option name="order" value="author-asc" id="order-author-asc">
+                            作者名アルファベット順
+                        </option>
+                        <option name="order" value="author-desc" id="order-author-desc">
+                            作者名アルファベット逆順
+                        </option>
+                    </select>
+                </div>
+                <!-- セパレーター  -->
+                <hr>
+
+                表示列数
+                <div id="ColControls" style="margin-top: 1em ;" class="addon-display-columns"
+                     data-collapse-toggle="display-col">
+                </div>
+            </div>
         </details>
 
         <!--Grid-->
@@ -549,9 +552,11 @@
                 </li>
             </ul>
         </div>
+    </div>
 </article>
 <script>
 
+    <!-- prettier-ignore-start -->
     const DataList = {{ readFile "static/data/addon.json" | safeJS }};
     const DatalistEntries = Object.entries(DataList);
     let FilteredDataList = DatalistEntries;
@@ -563,6 +568,7 @@
     const ThumbnailImageDirPath = "{{ "/images/addon/thumbnails/" | relURL }}";
     const ImageMovieThumbnailImageDirPath = "{{ "/images/addon/imagethumbnails/" | relURL }}";
     const ImageMovieOrgImageDirPath = "{{ "/images/addon/images/" | relURL }}";
+    <!-- prettier-ignore-end -->
 
     document.addEventListener('DOMContentLoaded', () => {
         // ソートのセレクトが変更されたらupdateを呼び出す
