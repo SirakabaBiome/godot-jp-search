@@ -1,3 +1,4 @@
+
 :root {
     --gap: 24px;
     --content-gap: 20px;
@@ -27,6 +28,10 @@ html {
 body {
     font-size: 100%;
     line-height: 1.6
+}
+
+article.addon{
+    margin-top: 128px;
 }
 
 body h1,
@@ -77,6 +82,7 @@ body main li {
 }
 
 
+
 .collapse-btn {
     display: inline;
     padding: 4px 4px;
@@ -96,22 +102,16 @@ body main li {
 }
 
 .pin-container {
-    display: inline-flex;
-}
-
-.pin-btn {
-    display: inline;
-    padding: 4px 4px;
-    background: var(--tertiary);
-    border-radius: 6px;
-    transition: transform 0.1s;
-    margin-left: 64px;
+    display: block;
 }
 
 .pin-on {
     color: #ff8880;
 }
 
+.material-symbols-outlined{
+    font-size: 1rem;
+}
 .labal-pin {
     color: var(--secondary);
 }
@@ -156,18 +156,34 @@ body main li {
     background: var(--tertiary);
 }
 
-.addon-tags li {
-    display: inline-block;
-    margin: 10px;
-    font-weight: 500;
+ul.addon-tags{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: "";
+    column-gap: 0.6rem;
+    row-gap: 0.3rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+ul.addon-tags li{
+    flex-grow: 1;
+    min-width: 120px;
+}
+ul.addon-tags li label{
+    width: 100%;
 }
 
 .addon-tags img[gdicon] {
-    display: inline;
-    height: 24px;
-    top: 4px;
-    position: relative;
+    display: inline-block;
+    height: 1rem;
 }
+
+input.checkTag{
+
+    height: 0.55rem;
+}
+
 
 .addon-display-columns {
     margin: 10px 0;
@@ -187,21 +203,12 @@ body main li {
     transform: scale(1.5);
 }
 
-.addon-andor {
-    height: 36px;
+button{
+    background-color: inherit;
 }
 
-.addon-andor label {
-    margin: 0 10px;
-    padding: 6px 8px;
-    background: var(--tertiary);
-    border-radius: 6px;
-    transition: transform 0.1s;
-    cursor: pointer;
-}
-
-.addon-tags label {
-    display: block;
+.addon-tags label,button, .addon-andor label{
+    display: inline-block;
     padding: 3px 10px;
     /*background-color: #56575e;*/
     border: 1px solid var(--border);
@@ -234,15 +241,6 @@ body main li {
     padding: 2px 0;
     background: var(--tertiary);
 }
-
-.clear-btn {
-    margin: 10px;
-    padding: 6px 12px;
-    background: var(--tertiary);
-    border-radius: 6px;
-    transition: transform 0.1s;
-}
-
 
 #AddonFilteredList {
     list-style: none;
@@ -315,6 +313,7 @@ body main li {
 
 .addon .entry-hint-parent a {
     text-decoration: underline;
+    word-break: break-all;
 }
 
 .addon .entry-icon {
@@ -429,4 +428,26 @@ ul.addon.sub-images {
 .addon .entry-summary a {
     text-decoration: underline;
     color: var(--link);
+}
+
+.filter-container > details[open] > summary > h3::before , .tag-filter details[open] summary::before{
+    display: inline-block;
+    content: "▼";
+    transform: rotate(0deg);
+    transition: 0.1s transform;
+}
+
+.filter-container > details > summary > h3::before , .tag-filter details summary::before{
+    display: inline-block;
+    content: "▼";
+    transform: rotate(-0.25turn);
+    transition: 0.1s transform;
+}
+
+summary{
+    display: inline-block;
+}
+
+.filter-container > details[open] > summary::marker , .filter-container > details > summary::marker{
+    content: "";
 }
